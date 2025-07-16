@@ -52,14 +52,13 @@ export function Specialties() {
               variants={itemVariants} 
               key={index} 
             >
-              <Link href={specialty.href} className="block relative rounded-lg overflow-hidden group aspect-[3/4]">
+              <Link href={specialty.href} className="block relative rounded-lg overflow-hidden group aspect-square">
                 <Image
                   src={specialty.imageUrl}
                   alt={specialty.title}
                   data-ai-hint={specialty.imageHint}
-                  layout="fill"
-                  objectFit="cover"
-                  className="transition-transform duration-500 ease-in-out group-hover:scale-110"
+                  fill
+                  className="object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent"></div>
                 <div className="absolute bottom-0 left-0 p-6 w-full text-white transform-gpu translate-y-2/3 group-hover:translate-y-0 transition-transform duration-500 ease-in-out">
