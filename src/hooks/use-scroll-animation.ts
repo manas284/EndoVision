@@ -16,10 +16,21 @@ export const useScrollAnimation = () => {
     }
   }, [isInView, controls]);
 
-  const cardVariants = {
-    hidden: { opacity: 0, y: 50 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+  const sectionVariants = {
+    hidden: { opacity: 0 },
+    visible: { 
+        opacity: 1, 
+        transition: { 
+            staggerChildren: 0.2,
+            delayChildren: 0.1,
+        } 
+    },
   };
 
-  return { ref, controls, cardVariants };
+  const itemVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
+  };
+
+  return { ref, controls, sectionVariants, itemVariants };
 };

@@ -23,28 +23,25 @@ const features = [
 ];
 
 export function Features() {
-    const { ref, controls, cardVariants } = useScrollAnimation();
+    const { ref, controls, sectionVariants, itemVariants } = useScrollAnimation();
   return (
     <motion.section 
       ref={ref}
       initial="hidden"
       animate={controls}
-      variants={{
-        visible: { opacity: 1, y: 0, transition: { staggerChildren: 0.2 } },
-        hidden: { opacity: 0, y: 50 },
-      }}
+      variants={sectionVariants}
       id="features" 
       className="py-16 md:py-24">
       <div className="container">
-        <div className="text-center">
+        <motion.div className="text-center" variants={itemVariants}>
           <h2 className="font-headline text-3xl md:text-4xl font-bold">Why Choose Us</h2>
           <p className="mt-4 max-w-2xl mx-auto text-muted-foreground">
             Our technology is engineered for excellence, reliability, and ease of use in the operating room.
           </p>
-        </div>
+        </motion.div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
           {features.map((feature, index) => (
-            <motion.div variants={cardVariants} key={index} className="text-center p-6">
+            <motion.div variants={itemVariants} key={index} className="text-center p-6">
               <div className="flex justify-center mb-4">
                 {feature.icon}
               </div>

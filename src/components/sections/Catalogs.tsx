@@ -28,27 +28,24 @@ const catalogs = [
 ];
 
 export function Catalogs() {
-    const { ref, controls, cardVariants } = useScrollAnimation();
+    const { ref, controls, sectionVariants, itemVariants } = useScrollAnimation();
   return (
     <motion.section 
         ref={ref}
         initial="hidden"
         animate={controls}
-        variants={{
-            visible: { opacity: 1, y: 0, transition: { staggerChildren: 0.2 } },
-            hidden: { opacity: 0, y: 50 },
-        }}
+        variants={sectionVariants}
         id="catalogs" className="py-16 md:py-24 bg-secondary">
       <div className="container">
-        <div className="text-center">
+        <motion.div className="text-center" variants={itemVariants}>
           <h2 className="font-headline text-3xl md:text-4xl font-bold">Our Catalogs</h2>
           <p className="mt-4 max-w-2xl mx-auto text-muted-foreground">
             Download our latest catalogs for detailed product specifications.
           </p>
-        </div>
+        </motion.div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
           {catalogs.map((catalog, index) => (
-            <motion.div variants={cardVariants} key={index}>
+            <motion.div variants={itemVariants} key={index}>
                 <Card className="flex flex-col h-full">
                 <CardHeader className="flex-row items-center gap-4">
                     {catalog.icon}

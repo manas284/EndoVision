@@ -32,7 +32,7 @@ type ContactFormValues = z.infer<typeof contactFormSchema>;
 
 export function Contact() {
   const { toast } = useToast();
-  const { ref, controls } = useScrollAnimation();
+  const { ref, controls, sectionVariants, itemVariants } = useScrollAnimation();
   const form = useForm<ContactFormValues>({
     resolver: zodResolver(contactFormSchema),
     defaultValues: {
@@ -57,96 +57,94 @@ export function Contact() {
         ref={ref}
         initial="hidden"
         animate={controls}
-        variants={{
-        visible: { opacity: 1, y: 0 },
-        hidden: { opacity: 0, y: 50 },
-        }}
-        transition={{ duration: 0.6 }}
+        variants={sectionVariants}
         id="contact" className="py-16 md:py-24 bg-secondary">
       <div className="container">
-        <div className="text-center">
+        <motion.div className="text-center" variants={itemVariants}>
           <h2 className="font-headline text-3xl md:text-4xl font-bold">Contact Us</h2>
           <p className="mt-4 max-w-2xl mx-auto text-muted-foreground">
             Have a question or need support? Reach out to our team.
           </p>
-        </div>
+        </motion.div>
         <div className="grid grid-cols-1 md:grid-cols-5 gap-8 lg:gap-12 mt-12">
-          <Card className="md:col-span-3">
-            <CardContent className="p-6">
-              <Form {...form}>
-                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-                  <FormField
-                    control={form.control}
-                    name="name"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>Full Name</FormLabel>
-                        <FormControl>
-                          <Input placeholder="John Doe" {...field} />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                  <FormField
-                    control={form.control}
-                    name="email"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>Email Address</FormLabel>
-                        <FormControl>
-                          <Input placeholder="you@example.com" {...field} />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                  <FormField
-                    control={form.control}
-                    name="specialty"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>Specialty</FormLabel>
-                         <Select onValueChange={field.onChange} defaultValue={field.value}>
+          <motion.div variants={itemVariants}>
+            <Card className="md:col-span-3">
+              <CardContent className="p-6">
+                <Form {...form}>
+                  <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+                    <FormField
+                      control={form.control}
+                      name="name"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel>Full Name</FormLabel>
                           <FormControl>
-                            <SelectTrigger>
-                              <SelectValue placeholder="Select a specialty" />
-                            </SelectTrigger>
+                            <Input placeholder="John Doe" {...field} />
                           </FormControl>
-                          <SelectContent>
-                            <SelectItem value="Arthroscopy">Arthroscopy</SelectItem>
-                            <SelectItem value="Hysteroscopy">Hysteroscopy</SelectItem>
-                            <SelectItem value="Urology">Urology</SelectItem>
-                            <SelectItem value="General Inquiry">General Inquiry</SelectItem>
-                          </SelectContent>
-                        </Select>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                  <FormField
-                    control={form.control}
-                    name="message"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel>Message</FormLabel>
-                        <FormControl>
-                          <Textarea
-                            placeholder="Tell us how we can help..."
-                            className="min-h-[120px]"
-                            {...field}
-                          />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                  <Button type="submit" className="w-full bg-accent text-accent-foreground hover:bg-accent/90" size="lg">Send Message</Button>
-                </form>
-              </Form>
-            </CardContent>
-          </Card>
-          <div className="md:col-span-2 space-y-6">
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+                    <FormField
+                      control={form.control}
+                      name="email"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel>Email Address</FormLabel>
+                          <FormControl>
+                            <Input placeholder="you@example.com" {...field} />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+                    <FormField
+                      control={form.control}
+                      name="specialty"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel>Specialty</FormLabel>
+                           <Select onValueChange={field.onChange} defaultValue={field.value}>
+                            <FormControl>
+                              <SelectTrigger>
+                                <SelectValue placeholder="Select a specialty" />
+                              </SelectTrigger>
+                            </FormControl>
+                            <SelectContent>
+                              <SelectItem value="Arthroscopy">Arthroscopy</SelectItem>
+                              <SelectItem value="Hysteroscopy">Hysteroscopy</SelectItem>
+                              <SelectItem value="Urology">Urology</SelectItem>
+                              <SelectItem value="General Inquiry">General Inquiry</SelectItem>
+                            </SelectContent>
+                          </Select>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+                    <FormField
+                      control={form.control}
+                      name="message"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel>Message</FormLabel>
+                          <FormControl>
+                            <Textarea
+                              placeholder="Tell us how we can help..."
+                              className="min-h-[120px]"
+                              {...field}
+                            />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+                    <Button type="submit" className="w-full bg-accent text-accent-foreground hover:bg-accent/90" size="lg">Send Message</Button>
+                  </form>
+                </Form>
+              </CardContent>
+            </Card>
+          </motion.div>
+          <motion.div className="md:col-span-2 space-y-6" variants={itemVariants}>
             <h3 className="font-headline text-2xl font-semibold">Our Information</h3>
             <div className="space-y-4 text-muted-foreground">
               <div className="flex items-start gap-4">
@@ -171,7 +169,7 @@ export function Contact() {
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </motion.section>
