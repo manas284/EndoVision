@@ -18,6 +18,8 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { useToast } from "@/hooks/use-toast";
 import { Card, CardContent } from "@/components/ui/card";
 import { Phone, Mail, MapPin } from "lucide-react";
+import { useScrollAnimation } from '@/hooks/use-scroll-animation';
+import { motion } from 'framer-motion';
 
 const contactFormSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters."),
@@ -30,6 +32,7 @@ type ContactFormValues = z.infer<typeof contactFormSchema>;
 
 export function Contact() {
   const { toast } = useToast();
+  const { ref, controls } = useScrollAnimation();
   const form = useForm<ContactFormValues>({
     resolver: zodResolver(contactFormSchema),
     defaultValues: {
@@ -50,7 +53,16 @@ export function Contact() {
   }
 
   return (
-    <section id="contact" className="py-16 md:py-24 bg-secondary">
+    <motion.section 
+        ref={ref}
+        initial="hidden"
+        animate={controls}
+        variants={{
+        visible: { opacity: 1, y: 0 },
+        hidden: { opacity: 0, y: 50 },
+        }}
+        transition={{ duration: 0.6 }}
+        id="contact" className="py-16 md:py-24 bg-secondary">
       <div className="container">
         <div className="text-center">
           <h2 className="font-headline text-3xl md:text-4xl font-bold">Contact Us</h2>
@@ -162,6 +174,6 @@ export function Contact() {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }

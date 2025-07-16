@@ -1,10 +1,22 @@
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
+import { useScrollAnimation } from '@/hooks/use-scroll-animation';
+import { motion } from 'framer-motion';
 
 export function Hero() {
+  const { ref, controls } = useScrollAnimation();
   return (
-    <section id="home" className="relative w-full h-[80vh] min-h-[500px] max-h-[700px] flex items-center justify-center text-white">
+    <motion.section 
+        ref={ref}
+        initial="hidden"
+        animate={controls}
+        variants={{
+        visible: { opacity: 1, y: 0 },
+        hidden: { opacity: 0, y: 50 },
+        }}
+        transition={{ duration: 0.6 }}
+        id="home" className="relative w-full h-[80vh] min-h-[500px] max-h-[700px] flex items-center justify-center text-white">
       <Image
         src="https://placehold.co/1920x1080.png"
         alt="Surgical suite"
@@ -30,6 +42,6 @@ export function Hero() {
           </Button>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }

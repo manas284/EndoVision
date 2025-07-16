@@ -1,4 +1,6 @@
 import { Waves, Camera, Hand } from 'lucide-react';
+import { useScrollAnimation } from '@/hooks/use-scroll-animation';
+import { motion } from 'framer-motion';
 
 const features = [
   {
@@ -19,8 +21,18 @@ const features = [
 ];
 
 export function Features() {
+    const { ref, controls, cardVariants } = useScrollAnimation();
   return (
-    <section id="features" className="py-16 md:py-24">
+    <motion.section 
+      ref={ref}
+      initial="hidden"
+      animate={controls}
+      variants={{
+        visible: { opacity: 1, y: 0, transition: { staggerChildren: 0.2 } },
+        hidden: { opacity: 0, y: 50 },
+      }}
+      id="features" 
+      className="py-16 md:py-24">
       <div className="container">
         <div className="text-center">
           <h2 className="font-headline text-3xl md:text-4xl font-bold">Why Choose Us</h2>
@@ -29,17 +41,17 @@ export function Features() {
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
-          {features.map((feature) => (
-            <div key={feature.title} className="text-center p-6">
+          {features.map((feature, index) => (
+            <motion.div variants={cardVariants} key={index} className="text-center p-6">
               <div className="flex justify-center mb-4">
                 {feature.icon}
               </div>
               <h3 className="font-headline text-xl font-semibold">{feature.title}</h3>
               <p className="mt-2 text-muted-foreground">{feature.description}</p>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }
