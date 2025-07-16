@@ -1,25 +1,32 @@
 "use client";
 
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Bone, HeartPulse, Droplets } from 'lucide-react';
 import { useScrollAnimation } from '@/hooks/use-scroll-animation';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
+import Link from 'next/link';
+import { Button } from '../ui/button';
 
 const specialties = [
   {
-    icon: <Bone className="h-10 w-10 text-primary" />,
     title: "Arthroscopy",
     description: "Advanced visualization for joint and orthopedic procedures.",
+    imageUrl: "https://placehold.co/600x400.png",
+    imageHint: "arthroscopy surgery",
+    href: "/specialties/arthroscopy"
   },
   {
-    icon: <HeartPulse className="h-10 w-10 text-primary" />,
     title: "Hysteroscopy",
     description: "High-definition solutions for gynecological examinations and surgeries.",
+    imageUrl: "https://placehold.co/600x400.png",
+    imageHint: "hysteroscopy procedure",
+    href: "/specialties/hysteroscopy"
   },
   {
-    icon: <Droplets className="h-10 w-10 text-primary" />,
     title: "Urology",
     description: "Precision instruments for comprehensive urological care.",
+    imageUrl: "https://placehold.co/600x400.png",
+    imageHint: "urology instrument",
+    href: "/specialties/urology"
   },
 ];
 
@@ -45,17 +52,26 @@ export function Specialties() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
           {specialties.map((specialty, index) => (
             <motion.div variants={cardVariants} key={index}>
-              <Card className="text-center group hover:shadow-xl transition-shadow duration-300 h-full">
-                <CardHeader>
-                  <div className="mx-auto bg-card p-4 rounded-full w-fit group-hover:scale-110 transition-transform duration-300">
-                    {specialty.icon}
-                  </div>
-                  <CardTitle className="font-headline pt-4">{specialty.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground">{specialty.description}</p>
-                </CardContent>
-              </Card>
+               <Link href={specialty.href} className="group block relative overflow-hidden rounded-lg shadow-lg">
+                <Image
+                    src={specialty.imageUrl}
+                    alt={specialty.title}
+                    data-ai-hint={specialty.imageHint}
+                    width={600}
+                    height={400}
+                    className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500 ease-in-out"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent"></div>
+                <div className="absolute inset-x-0 bottom-0 p-6">
+                    <div className="transform transition-transform duration-500 ease-in-out group-hover:-translate-y-24">
+                        <h3 className="font-headline text-2xl font-bold text-white">{specialty.title}</h3>
+                        <div className="opacity-0 max-h-0 group-hover:opacity-100 group-hover:max-h-full transition-all duration-500 ease-in-out mt-2">
+                           <p className="text-primary-foreground/90">{specialty.description}</p>
+                           <Button variant="link" className="text-accent p-0 mt-2 h-auto">Learn more &rarr;</Button>
+                        </div>
+                    </div>
+                </div>
+              </Link>
             </motion.div>
           ))}
         </div>
