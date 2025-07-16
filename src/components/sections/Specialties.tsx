@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useScrollAnimation } from '@/hooks/use-scroll-animation';
@@ -5,6 +6,7 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '../ui/button';
+import { ArrowRight } from 'lucide-react';
 
 const specialties = [
   {
@@ -52,22 +54,24 @@ export function Specialties() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
           {specialties.map((specialty, index) => (
             <motion.div variants={cardVariants} key={index}>
-               <Link href={specialty.href} className="group block relative overflow-hidden rounded-lg shadow-lg">
+               <Link href={specialty.href} className="group block relative overflow-hidden rounded-lg shadow-lg h-96">
                 <Image
                     src={specialty.imageUrl}
                     alt={specialty.title}
                     data-ai-hint={specialty.imageHint}
-                    width={600}
-                    height={400}
-                    className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500 ease-in-out"
+                    layout="fill"
+                    objectFit="cover"
+                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500 ease-in-out"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent"></div>
-                <div className="absolute inset-x-0 bottom-0 p-6">
-                    <div className="transform transition-transform duration-500 ease-in-out group-hover:-translate-y-24">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
+                <div className="absolute inset-0 flex flex-col justify-end p-6">
+                    <div className="transform transition-all duration-500 ease-in-out translate-y-20 group-hover:translate-y-0">
                         <h3 className="font-headline text-2xl font-bold text-white">{specialty.title}</h3>
-                        <div className="opacity-0 max-h-0 group-hover:opacity-100 group-hover:max-h-full transition-all duration-500 ease-in-out mt-2">
+                        <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out mt-2 delay-200">
                            <p className="text-primary-foreground/90">{specialty.description}</p>
-                           <Button variant="link" className="text-accent p-0 mt-2 h-auto">Learn more &rarr;</Button>
+                           <Button variant="link" className="text-accent p-0 mt-4 h-auto font-semibold">
+                                Learn more <ArrowRight className="ml-2 h-4 w-4" />
+                           </Button>
                         </div>
                     </div>
                 </div>
