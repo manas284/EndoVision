@@ -1,6 +1,5 @@
 "use client";
 
-import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -23,42 +22,39 @@ export function Hero() {
   };
 
   return (
-    <section id="home" className="relative w-full h-[80vh] min-h-[500px] max-h-[700px] flex items-center justify-center text-white">
-      <Image
-        src="https://www.datocms-assets.com/136621/1737729829-desk_banner_histeroscopia.png"
-        alt="EndoVision surgical suite with advanced endoscopic equipment"
-        data-ai-hint="surgical suite"
-        layout="fill"
-        objectFit="cover"
-        className="z-0"
-        priority
-      />
-      <div className="absolute inset-0 bg-primary/70 z-10" />
+    <section id="home" className="relative w-full py-24 md:py-32 flex items-center justify-center text-foreground overflow-hidden">
+       <div className="absolute top-0 -left-1/4 w-full h-full bg-gradient-to-r from-primary/30 to-accent/30 -z-10 blur-3xl" />
+
       <motion.div 
-        className="relative z-20 text-center container px-4"
+        className="relative z-10 text-center container px-4"
         variants={containerVariants}
         initial="hidden"
         animate="visible"
       >
         <motion.h1 
-          className="font-headline text-4xl md:text-6xl font-bold tracking-tight"
+          className="font-headline text-5xl md:text-7xl font-bold tracking-tighter"
           variants={itemVariants}
         >
-          Who We Are
+          Redefining Surgical Precision
         </motion.h1>
         <motion.p 
-          className="mt-4 max-w-3xl mx-auto text-lg md:text-xl text-primary-foreground/90"
+          className="mt-6 max-w-3xl mx-auto text-lg md:text-xl text-muted-foreground"
           variants={itemVariants}
         >
-          We design cutting-edge UHD endoscopes and the advanced Plasma EDGE™ system to redefine precision in minimally invasive surgery.
+          We design cutting-edge UHD endoscopes and the advanced Plasma EDGE™ system to enhance visualization in minimally invasive surgery.
         </motion.p>
         <motion.div 
-          className="mt-8"
+          className="mt-10 flex flex-wrap justify-center gap-4"
           variants={itemVariants}
         >
-          <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
+          <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-full">
+            <Link href="/products">
+              Explore Our Products
+            </Link>
+          </Button>
+          <Button asChild size="lg" variant="outline" className="border-primary/50 text-primary hover:bg-primary/10 rounded-full">
             <Link href="#specialties">
-              See More
+              View Specialties
             </Link>
           </Button>
         </motion.div>

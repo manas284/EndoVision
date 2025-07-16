@@ -86,6 +86,20 @@ export function Header() {
     setLanguage(prev => prev === 'EN' ? 'ES' : 'EN');
   };
 
+  const NavLink = ({ href, label, isActive }: { href: string; label: string; isActive: boolean }) => (
+    <Button
+      variant={isActive ? "default" : "outline"}
+      size="sm"
+      asChild
+      className={cn(
+        "rounded-full font-semibold",
+        isActive ? "bg-primary text-primary-foreground" : "border-primary/50 text-primary hover:bg-primary/10",
+      )}
+    >
+      <Link href={href}>{label}</Link>
+    </Button>
+  );
+
   const NavContent = () => (
     <>
       {navLinks.map((link) => {
@@ -96,15 +110,17 @@ export function Header() {
         return link.isDropdown ? (
           <DropdownMenu key={link.label}>
             <DropdownMenuTrigger asChild>
-                <Button variant="ghost" className={cn(
-                  "flex items-center gap-1 text-base font-semibold focus-visible:ring-0 focus-visible:ring-offset-0",
-                  isActive ? "text-accent" : "hover:text-accent hover:underline underline-offset-4"
-                )} asChild>
-                    <Link href={link.href}>
-                        {link.label}
-                        <ChevronDown className="h-4 w-4" />
-                    </Link>
-                </Button>
+              <Button
+                variant={isActive ? "default" : "outline"}
+                size="sm"
+                className={cn(
+                  "rounded-full font-semibold flex items-center gap-1",
+                   isActive ? "bg-primary text-primary-foreground" : "border-primary/50 text-primary hover:bg-primary/10",
+                )}
+              >
+                {link.label}
+                <ChevronDown className="h-4 w-4" />
+              </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent>
               {link.items?.map(item => (
@@ -115,28 +131,23 @@ export function Header() {
             </DropdownMenuContent>
           </DropdownMenu>
         ) : (
-          <Button key={link.label} variant="ghost" asChild className={cn(
-            "text-base font-semibold focus-visible:ring-0 focus-visible:ring-offset-0",
-             isActive ? "text-accent" : "hover:text-accent hover:underline underline-offset-4"
-            )}>
-            <Link href={link.href}>{link.label}</Link>
-          </Button>
+          <NavLink key={link.label} href={link.href} label={link.label} isActive={isActive} />
         )}
       )}
     </>
   );
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border/20 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-16 items-center justify-between">
+    <header className="sticky top-0 z-50 w-full bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+      <div className="container flex h-20 items-center justify-between">
         <Logo />
 
         <nav className="hidden md:flex items-center gap-2">
           <NavContent />
         </nav>
         
-        <div className="flex items-center gap-2">
-          <Button variant="ghost" onClick={toggleLanguage} className="gap-2">
+        <div className="flex items-center gap-1">
+          <Button variant="ghost" onClick={toggleLanguage} className="gap-2 font-semibold">
             <Globe className="h-5 w-5"/>
             <span>{language}</span>
           </Button>
