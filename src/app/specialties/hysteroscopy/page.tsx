@@ -5,7 +5,7 @@ import { SpecialtyOverview } from '@/components/sections/specialties/SpecialtyOv
 import { SpecialtyFeatures } from '@/components/sections/specialties/SpecialtyFeatures';
 import { ProductEvidence } from '@/components/sections/products/ProductEvidence';
 import { ProductCTA } from '@/components/sections/products/ProductCTA';
-import { ProductFAQ } from '@/components/sections/products/ProductFAQ';
+import { HysteroscopyFAQ } from '@/components/sections/specialties/HysteroscopyFAQ';
 import { Camera, TestTubeDiagonal, Hand } from 'lucide-react';
 
 const hysteroscopyData = {
@@ -52,7 +52,7 @@ export default function HysteroscopyPage() {
             features={hysteroscopyData.features}
         />
         <ProductEvidence />
-        <ProductFAQ />
+        <HysteroscopyFAQ />
         <ProductCTA />
       </main>
       <Footer />
