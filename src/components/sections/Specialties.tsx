@@ -25,8 +25,8 @@ const specialties = [
     title: "Urology",
     description: "Innovative devices for urinary tract and bladder procedures.",
     href: "/specialties/urology",
-    imageUrl: "https://placehold.co/600x800.png",
-    imageHint: "urology equipment"
+    imageUrl: "https://storage.googleapis.com/project-1107279361797.appspot.com/8301ec9a-6c17-48f0-b054-99859f77f0a6.png",
+    imageHint: "urology instruments"
   },
 ];
 
@@ -41,7 +41,7 @@ export function Specialties() {
         id="specialties" className="py-16 md:py-24 bg-background">
       <div className="container">
         <motion.div className="text-center" variants={itemVariants}>
-          <h2 className="font-headline text-3xl md:text-4xl font-bold">Specialties</h2>
+          <h2 className="font-headline text-3xl md:text-4xl font-bold">Our Specialties</h2>
            <p className="mt-4 max-w-2xl mx-auto text-muted-foreground">
             We provide cutting-edge endoscopic technology across key surgical fields to enhance visualization, improve outcomes, and support surgeons.
           </p>

@@ -11,8 +11,8 @@ import { Droplets, Zap, Microscope } from 'lucide-react';
 const urologyData = {
   title: "Urology",
   subtitle: "Precision instruments for comprehensive urological care, from diagnostics to advanced surgical interventions.",
-  imageUrl: "https://placehold.co/1920x1080.png",
-  imageHint: "urology surgery",
+  imageUrl: "https://storage.googleapis.com/project-1107279361797.appspot.com/8301ec9a-6c17-48f0-b054-99859f77f0a6.png",
+  imageHint: "urology instruments",
   overview: {
     title: "Precision in Urological Procedures",
     description: "EndoVision's urology portfolio is built to meet the rigorous demands of procedures like cystoscopy, ureteroscopy, and resections. We combine excellent optics with durable, semi-rigid designs and efficient working channels to provide urologists with the tools they need for accurate diagnosis and effective treatment.",
