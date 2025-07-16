@@ -28,7 +28,7 @@ const Logo = () => (
 const navLinks = [
   { href: '/', label: 'Home' },
   { href: '/about', label: 'About' },
-  { href: '/#products', label: 'Products' },
+  { href: '/products', label: 'Products' },
   { 
     label: 'Specialties', 
     isDropdown: true,
