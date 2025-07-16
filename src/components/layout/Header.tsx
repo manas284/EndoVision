@@ -93,7 +93,7 @@ export function Header() {
       asChild
       className={cn(
         "rounded-full font-semibold",
-        isActive ? "bg-primary text-primary-foreground" : "border-primary/50 text-primary hover:bg-primary/10",
+        isActive ? "bg-primary text-primary-foreground" : "border-primary/50 text-primary hover:bg-primary/10 hover:text-primary-foreground",
       )}
     >
       <Link href={href}>{label}</Link>
@@ -115,7 +115,7 @@ export function Header() {
                 size="sm"
                 className={cn(
                   "rounded-full font-semibold flex items-center gap-1",
-                   isActive ? "bg-primary text-primary-foreground" : "border-primary/50 text-primary hover:bg-primary/10",
+                   isActive ? "bg-primary text-primary-foreground" : "border-primary/50 text-primary hover:bg-primary/10 hover:text-primary-foreground",
                 )}
               >
                 {link.label}
