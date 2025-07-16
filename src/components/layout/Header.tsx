@@ -88,7 +88,7 @@ export function Header() {
         link.isDropdown ? (
           <DropdownMenu key={link.label}>
             <DropdownMenuTrigger asChild>
-                <Button variant="ghost" className="flex items-center gap-1 text-base hover:bg-transparent hover:text-primary hover:underline underline-offset-4 focus-visible:ring-0 focus-visible:ring-offset-0" asChild>
+                <Button variant="ghost" className="flex items-center gap-1 text-base hover:bg-transparent hover:text-accent hover:underline underline-offset-4 focus-visible:ring-0 focus-visible:ring-offset-0" asChild>
                     <Link href={link.href}>
                         {link.label}
                         <ChevronDown className="h-4 w-4" />
@@ -104,7 +104,7 @@ export function Header() {
             </DropdownMenuContent>
           </DropdownMenu>
         ) : (
-          <Button key={link.label} variant="ghost" asChild className="text-base hover:bg-transparent hover:text-primary hover:underline underline-offset-4 focus-visible:ring-0 focus-visible:ring-offset-0">
+          <Button key={link.label} variant="ghost" asChild className="text-base hover:bg-transparent hover:text-accent hover:underline underline-offset-4 focus-visible:ring-0 focus-visible:ring-offset-0">
             <Link href={link.href}>{link.label}</Link>
           </Button>
         )
