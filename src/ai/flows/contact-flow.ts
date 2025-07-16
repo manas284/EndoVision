@@ -12,7 +12,7 @@ import type {
 import { Resend } from 'resend';
 import { ContactFormEmail } from '@/components/emails/ContactFormEmail';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+const resend = process.env.RESEND_API_KEY ? new Resend(process.env.RESEND_API_KEY) : null;
 const TO_EMAIL = 'manastiwari625@gmail.com';
 const FROM_EMAIL = 'onboarding@resend.dev'; // Resend requires a verified domain or this default for free tier
 
@@ -21,12 +21,12 @@ export async function sendContactMessage(
 ): Promise<SendContactMessageOutput> {
   console.log('Received contact form submission:', input);
   
-  if (!process.env.RESEND_API_KEY) {
+  if (!resend) {
     console.error('RESEND_API_KEY is not set. Email not sent.');
     // In a real app, you might want to fall back to a database save or other notification
     // For this example, we'll return a success message as if it worked to not break the UI.
     return {
-      confirmation: `Thank you, ${input.name}. We have received your message and will get back to you shortly.`,
+      confirmation: `Thank you, ${input.name}. We have received your message and will get back to you shortly. (Email not sent due to missing configuration)`,
     };
   }
 
