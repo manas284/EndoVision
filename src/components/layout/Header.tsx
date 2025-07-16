@@ -16,11 +16,9 @@ const Logo = () => (
     <Link href="/" className="flex items-center gap-2">
       <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-8 w-8 text-primary">
         <circle cx="12" cy="12" r="10" />
-        <circle cx="12" cy="12" r="2" />
-        <line x1="12" y1="8" x2="12" y2="4" />
-        <line x1="12" y1="20" x2="12" y2="16" />
-        <line x1="8" y1="12" x2="4" y2="12" />
-        <line x1="20" y1="12" x2="16" y2="12" />
+        <path d="M12 2a10 10 0 0 0-3.91 19.82" />
+        <path d="M12 22a10 10 0 0 0 3.91-19.82" />
+        <ellipse cx="12" cy="12" rx="2.5" ry="5" />
       </svg>
       <span className="font-headline text-2xl font-bold text-primary">EndoVision</span>
     </Link>
@@ -28,20 +26,20 @@ const Logo = () => (
 
 
 const navLinks = [
-  { href: '#home', label: 'Home' },
-  { href: '#about', label: 'About' },
-  { href: '#products', label: 'Products' },
+  { href: '/', label: 'Home' },
+  { href: '/about', label: 'About' },
+  { href: '/#products', label: 'Products' },
   { 
     label: 'Specialties', 
     isDropdown: true,
     items: [
-      { href: '#specialties', label: 'Arthroscopy' },
-      { href: '#specialties', label: 'Hysteroscopy' },
-      { href: '#specialties', label: 'Urology' },
+      { href: '/#specialties', label: 'Arthroscopy' },
+      { href: '/#specialties', label: 'Hysteroscopy' },
+      { href: '/#specialties', label: 'Urology' },
     ]
   },
-  { href: '#catalogs', label: 'Catalogs' },
-  { href: '#contact', label: 'Contact' },
+  { href: '/#catalogs', label: 'Catalogs' },
+  { href: '/#contact', label: 'Contact' },
 ];
 
 export function Header() {
