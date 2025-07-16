@@ -11,7 +11,7 @@ import { Droplets, Zap, Microscope } from 'lucide-react';
 const urologyData = {
   title: "Urology",
   subtitle: "Precision instruments for comprehensive urological care, from diagnostics to advanced surgical interventions.",
-  imageUrl: "https://storage.googleapis.com/project-1107279361797.appspot.com/8301ec9a-6c17-48f0-b054-99859f77f0a6.png",
+  imageUrl: "https://storage.googleapis.com/project-1107279361797.appspot.com/3931bb48-d345-42a1-8230-2495d0383792.png",
   imageHint: "urology instruments",
   overview: {
     title: "Precision in Urological Procedures",
