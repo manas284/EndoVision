@@ -3,6 +3,12 @@ import { Footer } from '@/components/layout/Footer';
 import { SpecialtiesHero } from '@/components/sections/specialties/SpecialtiesHero';
 import { SpecialtiesGrid } from '@/components/sections/specialties/SpecialtiesGrid';
 import { AboutCTA } from '@/components/sections/about/AboutCTA';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Surgical Specialties | Arthroscopy, Hysteroscopy, Urology - EndoVision',
+  description: 'EndoVision provides specialized endoscopic technology for arthroscopy, hysteroscopy, and urology. Discover our solutions for superior surgical outcomes.',
+};
 
 
 export default function SpecialtiesPage() {

@@ -8,6 +8,12 @@ import { MissionVision } from '@/components/sections/about/MissionVision';
 import { Certifications } from '@/components/sections/about/Certifications';
 import { Team } from '@/components/sections/about/Team';
 import { AboutCTA } from '@/components/sections/about/AboutCTA';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'About EndoVision | Pioneering Surgical Technology',
+  description: 'Learn about EndoVision, our mission to advance minimally invasive surgery through innovation in optics, and our commitment to quality with FDA, CE, and ISO certifications.',
+};
 
 export default function AboutPage() {
   return (

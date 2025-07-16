@@ -21,7 +21,7 @@ export function Hero() {
         id="home" className="relative w-full h-[80vh] min-h-[500px] max-h-[700px] flex items-center justify-center text-white">
       <Image
         src="https://placehold.co/1920x1080.png"
-        alt="Surgical suite"
+        alt="EndoVision surgical suite with advanced endoscopic equipment"
         data-ai-hint="surgical suite"
         layout="fill"
         objectFit="cover"
