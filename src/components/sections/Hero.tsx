@@ -24,7 +24,7 @@ export function Hero() {
         </p>
         <div className="mt-8">
           <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
-            <Link href="#about">
+            <Link href="#specialties">
               See More
             </Link>
           </Button>
