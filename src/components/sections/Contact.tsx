@@ -16,7 +16,6 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
-import { Card, CardContent } from "@/components/ui/card";
 import { Phone, Mail, MapPin } from "lucide-react";
 import { useScrollAnimation } from '@/hooks/use-scroll-animation';
 import { motion } from 'framer-motion';
@@ -66,10 +65,40 @@ export function Contact() {
             Have a question or need support? Reach out to our team.
           </p>
         </motion.div>
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-8 lg:gap-12 mt-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mt-12 items-start">
+            <motion.div className="space-y-8" variants={itemVariants}>
+                <div className="flex items-start gap-4">
+                  <div className="bg-primary/10 p-3 rounded-full">
+                    <Mail className="h-6 w-6 text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="font-headline text-xl font-semibold">Email</h3>
+                    <p className="text-muted-foreground">Our support team is available 24/7.</p>
+                    <a href="mailto:contact@endovision.com" className="text-primary font-medium hover:underline">contact@endovision.com</a>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                    <div className="bg-primary/10 p-3 rounded-full">
+                        <Phone className="h-6 w-6 text-primary" />
+                    </div>
+                  <div>
+                    <h3 className="font-headline text-xl font-semibold">Phone</h3>
+                    <p className="text-muted-foreground">Speak with our specialists directly.</p>
+                    <a href="tel:+1234567890" className="text-primary font-medium hover:underline">+1 (234) 567-890</a>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                    <div className="bg-primary/10 p-3 rounded-full">
+                        <MapPin className="h-6 w-6 text-primary" />
+                    </div>
+                  <div>
+                    <h3 className="font-headline text-xl font-semibold">Office</h3>
+                    <p className="text-muted-foreground">123 Innovation Drive<br/>Medical Tech Park, Suite 456<br/>Boston, MA 02110, USA</p>
+                  </div>
+                </div>
+            </motion.div>
           <motion.div variants={itemVariants}>
-            <Card className="md:col-span-3">
-              <CardContent className="p-6">
+            <div className="bg-card p-6 md:p-8 rounded-lg shadow-lg">
                 <Form {...form}>
                   <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
                     <FormField
@@ -141,33 +170,6 @@ export function Contact() {
                     <Button type="submit" className="w-full bg-accent text-accent-foreground hover:bg-accent/90" size="lg">Send Message</Button>
                   </form>
                 </Form>
-              </CardContent>
-            </Card>
-          </motion.div>
-          <motion.div className="md:col-span-2 space-y-6" variants={itemVariants}>
-            <h3 className="font-headline text-2xl font-semibold">Our Information</h3>
-            <div className="space-y-4 text-muted-foreground">
-              <div className="flex items-start gap-4">
-                <Mail className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
-                <div>
-                  <h4 className="font-semibold text-foreground">Email</h4>
-                  <a href="mailto:contact@endovision.com" className="hover:text-primary">contact@endovision.com</a>
-                </div>
-              </div>
-              <div className="flex items-start gap-4">
-                <Phone className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
-                <div>
-                  <h4 className="font-semibold text-foreground">Phone</h4>
-                  <a href="tel:+1234567890" className="hover:text-primary">+1 (234) 567-890</a>
-                </div>
-              </div>
-              <div className="flex items-start gap-4">
-                <MapPin className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
-                <div>
-                  <h4 className="font-semibold text-foreground">Address</h4>
-                  <p>123 Innovation Drive<br/>Medical Tech Park, Suite 456<br/>Boston, MA 02110, USA</p>
-                </div>
-              </div>
             </div>
           </motion.div>
         </div>
