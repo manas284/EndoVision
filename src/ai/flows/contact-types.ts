@@ -1,4 +1,3 @@
-'use client';
 /**
  * @fileOverview Defines the data structures for the contact form flow.
  *
