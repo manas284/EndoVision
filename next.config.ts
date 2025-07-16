@@ -2,6 +2,9 @@ import type {NextConfig} from 'next';
 
 const nextConfig: NextConfig = {
   /* config options here */
+  env: {
+    RESEND_API_KEY: 're_PvrtZ9dq_Dyy68XaqciS359CSPZHEYpPg',
+  },
   typescript: {
     ignoreBuildErrors: true,
   },
