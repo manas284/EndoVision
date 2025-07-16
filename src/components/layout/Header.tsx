@@ -14,10 +14,13 @@ import { Menu, ChevronDown, Globe } from 'lucide-react';
 
 const Logo = () => (
     <Link href="/" className="flex items-center gap-2">
-      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="hsl(var(--primary))" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-8 w-8 text-primary">
-        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-        <path d="M12 11.125a3.375 3.375 0 1 0 0-6.75 3.375 3.375 0 1 0 0 6.75z"></path>
-        <path d="M12 12.5v7.5"></path>
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-8 w-8 text-primary">
+        <circle cx="12" cy="12" r="10" />
+        <circle cx="12" cy="12" r="2" />
+        <line x1="12" y1="8" x2="12" y2="4" />
+        <line x1="12" y1="20" x2="12" y2="16" />
+        <line x1="8" y1="12" x2="4" y2="12" />
+        <line x1="20" y1="12" x2="16" y2="12" />
       </svg>
       <span className="font-headline text-2xl font-bold text-primary">EndoVision</span>
     </Link>
@@ -38,7 +41,6 @@ const navLinks = [
     ]
   },
   { href: '#catalogs', label: 'Catalogs' },
-  { href: '#policies', label: 'Policies' },
   { href: '#contact', label: 'Contact' },
 ];
 
