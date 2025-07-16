@@ -84,7 +84,7 @@ export function Contact() {
                   <div>
                     <h3 className="font-headline text-xl font-semibold">Phone</h3>
                     <p className="text-muted-foreground">Speak with our specialists directly.</p>
-                    <a href="tel:+1234567890" className="text-primary font-medium hover:underline">+1 (234) 567-890</a>
+                    <a href="tel:+917389073923" className="text-primary font-medium hover:underline">+91 7389073923</a>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
@@ -93,7 +93,7 @@ export function Contact() {
                     </div>
                   <div>
                     <h3 className="font-headline text-xl font-semibold">Office</h3>
-                    <p className="text-muted-foreground">123 Innovation Drive<br/>Medical Tech Park, Suite 456<br/>Boston, MA 02110, USA</p>
+                    <p className="text-muted-foreground">123 Innovation Drive<br/>Navi Mumbai, India</p>
                   </div>
                 </div>
             </motion.div>
