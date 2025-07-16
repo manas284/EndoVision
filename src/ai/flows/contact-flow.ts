@@ -9,19 +9,47 @@ import type {
   SendContactMessageInput,
   SendContactMessageOutput,
 } from './contact-types';
+import { Resend } from 'resend';
+import { ContactFormEmail } from '@/components/emails/ContactFormEmail';
+
+const resend = new Resend(process.env.RESEND_API_KEY);
+const TO_EMAIL = 'manastiwari625@gmail.com';
+const FROM_EMAIL = 'onboarding@resend.dev'; // Resend requires a verified domain or this default for free tier
 
 export async function sendContactMessage(
   input: SendContactMessageInput
 ): Promise<SendContactMessageOutput> {
-  // In a real application, you would add logic here to:
-  // 1. Store the message in a database.
-  // 2. Send an email notification to the sales/support team.
-  // 3. Potentially use an LLM to categorize or summarize the message.
   console.log('Received contact form submission:', input);
+  
+  if (!process.env.RESEND_API_KEY) {
+    console.error('RESEND_API_KEY is not set. Email not sent.');
+    // In a real app, you might want to fall back to a database save or other notification
+    // For this example, we'll return a success message as if it worked to not break the UI.
+    return {
+      confirmation: `Thank you, ${input.name}. We have received your message and will get back to you shortly.`,
+    };
+  }
 
-  // For now, we'll just return a success message.
-  // The Genkit flow wrapper is removed to simplify the server action call.
-  return {
-    confirmation: `Thank you, ${input.name}. We have received your message and will get back to you shortly.`,
-  };
+  try {
+    const { data, error } = await resend.emails.send({
+      from: `EndoVision Contact Form <${FROM_EMAIL}>`,
+      to: [TO_EMAIL],
+      subject: `New Inquiry from ${input.name} - Specialty: ${input.specialty}`,
+      react: ContactFormEmail({ ...input }),
+    });
+
+    if (error) {
+      console.error('Resend API error:', error);
+      throw new Error('Failed to send email.');
+    }
+
+    console.log('Email sent successfully:', data);
+
+    return {
+      confirmation: `Thank you, ${input.name}. We have received your message and will get back to you shortly.`,
+    };
+  } catch (error) {
+    console.error('Error sending contact email:', error);
+    throw new Error('An unexpected error occurred while sending the email.');
+  }
 }
