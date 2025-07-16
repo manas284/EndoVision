@@ -11,7 +11,7 @@ import { Aperture, Shield, Droplets } from 'lucide-react';
 const arthroscopyData = {
   title: "Arthroscopy",
   subtitle: "Innovative, minimally invasive solutions for joint procedures, with unmatched clarity and surgeon control.",
-  imageUrl: "https://placehold.co/1920x1080.png",
+  imageUrl: "https://kenmedsurgical.com/cdn/shop/files/7a2b603e-72d0-5ac5-9263-11d482ed072f_533x.jpg?v=1726499072",
   imageHint: "arthroscopic surgery",
   overview: {
     title: "Why EndoVision for Arthroscopy?",
