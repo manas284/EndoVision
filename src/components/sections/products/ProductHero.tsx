@@ -6,24 +6,16 @@ import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { Badge } from '@/components/ui/badge';
-import { CheckCircle, Camera, View, Scan } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import type { Product } from '@/lib/products';
 
-const galleryImages = [
-  { src: "https://placehold.co/1200x800.png", alt: "UHD Endoscope 4K primary view", hint: "endoscopic device" },
-  { src: "https://placehold.co/800x600.png", alt: "UHD Endoscope 4K in use", hint: "endoscope surgery" },
-  { src: "https://placehold.co/800x600.png", alt: "UHD Endoscope 4K close-up", hint: "endoscope closeup" },
-  { src: "https://placehold.co/800x600.png", alt: "UHD Endoscope 4K with accessories", hint: "medical equipment" },
-];
+interface ProductHeroProps {
+  product: Product;
+}
 
-const keyFeatures = [
-  { icon: <Camera className="h-6 w-6 text-primary" />, text: "Native 4K UHD Sensor" },
-  { icon: <View className="h-6 w-6 text-primary" />, text: "Wide Color Gamut" },
-  { icon: <Scan className="h-6 w-6 text-primary" />, text: "Edge-to-Edge Clarity" },
-];
-
-export function ProductHero() {
-  const [activeImage, setActiveImage] = useState(galleryImages[0]);
+export function ProductHero({ product }: ProductHeroProps) {
+  const [activeImage, setActiveImage] = useState(product.gallery[0]);
 
   return (
     <section id="product-hero" className="py-12 md:py-16 bg-secondary">
@@ -38,12 +30,12 @@ export function ProductHero() {
                 data-ai-hint={activeImage.hint}
                 width={1200}
                 height={800}
-                className="w-full h-full object-cover transition-opacity duration-300"
+                className="w-full h-full object-cover transition-opacity duration-300 aspect-[4/3]"
                 priority
               />
             </div>
             <div className="grid grid-cols-4 gap-2">
-              {galleryImages.map((image, index) => (
+              {product.gallery.map((image, index) => (
                 <button
                   key={index}
                   onClick={() => setActiveImage(image)}
@@ -58,7 +50,7 @@ export function ProductHero() {
                     data-ai-hint={image.hint}
                     width={200}
                     height={150}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover aspect-[4/3]"
                   />
                 </button>
               ))}
@@ -67,19 +59,16 @@ export function ProductHero() {
 
           {/* Product Details */}
           <div className="space-y-6">
-            <div className="flex gap-2">
-                <Badge variant="outline">FDA Cleared</Badge>
-                <Badge variant="outline">CE Marked</Badge>
-            </div>
+            <Badge variant="outline">{product.status}</Badge>
             <h1 className="font-headline text-4xl md:text-5xl font-bold text-primary">
-              UHD Endoscope 4K
+              {product.name}
             </h1>
             <p className="text-lg text-muted-foreground">
-              Experience unparalleled clarity and precision with our flagship 4K UHD Endoscope, designed for the most demanding minimally invasive procedures.
+              {product.usp}
             </p>
 
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-4 border-t">
-              {keyFeatures.map(feature => (
+              {product.glanceFeatures.map(feature => (
                 <div key={feature.text} className="flex items-center gap-3">
                   {feature.icon}
                   <span className="text-sm font-medium">{feature.text}</span>

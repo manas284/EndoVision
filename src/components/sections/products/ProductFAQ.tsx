@@ -1,25 +1,15 @@
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
-const faqs = [
-  {
-    question: "What is the warranty on the UHD Endoscope 4K?",
-    answer: "The UHD Endoscope 4K comes with a comprehensive two-year manufacturer's warranty covering defects in materials and workmanship under normal use.",
-  },
-  {
-    question: "Is this endoscope compatible with our existing camera system?",
-    answer: "Yes, the device uses a standard C-mount optical interface, making it compatible with most major brands of camera control units (CCUs) and light sources. Please contact us to confirm compatibility with your specific system.",
-  },
-  {
-    question: "What are the approved sterilization methods?",
-    answer: "The UHD Endoscope 4K is fully autoclavable. It has been validated for steam sterilization cycles. It is also compatible with STERRAD and V-PRO low-temperature sterilization systems.",
-  },
-  {
-    question: "Can we schedule a demo of the product?",
-    answer: "Absolutely. We offer in-person and virtual demonstrations. Please use the 'Request a Quote' button or contact our sales team to schedule a session with a product specialist.",
-  },
-];
+interface FAQ {
+    question: string;
+    answer: string;
+}
 
-export function ProductFAQ() {
+interface ProductFAQProps {
+    faqs: FAQ[];
+}
+
+export function ProductFAQ({ faqs }: ProductFAQProps) {
   return (
     <div className="max-w-4xl mx-auto py-8">
         <Accordion type="single" collapsible className="w-full space-y-4">

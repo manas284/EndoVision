@@ -13,7 +13,7 @@ export function AboutCTA() {
         </p>
         <div className="mt-8 flex justify-center gap-4">
           <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">
-            <Link href="/#catalogs">Explore Products</Link>
+            <Link href="/products">Explore Products</Link>
           </Button>
           <Button asChild size="lg" variant="outline">
             <Link href="/#contact">Contact Us</Link>

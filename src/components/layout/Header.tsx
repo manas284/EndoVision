@@ -93,7 +93,8 @@ export function Header() {
       asChild
       className={cn(
         "rounded-full font-semibold",
-        isActive ? "bg-primary text-primary-foreground" : "border-primary/50 text-primary hover:bg-primary/10 hover:text-primary-foreground",
+        isActive ? "bg-primary text-primary-foreground" : "border-primary/50 text-primary hover:bg-primary/10 hover:text-accent-foreground",
+        !isActive && "dark:text-primary-foreground dark:border-primary-foreground/50 dark:hover:bg-primary-foreground/10 dark:hover:text-primary-foreground"
       )}
     >
       <Link href={href}>{label}</Link>
@@ -115,7 +116,8 @@ export function Header() {
                 size="sm"
                 className={cn(
                   "rounded-full font-semibold flex items-center gap-1",
-                   isActive ? "bg-primary text-primary-foreground" : "border-primary/50 text-primary hover:bg-primary/10 hover:text-primary-foreground",
+                   isActive ? "bg-primary text-primary-foreground" : "border-primary/50 text-primary hover:bg-primary/10 hover:text-accent-foreground",
+                    !isActive && "dark:text-primary-foreground dark:border-primary-foreground/50 dark:hover:bg-primary-foreground/10 dark:hover:text-primary-foreground"
                 )}
               >
                 {link.label}
