@@ -11,7 +11,7 @@ const specialties = [
     title: "Arthroscopy",
     description: "Advanced arthroscopic tools for joint examination and surgery.",
     href: "/specialties/arthroscopy",
-    imageUrl: "https://placehold.co/600x800.png",
+    imageUrl: "https://kenmedsurgical.com/cdn/shop/files/7a2b603e-72d0-5ac5-9263-11d482ed072f_533x.jpg?v=1726499072",
     imageHint: "arthroscopy surgery"
   },
   {
