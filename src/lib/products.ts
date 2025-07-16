@@ -233,7 +233,7 @@ export const products: Product[] = [
     },
     features: [
       { icon: <Waves className="h-10 w-10 text-primary" />, title: "Maximized Flow Channels", description: "Large-bore design facilitates rapid fluid exchange and debris removal." },
-      { icon: "-", title: "Atraumatic Tip Design", description: "Tapered and polished tip for smooth insertion and reduced tissue trauma." },
+      { icon: <TestTubeDiagonal className="h-10 w-10 text-primary" />, title: "Atraumatic Tip Design", description: "Tapered and polished tip for smooth insertion and reduced tissue trauma." },
       { icon: <View className="h-10 w-10 text-primary" />, title: "Proprietary Anti-Fog", description: "A permanent, bonded coating prevents fogging even during long cases." },
       { icon: <Shield className="h-10 w-10 text-primary" />, title: "Medical-Grade Steel", description: "Constructed from corrosion-resistant steel to withstand rigorous reprocessing." },
     ],
