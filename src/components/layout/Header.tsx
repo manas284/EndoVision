@@ -39,7 +39,7 @@ const navLinks = [
       { href: '/specialties/urology', label: 'Urology' },
     ]
   },
-  { href: '/blog', label: 'Blog' },
+  { href: '/careers', label: 'Careers' },
   { href: '/#contact', label: 'Contact' },
 ];
 
