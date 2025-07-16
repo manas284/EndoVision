@@ -18,7 +18,7 @@ const specialties = [
     title: "Hysteroscopy",
     description: "Precise instruments for uterine cavity inspection and intervention.",
     href: "/specialties/hysteroscopy",
-    imageUrl: "https://placehold.co/600x800.png",
+    imageUrl: "https://www.datocms-assets.com/136621/1737729829-desk_banner_histeroscopia.png",
     imageHint: "hysteroscopy procedure"
   },
   {

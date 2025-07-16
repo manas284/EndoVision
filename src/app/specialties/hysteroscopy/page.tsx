@@ -11,8 +11,8 @@ import { Camera, TestTubeDiagonal, Hand } from 'lucide-react';
 const hysteroscopyData = {
   title: "Hysteroscopy",
   subtitle: "High-definition solutions for gynecological examinations and surgeries, designed for patient comfort and diagnostic accuracy.",
-  imageUrl: "https://placehold.co/1920x1080.png",
-  imageHint: "medical equipment",
+  imageUrl: "https://www.datocms-assets.com/136621/1737729829-desk_banner_histeroscopia.png",
+  imageHint: "hysteroscopy equipment",
   overview: {
     title: "Advancing Gynecological Care",
     description: "Our hysteroscopy line offers exceptional image quality and a slim-profile design to minimize patient discomfort. From diagnostic 'see-and-treat' procedures to complex operative hysteroscopy, EndoVision provides reliable, high-performance instruments that empower gynecologists to deliver the best possible care.",
