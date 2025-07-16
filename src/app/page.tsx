@@ -1,3 +1,25 @@
+import { Header } from '@/components/layout/Header';
+import { Footer } from '@/components/layout/Footer';
+import { Hero } from '@/components/sections/Hero';
+import { Specialties } from '@/components/sections/Specialties';
+import { Features } from '@/components/sections/Features';
+import { Policies } from '@/components/sections/Policies';
+import { Contact } from '@/components/sections/Contact';
+import { Catalogs } from '@/components/sections/Catalogs';
+
 export default function Home() {
-  return <></>;
+  return (
+    <div className="flex flex-col min-h-screen bg-background">
+      <Header />
+      <main className="flex-grow">
+        <Hero />
+        <Specialties />
+        <Features />
+        <Catalogs />
+        <Policies />
+        <Contact />
+      </main>
+      <Footer />
+    </div>
+  );
 }

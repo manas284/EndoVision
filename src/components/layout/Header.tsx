@@ -1,0 +1,117 @@
+"use client";
+
+import { useState } from 'react';
+import Link from 'next/link';
+import { Button } from '@/components/ui/button';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from '@/components/ui/dropdown-menu';
+import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import { Menu, ChevronDown, Globe } from 'lucide-react';
+
+const Logo = () => (
+    <Link href="/" className="flex items-center gap-2">
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="hsl(var(--primary))" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-8 w-8 text-primary">
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+        <path d="M12 11.125a3.375 3.375 0 1 0 0-6.75 3.375 3.375 0 1 0 0 6.75z"></path>
+        <path d="M12 12.5v7.5"></path>
+      </svg>
+      <span className="font-headline text-2xl font-bold text-primary">EndoVision</span>
+    </Link>
+);
+
+
+const navLinks = [
+  { href: '#home', label: 'Home' },
+  { href: '#about', label: 'About' },
+  { href: '#products', label: 'Products' },
+  { 
+    label: 'Specialties', 
+    isDropdown: true,
+    items: [
+      { href: '#specialties', label: 'Arthroscopy' },
+      { href: '#specialties', label: 'Hysteroscopy' },
+      { href: '#specialties', label: 'Urology' },
+    ]
+  },
+  { href: '#catalogs', label: 'Catalogs' },
+  { href: '#policies', label: 'Policies' },
+  { href: '#contact', label: 'Contact' },
+];
+
+export function Header() {
+  const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [language, setLanguage] = useState<'EN' | 'ES'>('EN');
+
+  const toggleLanguage = () => {
+    setLanguage(prev => prev === 'EN' ? 'ES' : 'EN');
+  };
+
+  const NavContent = () => (
+    <>
+      {navLinks.map((link) => 
+        link.isDropdown ? (
+          <DropdownMenu key={link.label}>
+            <DropdownMenuTrigger asChild>
+              <Button variant="ghost" className="flex items-center gap-1 text-base">
+                {link.label}
+                <ChevronDown className="h-4 w-4" />
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent>
+              {link.items?.map(item => (
+                <DropdownMenuItem key={item.label} asChild>
+                  <Link href={item.href}>{item.label}</Link>
+                </DropdownMenuItem>
+              ))}
+            </DropdownMenuContent>
+          </DropdownMenu>
+        ) : (
+          <Button key={link.label} variant="ghost" asChild className="text-base">
+            <Link href={link.href}>{link.label}</Link>
+          </Button>
+        )
+      )}
+    </>
+  );
+
+  return (
+    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+      <div className="container flex h-20 items-center justify-between">
+        <Logo />
+
+        <nav className="hidden md:flex items-center gap-2">
+          <NavContent />
+        </nav>
+        
+        <div className="flex items-center gap-4">
+          <Button variant="ghost" onClick={toggleLanguage} className="gap-2">
+            <Globe className="h-5 w-5"/>
+            <span>{language}</span>
+          </Button>
+
+          <div className="md:hidden">
+            <Sheet open={isMobileMenuOpen} onOpenChange={setMobileMenuOpen}>
+              <SheetTrigger asChild>
+                <Button variant="outline" size="icon">
+                  <Menu className="h-6 w-6" />
+                </Button>
+              </SheetTrigger>
+              <SheetContent side="right">
+                <div className="flex flex-col items-start gap-4 p-4">
+                  <Logo />
+                  <nav className="flex flex-col gap-4 mt-8 w-full">
+                    <NavContent />
+                  </nav>
+                </div>
+              </SheetContent>
+            </Sheet>
+          </div>
+        </div>
+      </div>
+    </header>
+  );
+}

@@ -1,0 +1,71 @@
+'use client';
+
+import { useState } from 'react';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { getPolicySummary } from '@/app/actions';
+import { Skeleton } from "@/components/ui/skeleton";
+
+const policies = [
+  {
+    title: "Warranty Policy",
+    text: "EndoVision provides a comprehensive one-year warranty on all new endoscopes and surgical instruments, covering defects in materials and workmanship under normal use and service. This warranty is effective from the date of shipment. Should a product fail to function due to such defects within this period, EndoVision will, at its discretion, repair or replace the product free of charge. This warranty does not cover damage resulting from improper handling, unauthorized repairs, accidents, or use outside of the intended surgical applications. Consumable parts and accessories are excluded from this warranty. To initiate a warranty claim, please contact our customer service team with the product's serial number and a detailed description of the issue.",
+  },
+  {
+    title: "Shipping & Returns Policy",
+    text: "All orders are shipped FOB from our primary distribution center. Standard shipping is provided via trusted carriers, with expedited options available at an additional cost. For returns, products must be in their original, unopened packaging and returned within 30 days of receipt for a full refund or credit, less a 15% restocking fee. A Return Merchandise Authorization (RMA) number must be obtained from customer service prior to sending back any items. Products that have been used, sterilized, or are not in a resalable condition cannot be returned. Custom orders are final and non-returnable. EndoVision is not responsible for items lost or damaged during return shipment.",
+  },
+  {
+    title: "Compliance Policy",
+    text: "EndoVision is committed to the highest standards of quality and regulatory compliance. Our products are designed, manufactured, and distributed in accordance with the regulations set forth by the U.S. Food and Drug Administration (FDA) and are CE marked, indicating conformity with health, safety, and environmental protection standards for products sold within the European Economic Area (EEA). Our quality management system is certified under ISO 13485:2016, demonstrating our ability to provide medical devices and related services that consistently meet customer and applicable regulatory requirements. We conduct regular audits and risk assessments to ensure ongoing compliance and continuous improvement of our processes and products.",
+  }
+];
+
+export function PolicyAccordion() {
+  const [summaries, setSummaries] = useState<Record<string, string>>({});
+  const [loading, setLoading] = useState<Record<string, boolean>>({});
+
+  const handleValueChange = async (value: string) => {
+    if (!value || summaries[value] || loading[value]) {
+      return;
+    }
+
+    const policy = policies.find(p => p.title === value);
+    if (!policy) return;
+
+    setLoading(prev => ({ ...prev, [value]: true }));
+    try {
+      const result = await getPolicySummary(policy.text);
+      setSummaries(prev => ({ ...prev, [value]: result.summary }));
+    } catch (error) {
+      console.error("Failed to generate summary:", error);
+      setSummaries(prev => ({ ...prev, [value]: "An error occurred while generating the summary. Please try again later." }));
+    } finally {
+      setLoading(prev => ({ ...prev, [value]: false }));
+    }
+  };
+
+  return (
+    <Accordion type="single" collapsible className="w-full space-y-4" onValueChange={handleValueChange}>
+      {policies.map((policy) => (
+        <AccordionItem value={policy.title} key={policy.title} className="bg-card rounded-lg shadow-sm border">
+          <AccordionTrigger className="p-6 text-left font-headline hover:no-underline">
+            {policy.title}
+          </AccordionTrigger>
+          <AccordionContent className="p-6 pt-0">
+            <div className="space-y-4">
+              {loading[policy.title] && (
+                <>
+                  <Skeleton className="h-4 w-full" />
+                  <Skeleton className="h-4 w-full" />
+                  <Skeleton className="h-4 w-3/4" />
+                </>
+              )}
+              {summaries[policy.title] && <p className="text-base text-muted-foreground">{summaries[policy.title]}</p>}
+              {!loading[policy.title] && !summaries[policy.title] && <p className="text-sm text-muted-foreground">Expand to see an AI-generated summary.</p>}
+            </div>
+          </AccordionContent>
+        </AccordionItem>
+      ))}
+    </Accordion>
+  );
+}
