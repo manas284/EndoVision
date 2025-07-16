@@ -52,9 +52,6 @@ export function Footer() {
         </div>
         <div className="mt-8 pt-8 border-t border-primary-foreground/20 text-center text-sm text-primary-foreground/60">
           <p>&copy; {new Date().getFullYear()} EndoVision. All Rights Reserved.</p>
-          <p className="mt-2">
-            <Link href="#" className="hover:text-accent">Terms of Service</Link> | <Link href="#" className="hover:text-accent">Privacy Policy</Link>
-          </p>
         </div>
       </div>
     </footer>
