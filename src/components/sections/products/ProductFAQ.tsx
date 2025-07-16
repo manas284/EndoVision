@@ -6,10 +6,14 @@ interface FAQ {
 }
 
 interface ProductFAQProps {
-    faqs: FAQ[];
+    faqs?: FAQ[];
 }
 
 export function ProductFAQ({ faqs }: ProductFAQProps) {
+  if (!faqs || faqs.length === 0) {
+    return null;
+  }
+  
   return (
     <div className="max-w-4xl mx-auto py-8">
         <Accordion type="single" collapsible className="w-full space-y-4">
