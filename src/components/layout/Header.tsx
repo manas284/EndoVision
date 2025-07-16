@@ -1,7 +1,9 @@
+
 "use client";
 
 import { useState } from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { Button } from '@/components/ui/button';
 import {
   DropdownMenu,
@@ -12,6 +14,7 @@ import {
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Menu, ChevronDown, Globe, Moon, Sun, Laptop } from 'lucide-react';
 import { useTheme } from 'next-themes';
+import { cn } from '@/lib/utils';
 
 const Logo = () => (
     <Link href="/" className="flex items-center gap-2">
@@ -77,6 +80,7 @@ const navLinks = [
 export function Header() {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [language, setLanguage] = useState<'EN' | 'ES'>('EN');
+  const pathname = usePathname();
 
   const toggleLanguage = () => {
     setLanguage(prev => prev === 'EN' ? 'ES' : 'EN');
@@ -84,11 +88,18 @@ export function Header() {
 
   const NavContent = () => (
     <>
-      {navLinks.map((link) => 
-        link.isDropdown ? (
+      {navLinks.map((link) => {
+        const isActive = link.isDropdown 
+          ? pathname.startsWith(link.href)
+          : pathname === link.href;
+
+        return link.isDropdown ? (
           <DropdownMenu key={link.label}>
             <DropdownMenuTrigger asChild>
-                <Button variant="ghost" className="flex items-center gap-1 text-base hover:bg-transparent hover:text-accent hover:underline underline-offset-4 focus-visible:ring-0 focus-visible:ring-offset-0" asChild>
+                <Button variant="ghost" className={cn(
+                  "flex items-center gap-1 text-base font-semibold focus-visible:ring-0 focus-visible:ring-offset-0",
+                  isActive ? "text-accent" : "hover:text-accent hover:underline underline-offset-4"
+                )} asChild>
                     <Link href={link.href}>
                         {link.label}
                         <ChevronDown className="h-4 w-4" />
@@ -104,17 +115,20 @@ export function Header() {
             </DropdownMenuContent>
           </DropdownMenu>
         ) : (
-          <Button key={link.label} variant="ghost" asChild className="text-base hover:bg-transparent hover:text-accent hover:underline underline-offset-4 focus-visible:ring-0 focus-visible:ring-offset-0">
+          <Button key={link.label} variant="ghost" asChild className={cn(
+            "text-base font-semibold focus-visible:ring-0 focus-visible:ring-offset-0",
+             isActive ? "text-accent" : "hover:text-accent hover:underline underline-offset-4"
+            )}>
             <Link href={link.href}>{link.label}</Link>
           </Button>
-        )
+        )}
       )}
     </>
   );
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-20 items-center justify-between">
+    <header className="sticky top-0 z-50 w-full border-b border-border/20 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+      <div className="container flex h-16 items-center justify-between">
         <Logo />
 
         <nav className="hidden md:flex items-center gap-2">
