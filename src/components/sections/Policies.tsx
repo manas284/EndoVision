@@ -1,3 +1,5 @@
+"use client";
+
 import { PolicyAccordion } from './PolicyAccordion';
 import { useScrollAnimation } from '@/hooks/use-scroll-animation';
 import { motion } from 'framer-motion';

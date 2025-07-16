@@ -1,3 +1,5 @@
+"use client";
+
 import { Waves, Camera, Hand } from 'lucide-react';
 import { useScrollAnimation } from '@/hooks/use-scroll-animation';
 import { motion } from 'framer-motion';

@@ -1,3 +1,5 @@
+"use client";
+
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Bone, HeartPulse, Droplets } from 'lucide-react';
 import { useScrollAnimation } from '@/hooks/use-scroll-animation';
