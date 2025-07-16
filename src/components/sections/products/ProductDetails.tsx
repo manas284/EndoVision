@@ -3,7 +3,7 @@ import { ProductSpecs } from "./ProductSpecs";
 import { ProductDocs } from "./ProductDocs";
 import { ProductFAQ } from "./ProductFAQ";
 import Image from "next/image";
-import type { Product } from "@/lib/products";
+import type { Product } from "@/lib/products.tsx";
 
 interface ProductDetailsProps {
     product: Product;

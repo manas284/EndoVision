@@ -8,7 +8,7 @@ import Link from 'next/link';
 import { Badge } from '@/components/ui/badge';
 import { CheckCircle } from 'lucide-react';
 import { cn } from '@/lib/utils';
-import type { Product } from '@/lib/products';
+import type { Product } from '@/lib/products.tsx';
 
 interface ProductHeroProps {
   product: Product;

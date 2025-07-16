@@ -1,7 +1,7 @@
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Button } from "@/components/ui/button";
 import { Download } from "lucide-react";
-import type { ProductSpec } from "@/lib/products";
+import type { ProductSpec } from "@/lib/products.tsx";
 
 interface ProductSpecsProps {
     specs: ProductSpec[];

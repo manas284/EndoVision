@@ -6,7 +6,7 @@ import { ProductEvidence } from '@/components/sections/products/ProductEvidence'
 import { ProductCTA } from '@/components/sections/products/ProductCTA';
 import type { Metadata } from 'next';
 import { Breadcrumb } from '@/components/layout/Breadcrumb';
-import { products, Product } from '@/lib/products';
+import { products, Product } from '@/lib/products.tsx';
 import { notFound } from 'next/navigation';
 
 export async function generateStaticParams() {
