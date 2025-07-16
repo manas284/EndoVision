@@ -58,17 +58,15 @@ export function Specialties() {
                   alt={specialty.title}
                   data-ai-hint={specialty.imageHint}
                   fill
-                  className="object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
+                  className="object-cover object-center transition-transform duration-500 ease-in-out group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent"></div>
-                <div className="absolute bottom-0 left-0 p-6 w-full text-white transform-gpu translate-y-2/3 group-hover:translate-y-0 transition-transform duration-500 ease-in-out">
-                  <div className="transform-gpu translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out delay-100">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+                <div className="absolute bottom-0 left-0 p-6 w-full text-white transform-gpu translate-y-1/2 group-hover:translate-y-0 transition-transform duration-500 ease-in-out">
                     <h3 className="font-headline text-2xl font-bold">{specialty.title}</h3>
                     <p className="mt-2 text-primary-foreground/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-200">{specialty.description}</p>
                     <Button variant="link" className="p-0 mt-4 text-accent opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-300">
                       Learn More &rarr;
                     </Button>
-                  </div>
                 </div>
               </Link>
             </motion.div>
