@@ -30,12 +30,13 @@ const navLinks = [
   { href: '/about', label: 'About' },
   { href: '/products', label: 'Products' },
   { 
+    href: '/specialties',
     label: 'Specialties', 
     isDropdown: true,
     items: [
-      { href: '/#specialties', label: 'Arthroscopy' },
-      { href: '/#specialties', label: 'Hysteroscopy' },
-      { href: '/#specialties', label: 'Urology' },
+      { href: '/specialties/arthroscopy', label: 'Arthroscopy' },
+      { href: '/specialties/hysteroscopy', label: 'Hysteroscopy' },
+      { href: '/specialties/urology', label: 'Urology' },
     ]
   },
   { href: '/#catalogs', label: 'Catalogs' },
@@ -56,10 +57,12 @@ export function Header() {
         link.isDropdown ? (
           <DropdownMenu key={link.label}>
             <DropdownMenuTrigger asChild>
-              <Button variant="ghost" className="flex items-center gap-1 text-base">
-                {link.label}
-                <ChevronDown className="h-4 w-4" />
-              </Button>
+                <Button variant="ghost" className="flex items-center gap-1 text-base" asChild>
+                    <Link href={link.href}>
+                        {link.label}
+                        <ChevronDown className="h-4 w-4" />
+                    </Link>
+                </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent>
               {link.items?.map(item => (

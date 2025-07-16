@@ -5,6 +5,7 @@ import { Specialties } from '@/components/sections/Specialties';
 import { Features } from '@/components/sections/Features';
 import { Contact } from '@/components/sections/Contact';
 import { Catalogs } from '@/components/sections/Catalogs';
+import { Policies } from '@/components/sections/Policies';
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
         <Specialties />
         <Features />
         <Catalogs />
+        <Policies />
         <Contact />
       </main>
       <Footer />
