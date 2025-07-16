@@ -13,10 +13,10 @@ export function ProductCTA() {
         </p>
         <div className="mt-8 flex justify-center gap-4">
           <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
-            <Link href="/#contact">Contact a Specialist</Link>
+            <Link href="/#contact">Request a Specialist</Link>
           </Button>
           <Button asChild size="lg" variant="outline" className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
-            <Link href="#product-docs">View Documentation</Link>
+            <Link href="/#catalogs">View Catalogs</Link>
           </Button>
         </div>
       </div>

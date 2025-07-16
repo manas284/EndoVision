@@ -1,24 +1,72 @@
+
+'use client';
+
+import { useState } from 'react';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { CheckCircle } from 'lucide-react';
+import { CheckCircle, Camera, View, Scan } from 'lucide-react';
+import { cn } from '@/lib/utils';
 
-const quickSpecs = [
-  "Model: EV-4K-2100",
-  "4K UHD Resolution",
-  "Ergonomic Handle Design",
-  "High-Flow Sheath",
-  "Ideal for Arthroscopy"
+const galleryImages = [
+  { src: "https://placehold.co/1200x800.png", alt: "UHD Endoscope 4K primary view", hint: "endoscopic device" },
+  { src: "https://placehold.co/800x600.png", alt: "UHD Endoscope 4K in use", hint: "endoscope surgery" },
+  { src: "https://placehold.co/800x600.png", alt: "UHD Endoscope 4K close-up", hint: "endoscope closeup" },
+  { src: "https://placehold.co/800x600.png", alt: "UHD Endoscope 4K with accessories", hint: "medical equipment" },
+];
+
+const keyFeatures = [
+  { icon: <Camera className="h-6 w-6 text-primary" />, text: "Native 4K UHD Sensor" },
+  { icon: <View className="h-6 w-6 text-primary" />, text: "Wide Color Gamut" },
+  { icon: <Scan className="h-6 w-6 text-primary" />, text: "Edge-to-Edge Clarity" },
 ];
 
 export function ProductHero() {
+  const [activeImage, setActiveImage] = useState(galleryImages[0]);
+
   return (
-    <section id="product-hero" className="py-16 md:py-24 bg-secondary">
+    <section id="product-hero" className="py-12 md:py-16 bg-secondary">
       <div className="container">
-        <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-center">
-          <div className="space-y-4">
+        <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-start">
+          {/* Image Gallery */}
+          <div className="flex flex-col gap-4 sticky top-24">
+            <div className="rounded-lg overflow-hidden border shadow-lg bg-background">
+              <Image
+                src={activeImage.src}
+                alt={activeImage.alt}
+                data-ai-hint={activeImage.hint}
+                width={1200}
+                height={800}
+                className="w-full h-full object-cover transition-opacity duration-300"
+                priority
+              />
+            </div>
+            <div className="grid grid-cols-4 gap-2">
+              {galleryImages.map((image, index) => (
+                <button
+                  key={index}
+                  onClick={() => setActiveImage(image)}
+                  className={cn(
+                    "rounded-md overflow-hidden border-2 transition-all",
+                    activeImage.src === image.src ? "border-primary shadow-md" : "border-transparent hover:border-primary/50"
+                  )}
+                >
+                  <Image
+                    src={image.src}
+                    alt={image.alt}
+                    data-ai-hint={image.hint}
+                    width={200}
+                    height={150}
+                    className="w-full h-full object-cover"
+                  />
+                </button>
+              ))}
+            </div>
+          </div>
+
+          {/* Product Details */}
+          <div className="space-y-6">
             <div className="flex gap-2">
                 <Badge variant="outline">FDA Cleared</Badge>
                 <Badge variant="outline">CE Marked</Badge>
@@ -29,41 +77,33 @@ export function ProductHero() {
             <p className="text-lg text-muted-foreground">
               Experience unparalleled clarity and precision with our flagship 4K UHD Endoscope, designed for the most demanding minimally invasive procedures.
             </p>
-            <div className="flex gap-4 pt-4">
-              <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
+
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-4 border-t">
+              {keyFeatures.map(feature => (
+                <div key={feature.text} className="flex items-center gap-3">
+                  {feature.icon}
+                  <span className="text-sm font-medium">{feature.text}</span>
+                </div>
+              ))}
+            </div>
+            
+            <div className="flex flex-col sm:flex-row gap-4 pt-6">
+              <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 w-full sm:w-auto">
                 <Link href="/#contact">Request a Quote</Link>
               </Button>
-              <Button asChild size="lg" variant="outline">
+              <Button asChild size="lg" variant="outline" className="w-full sm:w-auto">
                 <Link href="#product-docs">Download Brochure</Link>
               </Button>
             </div>
-          </div>
-          <div className="space-y-6">
-            <div className="rounded-lg overflow-hidden shadow-lg border">
-                <Image
-                src="https://placehold.co/800x600.png"
-                alt="UHD Endoscope 4K device"
-                data-ai-hint="endoscopic device"
-                width={800}
-                height={600}
-                className="w-full h-full object-cover"
-                />
+
+            <div className="pt-6 border-t">
+                <h3 className="font-headline text-lg font-semibold">Availability & Compliance</h3>
+                <ul className="mt-4 space-y-2 text-muted-foreground text-sm">
+                    <li className="flex items-center gap-2"><CheckCircle className="h-5 w-5 text-green-600"/><span>In Stock - Ships within 24 hours</span></li>
+                    <li className="flex items-center gap-2"><CheckCircle className="h-5 w-5 text-green-600"/><span>ISO 13485 Compliant</span></li>
+                    <li className="flex items-center gap-2"><CheckCircle className="h-5 w-5 text-green-600"/><span>2-Year Full Warranty</span></li>
+                </ul>
             </div>
-            <Card>
-                <CardHeader>
-                    <CardTitle className="font-headline text-xl">At a Glance</CardTitle>
-                </CardHeader>
-                <CardContent>
-                    <ul className="space-y-2 text-muted-foreground">
-                        {quickSpecs.map(spec => (
-                            <li key={spec} className="flex items-center gap-2">
-                                <CheckCircle className="h-5 w-5 text-primary"/>
-                                <span>{spec}</span>
-                            </li>
-                        ))}
-                    </ul>
-                </CardContent>
-            </Card>
           </div>
         </div>
       </div>
