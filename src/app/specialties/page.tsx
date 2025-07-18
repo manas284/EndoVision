@@ -6,8 +6,8 @@ import { AboutCTA } from '@/components/sections/about/AboutCTA';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Surgical Specialties | Arthroscopy, Hysteroscopy, Urology - EndoVision',
-  description: 'EndoVision provides specialized endoscopic technology for arthroscopy, hysteroscopy, and urology. Discover our solutions for superior surgical outcomes.',
+  title: 'Surgical Specialties | Arthroscopy, Hysteroscopy, Urology - BluezoneSurgical',
+  description: 'BluezoneSurgical provides specialized endoscopic technology for arthroscopy, hysteroscopy, and urology. Discover our solutions for superior surgical outcomes.',
 };
 
 

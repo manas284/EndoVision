@@ -97,7 +97,7 @@ export function Contact() {
                   <div>
                     <h3 className="font-headline text-xl font-semibold">Email</h3>
                     <p className="text-muted-foreground">Our support team is available 24/7.</p>
-                    <a href="mailto:contact@endovision.com" className="text-primary font-medium hover:underline">contact@endovision.com</a>
+                    <a href="mailto:contact@bluezonesurgical.com" className="text-primary font-medium hover:underline">contact@bluezonesurgical.com</a>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">

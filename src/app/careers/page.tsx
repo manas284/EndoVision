@@ -7,8 +7,8 @@ import { CareersCTA } from '@/components/sections/careers/CareersCTA';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Careers at EndoVision | Join Our Team',
-  description: 'Explore career opportunities at EndoVision. Join a team of innovators dedicated to pioneering the future of medical technology and improving patient outcomes.',
+  title: 'Careers at BluezoneSurgical | Join Our Team',
+  description: 'Explore career opportunities at BluezoneSurgical. Join a team of innovators dedicated to pioneering the future of medical technology and improving patient outcomes.',
 };
 
 export default function CareersPage() {

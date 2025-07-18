@@ -20,7 +20,7 @@ export function CompanyOverview() {
               Pioneering Surgical Visualization
             </h2>
             <p className="text-lg text-muted-foreground">
-              At EndoVision, our focus is delivering ultra-high-definition surgical instruments tailored to the specific demands of arthroscopy, hysteroscopy, and urology.
+              At BluezoneSurgical, our focus is delivering ultra-high-definition surgical instruments tailored to the specific demands of arthroscopy, hysteroscopy, and urology.
             </p>
             <p className="text-muted-foreground">
               We were founded on the principle that better visualization leads to better patient outcomes. By integrating state-of-the-art optics with surgeon-centric ergonomic design, we empower medical professionals to perform with greater confidence and precision. Our commitment to innovation drives us to continuously push the boundaries of what's possible in minimally invasive surgery.

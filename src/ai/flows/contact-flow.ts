@@ -32,7 +32,7 @@ export async function sendContactMessage(
 
   try {
     const { data, error } = await resend.emails.send({
-      from: `EndoVision Contact Form <${FROM_EMAIL}>`,
+      from: `BluezoneSurgical Contact Form <${FROM_EMAIL}>`,
       to: [TO_EMAIL],
       subject: `New Inquiry from ${input.name} - Specialty: ${input.specialty}`,
       react: ContactFormEmail({ ...input }),

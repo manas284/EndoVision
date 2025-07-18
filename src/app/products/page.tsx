@@ -5,8 +5,8 @@ import { ProductGrid } from '@/components/sections/products/ProductGrid';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Our Products | EndoVision',
-  description: 'Explore EndoVision\'s range of cutting-edge surgical devices, including UHD endoscopes and advanced energy systems for minimally invasive procedures.',
+  title: 'Our Products | BluezoneSurgical',
+  description: 'Explore BluezoneSurgical\'s range of cutting-edge surgical devices, including UHD endoscopes and advanced energy systems for minimally invasive procedures.',
 };
 
 export default function ProductsPage() {

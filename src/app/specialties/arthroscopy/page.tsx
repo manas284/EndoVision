@@ -14,7 +14,7 @@ const arthroscopyData = {
   imageUrl: "https://kenmedsurgical.com/cdn/shop/files/7a2b603e-72d0-5ac5-9263-11d482ed072f_533x.jpg?v=1726499072",
   imageHint: "arthroscopic surgery",
   overview: {
-    title: "Why EndoVision for Arthroscopy?",
+    title: "Why BluezoneSurgical for Arthroscopy?",
     description: "Our arthroscopy instruments are engineered to provide superior visualization and maneuverability within the confined space of the joint. We focus on creating durable, ergonomic tools that allow surgeons to perform complex procedures with greater precision and confidence, leading to better patient outcomes and faster recovery times.",
     bullets: [
       "Crystal-clear UHD optics for detailed anatomical viewing.",

@@ -25,7 +25,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   }
 
   return {
-    title: `${product.name} | EndoVision Products`,
+    title: `${product.name} | BluezoneSurgical Products`,
     description: product.usp,
   };
 }

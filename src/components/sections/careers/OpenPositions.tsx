@@ -25,7 +25,7 @@ const positions = [
     title: "Clinical Education Specialist",
     location: "Field-based (West Coast)",
     type: "Full-time",
-    description: "Provide training and support to surgeons and hospital staff on the proper use of EndoVision products. RN or surgical tech background preferred.",
+    description: "Provide training and support to surgeons and hospital staff on the proper use of BluezoneSurgical products. RN or surgical tech background preferred.",
     },
 ];
 
@@ -36,7 +36,7 @@ export function OpenPositions() {
         <div className="text-center">
           <h2 className="font-headline text-3xl md:text-4xl font-bold">Current Openings</h2>
           <p className="mt-4 max-w-2xl mx-auto text-muted-foreground">
-            Find your next career opportunity at EndoVision and help us shape the future of surgery.
+            Find your next career opportunity at BluezoneSurgical and help us shape the future of surgery.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">

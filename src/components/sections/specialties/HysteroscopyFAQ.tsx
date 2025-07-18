@@ -2,7 +2,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 
 const faqs = [
   {
-    question: "What makes EndoVision hysteroscopes suitable for 'see-and-treat' procedures?",
+    question: "What makes BluezoneSurgical hysteroscopes suitable for 'see-and-treat' procedures?",
     answer: "Our hysteroscopes feature a slim, atraumatic design for patient comfort, combined with superior HD imaging. This allows for clear diagnosis and immediate treatment within the same procedure, improving efficiency and patient experience.",
   },
   {
@@ -10,7 +10,7 @@ const faqs = [
     answer: "Yes, our hysteroscopy sheaths are designed for compatibility with common fluid management systems to ensure optimal uterine distention and a clear view during procedures.",
   },
   {
-    question: "What is the typical lifespan of an EndoVision hysteroscope?",
+    question: "What is the typical lifespan of a BluezoneSurgical hysteroscope?",
     answer: "Our hysteroscopes are built with durable, high-quality materials, including sapphire lenses, to withstand the rigors of frequent reprocessing. With proper care and handling according to the user manual, they are designed for a long service life.",
   },
   {

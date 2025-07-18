@@ -58,7 +58,7 @@ export const products: Product[] = [
     ],
     overview: {
       title: "Uncompromising Clarity in Joint Surgery",
-      description: "The EndoVision UHD Arthroscopy Scope provides surgeons with a crystal-clear, true-to-life view of the joint space. Its advanced optical system minimizes distortion and provides superior color accuracy, allowing for more confident identification of anatomical structures and pathologies.",
+      description: "The BluezoneSurgical UHD Arthroscopy Scope provides surgeons with a crystal-clear, true-to-life view of the joint space. Its advanced optical system minimizes distortion and provides superior color accuracy, allowing for more confident identification of anatomical structures and pathologies.",
       image: "https://placehold.co/800x600.png",
       imageHint: "endoscope diagram"
     },
@@ -227,7 +227,7 @@ export const products: Product[] = [
     ],
     overview: {
         title: "Maintain a Clear Field",
-        description: "EndoVision's High-Flow Sheathing is designed to provide optimal irrigation and suction management. Its smooth, atraumatic tip ensures easy insertion, while the anti-fog coating on the distal end helps maintain clear visualization throughout the procedure.",
+        description: "BluezoneSurgical's High-Flow Sheathing is designed to provide optimal irrigation and suction management. Its smooth, atraumatic tip ensures easy insertion, while the anti-fog coating on the distal end helps maintain clear visualization throughout the procedure.",
         image: "https://placehold.co/800x600.png",
         imageHint: "medical design"
     },
@@ -240,11 +240,11 @@ export const products: Product[] = [
     specs: [
       { parameter: "Material", value: "Medical Grade Stainless Steel" },
       { parameter: "Sizes Available", value: "4.5mm, 5.5mm, 8.5mm" },
-      { parameter: "Compatibility", value: "Designed for EndoVision scopes" },
+      { parameter: "Compatibility", value: "Designed for BluezoneSurgical scopes" },
       { parameter: "Sterilization", value: "Autoclavable" },
     ],
     faqs: [
-        { question: "Are these sheaths compatible with other brands of endoscopes?", answer: "Our sheathing is designed for a precise fit with EndoVision endoscopes to ensure optimal performance. Compatibility with other brands is not guaranteed." },
+        { question: "Are these sheaths compatible with other brands of endoscopes?", answer: "Our sheathing is designed for a precise fit with BluezoneSurgical endoscopes to ensure optimal performance. Compatibility with other brands is not guaranteed." },
     ]
   },
 ];

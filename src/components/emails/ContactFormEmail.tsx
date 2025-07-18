@@ -28,6 +28,6 @@ export const ContactFormEmail: React.FC<Readonly<ContactFormEmailProps>> = ({
       {message}
     </p>
     <hr style={{ border: 'none', borderTop: '1px solid #eee' }} />
-    <p style={{ fontSize: '12px', color: '#999' }}>This email was sent from the EndoVision website.</p>
+    <p style={{ fontSize: '12px', color: '#999' }}>This email was sent from the BluezoneSurgical website.</p>
   </div>
 );

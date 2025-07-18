@@ -9,8 +9,8 @@ import { Policies } from '@/components/sections/Policies';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'EndoVision - Cutting-Edge Endoscopic Solutions',
-  description: 'EndoVision designs and manufactures advanced UHD endoscopes and the Plasma EDGE™ system for minimally invasive surgery in arthroscopy, hysteroscopy, and urology.',
+  title: 'BluezoneSurgical - Cutting-Edge Endoscopic Solutions',
+  description: 'BluezoneSurgical designs and manufactures advanced UHD endoscopes and the Plasma EDGE™ system for minimally invasive surgery in arthroscopy, hysteroscopy, and urology.',
 };
 
 export default function Home() {

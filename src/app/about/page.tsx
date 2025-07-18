@@ -11,8 +11,8 @@ import { AboutCTA } from '@/components/sections/about/AboutCTA';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'About EndoVision | Pioneering Surgical Technology',
-  description: 'Learn about EndoVision, our mission to advance minimally invasive surgery through innovation in optics, and our commitment to quality with FDA, CE, and ISO certifications.',
+  title: 'About BluezoneSurgical | Pioneering Surgical Technology',
+  description: 'Learn about BluezoneSurgical, our mission to advance minimally invasive surgery through innovation in optics, and our commitment to quality with FDA, CE, and ISO certifications.',
 };
 
 export default function AboutPage() {

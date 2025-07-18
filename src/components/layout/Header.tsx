@@ -24,7 +24,7 @@ const Logo = () => (
         <path d="M12 22a10 10 0 0 0 3.91-19.82" />
         <ellipse cx="12" cy="12" rx="2.5" ry="5" />
       </svg>
-      <span className="font-headline text-2xl font-bold text-primary">EndoVision</span>
+      <span className="font-headline text-2xl font-bold text-primary">BluezoneSurgical</span>
     </Link>
 );
 

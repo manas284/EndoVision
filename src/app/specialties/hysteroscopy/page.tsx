@@ -15,7 +15,7 @@ const hysteroscopyData = {
   imageHint: "hysteroscopy equipment",
   overview: {
     title: "Advancing Gynecological Care",
-    description: "Our hysteroscopy line offers exceptional image quality and a slim-profile design to minimize patient discomfort. From diagnostic 'see-and-treat' procedures to complex operative hysteroscopy, EndoVision provides reliable, high-performance instruments that empower gynecologists to deliver the best possible care.",
+    description: "Our hysteroscopy line offers exceptional image quality and a slim-profile design to minimize patient discomfort. From diagnostic 'see-and-treat' procedures to complex operative hysteroscopy, BluezoneSurgical provides reliable, high-performance instruments that empower gynecologists to deliver the best possible care.",
     bullets: [
       "Superior HD imaging for confident diagnosis.",
       "Slim, atraumatic design for enhanced patient tolerance.",

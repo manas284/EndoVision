@@ -21,7 +21,7 @@ export function ProductEvidence() {
                 </CardHeader>
                 <CardContent>
                     <blockquote className="border-l-4 border-primary pl-4 italic text-muted-foreground">
-                        "The clarity of the EndoVision 4K scope is a game-changer. It has significantly improved my confidence in identifying subtle tissue changes during hysteroscopies."
+                        "The clarity of the BluezoneSurgical 4K scope is a game-changer. It has significantly improved my confidence in identifying subtle tissue changes during hysteroscopies."
                     </blockquote>
                     <p className="mt-4 font-semibold text-right">- Dr. Emily Carter, OB/GYN</p>
                 </CardContent>

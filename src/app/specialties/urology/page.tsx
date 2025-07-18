@@ -15,7 +15,7 @@ const urologyData = {
   imageHint: "urology instruments",
   overview: {
     title: "Precision in Urological Procedures",
-    description: "EndoVision's urology portfolio is built to meet the rigorous demands of procedures like cystoscopy, ureteroscopy, and resections. We combine excellent optics with durable, semi-rigid designs and efficient working channels to provide urologists with the tools they need for accurate diagnosis and effective treatment.",
+    description: "BluezoneSurgical's urology portfolio is built to meet the rigorous demands of procedures like cystoscopy, ureteroscopy, and resections. We combine excellent optics with durable, semi-rigid designs and efficient working channels to provide urologists with the tools they need for accurate diagnosis and effective treatment.",
     bullets: [
       "High-contrast imaging for clear visualization of the urinary tract.",
       "Durable, semi-rigid construction for reliable navigation.",

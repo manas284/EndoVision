@@ -10,7 +10,7 @@ const Logo = () => (
       <path d="M12 22a10 10 0 0 0 3.91-19.82" />
       <ellipse cx="12" cy="12" rx="2.5" ry="5" />
     </svg>
-    <span className="font-headline text-2xl font-bold text-primary-foreground">EndoVision</span>
+    <span className="font-headline text-2xl font-bold text-primary-foreground">BluezoneSurgical</span>
   </Link>
 );
 
@@ -51,7 +51,7 @@ export function Footer() {
           </div>
         </div>
         <div className="mt-8 pt-8 border-t border-primary-foreground/20 text-center text-sm text-primary-foreground/60">
-          <p>&copy; {new Date().getFullYear()} EndoVision. All Rights Reserved.</p>
+          <p>&copy; {new Date().getFullYear()} BluezoneSurgical. All Rights Reserved.</p>
         </div>
       </div>
     </footer>

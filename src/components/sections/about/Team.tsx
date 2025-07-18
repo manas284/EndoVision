@@ -37,7 +37,7 @@ export function Team() {
         <div className="text-center">
           <h2 className="font-headline text-3xl md:text-4xl font-bold">Meet Our Leadership</h2>
           <p className="mt-4 max-w-2xl mx-auto text-muted-foreground">
-            The passionate minds driving EndoVision forward.
+            The passionate minds driving BluezoneSurgical forward.
           </p>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-12">
