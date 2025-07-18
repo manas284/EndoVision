@@ -147,34 +147,42 @@ export const products: Product[] = [
           {
             title: "Mixter (90°) Grasper",
             icon: "📐",
-            description: "Has a right-angle jaw (90°) with serrations.",
-            function: "Designed for deep or difficult-to-reach areas where straight instruments can’t easily access.",
-            application: "Isolating and passing around vessels, ducts, or ligatures behind structures.",
-            advantage: "Excellent for dissecting around tubular structures."
+            description: "Has a right-angle jaw (90°) with serrations for deep or difficult-to-reach areas.",
+            function: "Isolating and passing around vessels, ducts, or ligatures behind structures.",
+            application: "Used for dissecting around tubular structures such as the ureter in pelvic surgery.",
+            advantage: "Provides excellent access and control in confined spaces."
           },
           {
             title: "Universal/Maxi Grasper",
             icon: "💪",
-            description: "Robust build with wide, serrated jaws for firm grip.",
+            description: "Robust build with wide, serrated jaws for a firm grip on large or tough tissues.",
             function: "For securely holding and mobilizing large or tough tissues and organs.",
             application: "Retracting the uterus, mobilizing bowel, or manipulating bulky structures.",
-            advantage: "Provides a strong, secure grip on large tissues."
+            advantage: "Provides a strong, secure grip on large tissues without slippage."
           },
            {
             title: "Babcock Grasper",
             icon: "👶",
-            description: "Has rounded, fenestrated, and atraumatic jaws.",
-            function: "Grips tubular or delicate structures without compressing or damaging.",
+            description: "Has rounded, fenestrated, and atraumatic jaws that encircle tissue.",
+            function: "Grips tubular or delicate structures without compressing or damaging them.",
             application: "Commonly used for bowel, appendix, fallopian tubes, and vascular structures.",
-            advantage: "Atraumatic design minimizes tissue injury."
+            advantage: "Atraumatic design minimizes tissue injury during manipulation."
           },
-           {
+          {
             title: "Alligator Grasper",
             icon: "🐊",
-            description: "Long, slender shaft with small jaws that open vertically.",
-            function: "Reaches into in-accessible spaces, opens wide at the tip for localized grasp.",
-            application: "Used in pediatric laparoscopy or to retrieve objects from narrow spaces.",
-            advantage: "Ideal for retrieval in confined areas."
+            description: "Long, slender shaft with small jaws that open vertically, ideal for reaching into inaccessible spaces.",
+            function: "Opens wide at the tip for localized grasping and retrieval.",
+            application: "Used in pediatric laparoscopy or to retrieve objects like gallstones or tissue fragments from narrow spaces.",
+            advantage: "Ideal for retrieval in confined areas where other graspers cannot reach."
+          },
+           {
+            title: "Claw (2x4/2x3) Grasper",
+            icon: "⚙️",
+            description: "Features interlocking teeth (2 by 4, or 2 by 3) for an aggressive hold.",
+            function: "Provides a very secure hold, especially on fibrous or slippery tissues.",
+            application: "Grasping muscle, omentum, or other strong tissue structures for extraction or retraction.",
+            advantage: "Prevents tissue slippage during manipulation of heavy or tough structures."
           }
         ],
         keyFeatures: [
@@ -182,6 +190,41 @@ export const products: Product[] = [
           "Shaft Size: 5mm and 10mm to fit standard laparoscopic trocars.",
           "Mechanism: Double action (both jaws move) or single action (one jaw moves, one fixed), tailored for either strength or precision.",
           "Ergonomics: Handles designed for comfort and minimal fatigue during prolonged procedures."
+        ]
+      },
+      {
+        title: "3. Clip Applicators",
+        icon: "🔗",
+        mainDescription: "Laparoscopic clip applicators are essential instruments used to apply ligation clips to occlude blood vessels, ducts, or tubular structures, preventing bleeding or fluid leakage. They are designed to deploy specific clip sizes (LT200, LT300, LT400).",
+        subItems: [
+          {
+            title: "10mm Double Action Clip Applicator",
+            icon: "⚖️",
+            description: "Features two moving jaws for balanced and uniform force distribution when applying the clip, ensuring precise alignment and secure closure.",
+            function: "Applies LT200, LT300, and LT400 clips with balanced pressure. Available with standard or long inserts for deep access.",
+            application: "Ideal for cholecystectomy, appendectomy, and ligation of arteries & veins in urology and gynecology.",
+            advantage: "Decreases risk of clip migration or slippage and facilitates accurate placement in difficult angles."
+          },
+          {
+            title: "10mm Single Action Clip Applicator",
+            icon: "🔩",
+            description: "This type has a single moving jaw that presses the clip against a fixed lower jaw, suitable for most routine procedures.",
+            function: "Reliably deploys medium (LT300) and large (LT400) clips on vessels.",
+            application: "Used in general surgery, gynecological ligation, and colorectal procedures involving vascular clipping.",
+            advantage: "Simple, durable mechanism with lower maintenance. Cost-effective for high-volume centers."
+          },
+          {
+            title: "5mm Clip Applicator",
+            icon: "🎯",
+            description: "Engineered with a slimmer 5mm shaft to pass through smaller trocars, reducing trauma to the abdominal wall.",
+            function: "Accurately deploys small-size clips (LT200 or equivalent).",
+            application: "Valuable in pediatric laparoscopy, tubal ligation, and small-vessel clipping in hernia repair.",
+            advantage: "Minimally invasive, fits 5mm ports, and offers flexibility in instrument arrangement."
+          }
+        ],
+        keyFeatures: [
+          "Material: High-grade surgical stainless steel or titanium-compatible.",
+          "Mechanism: Ring-handle with trigger action and a locking system to hold the clip securely.",
         ]
       }
     ],
