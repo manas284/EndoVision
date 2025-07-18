@@ -5,7 +5,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { ProductDocs } from "./ProductDocs";
 import { ProductFAQ } from "./ProductFAQ";
 import Image from "next/image";
-import type { Product } from "@/lib/products";
+import type { Product } from "@/lib/products.tsx";
 import { ProductCategoryGrid } from "./ProductCategoryGrid";
 
 interface ProductDetailsProps {
