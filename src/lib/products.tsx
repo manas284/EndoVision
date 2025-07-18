@@ -130,6 +130,59 @@ export const products: Product[] = [
           "Handle Options: Ratcheted or ratchet-free, with ergonomic grips for fatigue-free use.",
           "Energy Compatibility: Monopolar versions are available for simultaneous cutting and coagulation."
         ]
+      },
+      {
+        title: "2. Laparoscopic Graspers",
+        icon: "✋",
+        mainDescription: "Laparoscopic graspers are specialized instruments used for holding, manipulating, and sometimes dissecting tissues during minimally invasive surgery. Their jaws can be single-action or double-action, and their tip designs suit varied surgical tasks.",
+        subItems: [
+          {
+            title: "Maryland Grasper",
+            icon: "🤏",
+            description: "Features a long, curved, and partially serrated jaw similar to surgical 'rat-tooth' forceps.",
+            function: "Combines blunt tissue dissection, fine grasping, and manipulation of delicate tissues.",
+            application: "Widely used for separating tissue planes, grasping small structures, and blunt dissection.",
+            advantage: "Versatile for both dissection and grasping."
+          },
+          {
+            title: "Mixter (90°) Grasper",
+            icon: "📐",
+            description: "Has a right-angle jaw (90°) with serrations.",
+            function: "Designed for deep or difficult-to-reach areas where straight instruments can’t easily access.",
+            application: "Isolating and passing around vessels, ducts, or ligatures behind structures.",
+            advantage: "Excellent for dissecting around tubular structures."
+          },
+          {
+            title: "Universal/Maxi Grasper",
+            icon: "💪",
+            description: "Robust build with wide, serrated jaws for firm grip.",
+            function: "For securely holding and mobilizing large or tough tissues and organs.",
+            application: "Retracting the uterus, mobilizing bowel, or manipulating bulky structures.",
+            advantage: "Provides a strong, secure grip on large tissues."
+          },
+           {
+            title: "Babcock Grasper",
+            icon: "👶",
+            description: "Has rounded, fenestrated, and atraumatic jaws.",
+            function: "Grips tubular or delicate structures without compressing or damaging.",
+            application: "Commonly used for bowel, appendix, fallopian tubes, and vascular structures.",
+            advantage: "Atraumatic design minimizes tissue injury."
+          },
+           {
+            title: "Alligator Grasper",
+            icon: "🐊",
+            description: "Long, slender shaft with small jaws that open vertically.",
+            function: "Reaches into in-accessible spaces, opens wide at the tip for localized grasp.",
+            application: "Used in pediatric laparoscopy or to retrieve objects from narrow spaces.",
+            advantage: "Ideal for retrieval in confined areas."
+          }
+        ],
+        keyFeatures: [
+          "Material: Surgical-grade stainless steel, often with insulation for electrosurgical compatibility.",
+          "Shaft Size: 5mm and 10mm to fit standard laparoscopic trocars.",
+          "Mechanism: Double action (both jaws move) or single action (one jaw moves, one fixed), tailored for either strength or precision.",
+          "Ergonomics: Handles designed for comfort and minimal fatigue during prolonged procedures."
+        ]
       }
     ],
   }
