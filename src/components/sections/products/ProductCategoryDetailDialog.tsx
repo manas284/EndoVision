@@ -9,12 +9,10 @@ import {
   DialogDescription,
 } from '@/components/ui/dialog';
 import { ScrollArea } from '@/components/ui/scroll-area';
-import { Check, ChevronDown, ChevronUp } from 'lucide-react';
+import { Check } from 'lucide-react';
 import type { DetailedCategory } from '@/lib/products.tsx';
 import * as React from 'react';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
-import { Button } from '@/components/ui/button';
-
 
 interface ProductCategoryDetailDialogProps {
   category: DetailedCategory | null;
@@ -23,20 +21,9 @@ interface ProductCategoryDetailDialogProps {
 }
 
 export function ProductCategoryDetailDialog({ category, isOpen, onClose }: ProductCategoryDetailDialogProps) {
-  const scrollViewportRef = React.useRef<HTMLDivElement>(null);
-
   if (!category) {
     return null;
   }
-
-  const handleScroll = (direction: 'up' | 'down') => {
-    if (scrollViewportRef.current) {
-      const { scrollTop } = scrollViewportRef.current;
-      const scrollAmount = 200;
-      const newScrollTop = direction === 'up' ? scrollTop - scrollAmount : scrollTop + scrollAmount;
-      scrollViewportRef.current.scrollTo({ top: newScrollTop, behavior: 'smooth' });
-    }
-  };
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
@@ -51,17 +38,7 @@ export function ProductCategoryDetailDialog({ category, isOpen, onClose }: Produ
           </DialogDescription>
         </DialogHeader>
         <div className="flex-grow relative min-h-0">
-          <div className="absolute top-0 right-4 z-10 flex flex-col gap-2">
-              <Button size="icon" variant="outline" className="h-8 w-8" onClick={() => handleScroll('up')}>
-                  <ChevronUp className="h-5 w-5" />
-                  <span className="sr-only">Scroll Up</span>
-              </Button>
-              <Button size="icon" variant="outline" className="h-8 w-8" onClick={() => handleScroll('down')}>
-                  <ChevronDown className="h-5 w-5" />
-                  <span className="sr-only">Scroll Down</span>
-              </Button>
-          </div>
-          <ScrollArea className="h-full pr-6" viewportRef={scrollViewportRef}>
+          <ScrollArea className="h-full pr-6">
               <div className="space-y-6 py-4">
                 <Accordion type="single" collapsible className="w-full">
                   {category.subItems.map((item, itemIndex) => (
