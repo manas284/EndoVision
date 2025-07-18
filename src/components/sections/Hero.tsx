@@ -53,8 +53,8 @@ export function Hero() {
             </Link>
           </Button>
           <Button asChild size="lg" variant="outline" className="border-primary/50 text-primary hover:bg-primary/10 rounded-full">
-            <Link href="#specialties">
-              View Specialties
+            <Link href="/products">
+              View Products
             </Link>
           </Button>
         </motion.div>
