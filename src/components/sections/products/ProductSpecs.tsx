@@ -2,6 +2,7 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@
 import { Button } from "@/components/ui/button";
 import { Download } from "lucide-react";
 import type { ProductSpec } from "@/lib/products.tsx";
+import Link from "next/link";
 
 interface ProductSpecsProps {
     specs: ProductSpec[];
@@ -29,9 +30,11 @@ export function ProductSpecs({ specs }: ProductSpecsProps) {
             </Table>
         </div>
         <div className="mt-6 text-center">
-            <Button>
-                <Download className="mr-2 h-4 w-4" />
-                Download Full Spec Sheet
+            <Button asChild>
+                <Link href="/laparoscopic-instruments-spec-sheet.txt" download>
+                    <Download className="mr-2 h-4 w-4" />
+                    Download Full Spec Sheet
+                </Link>
             </Button>
         </div>
     </div>
