@@ -22,7 +22,7 @@ export function Hero() {
   };
 
   return (
-    <section id="home" className="relative w-full py-24 md:py-32 flex items-center justify-center text-foreground overflow-hidden">
+    <section id="home" className="relative w-full py-20 md:py-32 flex items-center justify-center text-foreground overflow-hidden">
        <div className="absolute top-0 -left-1/4 w-full h-full bg-gradient-to-r from-primary/30 to-accent/30 -z-10 blur-3xl" />
 
       <motion.div 
@@ -32,13 +32,13 @@ export function Hero() {
         animate="visible"
       >
         <motion.h1 
-          className="font-headline text-5xl md:text-7xl font-bold tracking-tighter"
+          className="font-headline text-4xl md:text-7xl font-bold tracking-tighter"
           variants={itemVariants}
         >
           Redefining Surgical Precision
         </motion.h1>
         <motion.p 
-          className="mt-6 max-w-3xl mx-auto text-lg md:text-xl text-muted-foreground"
+          className="mt-6 max-w-3xl mx-auto text-base md:text-xl text-muted-foreground"
           variants={itemVariants}
         >
           We design cutting-edge UHD endoscopes and the advanced Plasma EDGE™ system to enhance visualization in minimally invasive surgery.
@@ -53,8 +53,8 @@ export function Hero() {
             </Link>
           </Button>
           <Button asChild size="lg" variant="outline" className="border-primary/50 text-primary hover:bg-primary/10 rounded-full">
-            <Link href="/products">
-              View Products
+            <Link href="/#contact">
+              Contact Us
             </Link>
           </Button>
         </motion.div>

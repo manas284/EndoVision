@@ -44,14 +44,15 @@ export function Team() {
           {teamMembers.map((member) => (
             <Card key={member.name} className="text-center overflow-hidden group">
               <CardHeader className="p-0">
-                <Image
-                  src={member.imageUrl}
-                  alt={`Headshot of ${member.name}`}
-                  data-ai-hint={member.aiHint}
-                  width={400}
-                  height={400}
-                  className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300"
-                />
+                <div className="aspect-square relative w-full">
+                  <Image
+                    src={member.imageUrl}
+                    alt={`Headshot of ${member.name}`}
+                    data-ai-hint={member.aiHint}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
               </CardHeader>
               <CardContent className="p-6">
                 <h3 className="font-headline text-xl font-bold">{member.name}</h3>

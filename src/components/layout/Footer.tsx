@@ -17,24 +17,24 @@ export function Footer() {
   return (
     <footer className="bg-primary text-primary-foreground">
       <div className="container py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          <div className="md:col-span-2">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-4">
+          <div className="md:col-span-2 space-y-4">
             <Logo />
-            <p className="mt-4 max-w-sm text-primary-foreground/80">
+            <p className="max-w-sm text-primary-foreground/80">
               Redefining precision in minimally invasive surgery with cutting-edge UHD endoscopes and advanced energy systems.
             </p>
           </div>
-          <div>
+          <div className="space-y-4">
             <h3 className="font-headline font-semibold">Quick Links</h3>
-            <ul className="mt-4 space-y-2">
+            <ul className="space-y-2">
               <li><Link href="/about" className="hover:text-accent">About</Link></li>
               <li><Link href="/products" className="hover:text-accent">Products</Link></li>
               <li><Link href="/#contact" className="hover:text-accent">Contact</Link></li>
             </ul>
           </div>
-          <div>
+          <div className="space-y-4">
             <h3 className="font-headline font-semibold">Connect</h3>
-            <div className="flex gap-4 mt-4">
+            <div className="flex gap-4">
               <Button variant="ghost" size="icon" asChild>
                 <a href="#" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                   <Linkedin className="h-6 w-6 text-primary-foreground/80 hover:text-accent"/>

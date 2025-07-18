@@ -20,7 +20,7 @@ export function Policies() {
             Clear, concise, and transparent. Understand our commitments to you.
           </p>
         </motion.div>
-        <motion.div className="max-w-3xl mx-auto mt-12" variants={itemVariants}>
+        <motion.div className="max-w-3xl mx-auto mt-8 md:mt-12" variants={itemVariants}>
           <PolicyAccordion />
         </motion.div>
       </div>

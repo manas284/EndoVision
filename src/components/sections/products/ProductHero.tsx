@@ -19,11 +19,11 @@ export function ProductHero({ product }: ProductHeroProps) {
   const activeImage = product.gallery[activeImageIndex];
 
   return (
-    <section id="product-hero" className="py-12 md:py-16 bg-secondary">
+    <section id="product-hero" className="py-8 md:py-16 bg-secondary">
       <div className="container">
         <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-start">
           {/* Image Gallery */}
-          <div className="flex flex-col gap-4 sticky top-24">
+          <div className="flex flex-col gap-4 md:sticky top-24">
             <div className="rounded-lg overflow-hidden border shadow-lg bg-background">
               <Image
                 src={activeImage.src}
@@ -61,7 +61,7 @@ export function ProductHero({ product }: ProductHeroProps) {
           {/* Product Details */}
           <div className="space-y-6">
             <Badge variant="outline">{product.status}</Badge>
-            <h1 className="font-headline text-4xl md:text-5xl font-bold text-primary">
+            <h1 className="font-headline text-3xl md:text-5xl font-bold text-primary">
               {product.name}
             </h1>
             <p className="text-lg text-muted-foreground">

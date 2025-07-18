@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button';
 
 export function ProductGrid() {
   return (
-    <section className="pt-8 pb-16 md:pt-12 md:pb-24 bg-background">
+    <section className="pt-8 pb-16 md:pt-8 md:pb-24 bg-background">
       <div className="container">
         <div className="text-center mb-12">
           <h1 className="font-headline text-4xl md:text-5xl font-bold text-primary">

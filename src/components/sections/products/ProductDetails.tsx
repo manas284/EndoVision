@@ -15,7 +15,7 @@ interface ProductDetailsProps {
 export function ProductDetails({ product }: ProductDetailsProps) {
 
   const renderStandardOverview = () => (
-     <div className="grid md:grid-cols-2 gap-12 items-center">
+     <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
         <div className="space-y-4">
             <h2 className="font-headline text-3xl font-bold text-primary">{product.overview.title}</h2>
             <p className="text-muted-foreground text-lg">
@@ -40,26 +40,26 @@ export function ProductDetails({ product }: ProductDetailsProps) {
     <section id="product-details" className="py-16 md:py-24 bg-background">
       <div className="container">
         <Tabs defaultValue="overview" className="w-full">
-          <TabsList className="grid w-full grid-cols-2 md:grid-cols-4 mb-8">
+          <TabsList className="grid w-full grid-cols-2 md:grid-cols-4 h-auto md:h-10">
             <TabsTrigger value="overview">Overview</TabsTrigger>
             <TabsTrigger value="specs">Specifications</TabsTrigger>
             <TabsTrigger value="docs">Documents</TabsTrigger>
             <TabsTrigger value="faq">FAQ</TabsTrigger>
           </TabsList>
           
-          <TabsContent value="overview">
+          <TabsContent value="overview" className="mt-8">
             {renderStandardOverview()}
           </TabsContent>
 
-          <TabsContent value="specs">
+          <TabsContent value="specs" className="mt-8">
             <ProductCategoryGrid categories={product.detailedDescription} />
           </TabsContent>
           
-          <TabsContent value="docs">
+          <TabsContent value="docs" className="mt-8">
             <ProductDocs />
           </TabsContent>
 
-          <TabsContent value="faq">
+          <TabsContent value="faq" className="mt-8">
             <ProductFAQ faqs={product.faqs} />
           </TabsContent>
         </Tabs>

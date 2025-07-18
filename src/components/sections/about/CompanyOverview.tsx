@@ -5,7 +5,7 @@ export function CompanyOverview() {
     <section className="py-16 md:py-24 bg-background">
       <div className="container">
         <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-center">
-          <div className="rounded-lg overflow-hidden shadow-lg">
+          <div className="rounded-lg overflow-hidden shadow-lg order-1 md:order-none">
             <Image
               src="https://placehold.co/800x600.png"
               alt="Close-up of a high-tech endoscopic device"
