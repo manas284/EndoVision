@@ -49,8 +49,8 @@ export interface Product {
     image: string;
     imageHint: string;
   };
-  features: ProductFeature[]; // Kept for other products, will be empty for laparoscopic instruments
-  specs: ProductSpec[]; // Kept for other products, will be empty for laparoscopic instruments
+  features?: ProductFeature[];
+  specs?: ProductSpec[];
   faqs: { question: string; answer: string }[];
   detailedDescription?: DetailedCategory[];
 }
@@ -80,8 +80,11 @@ export const products: Product[] = [
       image: "https://placehold.co/800x600.png",
       imageHint: "surgical instruments"
     },
-    features: [], // This is now handled by detailedDescription
-    specs: [], // This is now handled by detailedDescription
+    faqs: [
+        { question: "Are these instruments compatible with standard trocars?", answer: "Yes, our instruments are designed to be compatible with all standard trocars of the corresponding size." },
+        { question: "What is the warranty on these laparoscopic instruments?", answer: "All our reusable laparoscopic instruments come with a one-year warranty against manufacturing defects." },
+        { question: "Are the instruments reusable?", answer: "Yes, the majority of our laparoscopic instruments are designed for reusability and are autoclavable. Please refer to the specific instrument's documentation for cleaning and sterilization protocols." },
+    ],
     detailedDescription: [
       {
         title: "1. Laparoscopic Scissors (5mm)",
@@ -129,10 +132,5 @@ export const products: Product[] = [
         ]
       }
     ],
-    faqs: [
-        { question: "Are these instruments compatible with standard trocars?", answer: "Yes, our instruments are designed to be compatible with all standard trocars of the corresponding size." },
-        { question: "What is the warranty on these laparoscopic instruments?", answer: "All our reusable laparoscopic instruments come with a one-year warranty against manufacturing defects." },
-        { question: "Are the instruments reusable?", answer: "Yes, the majority of our laparoscopic instruments are designed for reusability and are autoclavable. Please refer to the specific instrument's documentation for cleaning and sterilization protocols." },
-    ]
   }
 ];
