@@ -1,5 +1,5 @@
 
-import { Scissors, Hand, Zap, Shield, Droplets, Aperture, Check } from 'lucide-react';
+import { Hand, Shield, Aperture } from 'lucide-react';
 
 export interface ProductFeature {
   icon: React.ReactNode;
@@ -19,6 +19,7 @@ export interface GalleryImage {
 }
 
 export interface DetailedCategory {
+    id: string;
     title: string;
     icon: string;
     mainDescription: string;
@@ -87,7 +88,8 @@ export const products: Product[] = [
     ],
     detailedDescription: [
       {
-        title: "1. Laparoscopic Scissors (5mm)",
+        id: "scissors",
+        title: "1. Laparoscopic Scissors",
         icon: "🔪",
         mainDescription: "Laparoscopic scissors are precision surgical instruments designed for cutting tissue during minimally invasive surgery. They are inserted through 5mm trocars and manipulated using a handle and long shaft. These scissors are electrosurgical-compatible and can be used in various surgical procedures including general surgery, gynecology, urology, and colorectal surgery.",
         subItems: [
@@ -132,6 +134,7 @@ export const products: Product[] = [
         ]
       },
       {
+        id: "graspers",
         title: "2. Laparoscopic Graspers",
         icon: "✋",
         mainDescription: "Laparoscopic graspers are specialized instruments used for holding, manipulating, and sometimes dissecting tissues during minimally invasive surgery. Their jaws can be single-action or double-action, and their tip designs suit varied surgical tasks.",
@@ -193,6 +196,7 @@ export const products: Product[] = [
         ]
       },
       {
+        id: "clip-applicators",
         title: "3. Clip Applicators",
         icon: "🔗",
         mainDescription: "Laparoscopic clip applicators are essential instruments used to apply ligation clips during surgery to occlude blood vessels, ducts, or tubular structures. These clips, typically made of titanium or polymer, are applied to prevent bleeding or fluid leakage. Applicators are designed to deploy specific clip sizes (LT200, LT300, LT400) and are compatible with single-use or reusable clip cartridges.",
@@ -231,12 +235,13 @@ export const products: Product[] = [
         ]
       },
        {
+        id: "needle-holders",
         title: "4. Needle Holders",
         icon: "🔩",
         mainDescription: "Laparoscopic needle holders are critical tools in endoscopic surgery, designed to hold suturing needles securely and facilitate precise placement of stitches within the body. They are long-shafted, precision-controlled instruments integrated with ergonomic handles for surgeon comfort and stability.",
         subItems: [
           {
-            title: "Ethicon Type (Stainless Steel)",
+            title: "Ethicon Type Needle Holder (Stainless Steel)",
             icon: "🧷",
             description: "Rust-resistant, high-quality stainless steel for long-term durability and repeated autoclaving. Traditional ring handle equipped with a smooth ratchet-lock system for locking the needle in place during suturing.",
             function: "Holds suturing needles securely.",
@@ -244,7 +249,7 @@ export const products: Product[] = [
             advantage: "Excellent tactile feedback, widely accepted by laparoscopic surgeons, compatible with standard 5mm and 10mm ports."
           },
           {
-            title: "Storz Type (Aluminum Gun/V-Type)",
+            title: "Storz Type Needle Holder (Aluminum Gun/V-Type)",
             icon: "🧷",
             description: "Lightweight aluminum body (Gun Type) or straight vertical handle (V-Type) for reduced fatigue and enhanced access.",
             function: "Enables rapid adjustment and single-click control when locking the needle. V-Type is suitable for rotational movements.",
@@ -268,6 +273,7 @@ export const products: Product[] = [
         ]
       },
       {
+        id: "suction-irrigation",
         title: "5. Suction & Irrigation Systems",
         icon: "💧",
         mainDescription: "Laparoscopic suction irrigation systems are essential tools used to clear blood, debris, smoke, or fluids from the operative field and can also be used to deliver irrigation fluids to maintain visibility and prevent tissue adhesion.",
@@ -305,6 +311,7 @@ export const products: Product[] = [
         ]
       },
       {
+        id: "monopolar-electrodes",
         title: "6. Monopolar Electrodes (5mm)",
         icon: "⚡",
         mainDescription: "Monopolar electrodes are used in laparoscopic procedures for cauterizing, cutting, and dissection. They deliver current from a single electrode to targeted tissue and complete the circuit through a grounding pad on the patient.",
@@ -342,6 +349,7 @@ export const products: Product[] = [
         ]
       },
       {
+        id: "bipolar-instruments",
         title: "7. Bipolar Instruments",
         icon: "🔥",
         mainDescription: "Bipolar instruments safely deliver coagulating current between two electrodes on the instrument tip, eliminating the need for a grounding pad and minimizing lateral thermal spread. They’re widely preferred in bowel, gynecological, urological, and oncologic laparoscopies.",
@@ -387,6 +395,7 @@ export const products: Product[] = [
         ]
       },
       {
+        id: "trocars-veress",
         title: "8. Trocars & Veress Needles",
         icon: "🧷",
         mainDescription: "Trocars and Veress needles serve as the initial access tools for laparoscopic surgeries.",
@@ -415,6 +424,7 @@ export const products: Product[] = [
         ]
       },
       {
+        id: "endo-retractors",
         title: "9. Endo Retractors",
         icon: "🚧",
         mainDescription: "Designed to atraumatically hold organs away from the surgical field to improve visibility and access.",
@@ -443,6 +453,7 @@ export const products: Product[] = [
         ]
       },
       {
+        id: "reducers",
         title: "10. Laparoscopy Reducers",
         icon: "🔁",
         mainDescription: "These reducers allow insertion of smaller instruments through larger trocars while maintaining pneumoperitoneum.",

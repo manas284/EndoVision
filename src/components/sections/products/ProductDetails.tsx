@@ -1,10 +1,12 @@
 
+'use client';
+
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { ProductDocs } from "./ProductDocs";
 import { ProductFAQ } from "./ProductFAQ";
 import Image from "next/image";
 import type { Product } from "@/lib/products";
-import { ProductDetailedSpecs } from "./ProductDetailedSpecs";
+import { ProductCategoryGrid } from "./ProductCategoryGrid";
 
 interface ProductDetailsProps {
     product: Product;
@@ -50,7 +52,7 @@ export function ProductDetails({ product }: ProductDetailsProps) {
           </TabsContent>
 
           <TabsContent value="specs">
-            <ProductDetailedSpecs detailedDescription={product.detailedDescription} />
+            <ProductCategoryGrid categories={product.detailedDescription} />
           </TabsContent>
           
           <TabsContent value="docs">
