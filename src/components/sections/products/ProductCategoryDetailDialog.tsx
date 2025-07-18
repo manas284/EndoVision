@@ -39,7 +39,7 @@ export function ProductCategoryDetailDialog({ category, isOpen, onClose }: Produ
             {category.mainDescription}
           </DialogDescription>
         </DialogHeader>
-        <div className="flex-grow relative overflow-hidden">
+        <div className="flex-grow relative">
           <ScrollArea className="h-full pr-6 -mr-6">
               <div className="space-y-6 py-4">
                 <Accordion type="single" collapsible className="w-full">
