@@ -1,3 +1,4 @@
+
 "use client";
 
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
@@ -8,7 +9,7 @@ import { useState } from "react";
 import jsPDF from "jspdf";
 
 interface ProductSpecsProps {
-    specs: ProductSpec[];
+    specs?: ProductSpec[];
 }
 
 const catalogContent = `
@@ -103,6 +104,29 @@ export function ProductSpecs({ specs }: ProductSpecsProps) {
       setIsGenerating(false);
     }
   };
+  
+  if (!specs || specs.length === 0) {
+    return (
+        <div className="text-center py-8 text-muted-foreground">
+            <p>No specifications available for this product.</p>
+             <div className="mt-6 text-center">
+                <Button onClick={generatePdf} disabled={isGenerating}>
+                    {isGenerating ? (
+                        <>
+                            <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                            Generating...
+                        </>
+                    ) : (
+                        <>
+                            <Download className="mr-2 h-4 w-4" />
+                            Download Spec Sheet (PDF)
+                        </>
+                    )}
+                </Button>
+            </div>
+        </div>
+    );
+  }
 
   return (
     <div className="mt-8">
