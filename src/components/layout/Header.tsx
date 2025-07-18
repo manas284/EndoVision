@@ -22,7 +22,7 @@ const Logo = () => (
         <circle cx="16" cy="16" r="16" fill="currentColor"/>
         <path d="M16.2031 4.25L7.45312 27.75L16.2031 22.25L24.9531 27.75L16.2031 4.25Z" fill="#3B73B5"/>
       </svg>
-      <span className="font-headline text-2xl font-bold text-white">BluezoneSurgical</span>
+      <span className="font-headline text-xl font-bold text-white leading-tight">Bluezone<br/>Surgical</span>
     </Link>
 );
 
