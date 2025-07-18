@@ -61,17 +61,6 @@ const navLinks = [
   { href: '/', label: 'Home' },
   { href: '/about', label: 'About' },
   { href: '/products', label: 'Products' },
-  { 
-    href: '/specialties',
-    label: 'Specialties', 
-    isDropdown: true,
-    items: [
-      { href: '/specialties/arthroscopy', label: 'Arthroscopy' },
-      { href: '/specialties/hysteroscopy', label: 'Hysteroscopy' },
-      { href: '/specialties/urology', label: 'Urology' },
-    ]
-  },
-  { href: '/careers', label: 'Careers' },
   { href: '/#contact', label: 'Contact' },
 ];
 
@@ -101,37 +90,10 @@ export function Header() {
   const NavContent = () => (
     <>
       {navLinks.map((link) => {
-        const isActive = link.isDropdown 
-          ? pathname.startsWith(link.href)
-          : pathname === link.href;
+        const isActive = pathname === link.href;
 
-        return link.isDropdown ? (
-          <DropdownMenu key={link.label}>
-            <DropdownMenuTrigger asChild>
-              <Button
-                variant="ghost"
-                size="sm"
-                className={cn(
-                  "rounded-full font-semibold flex items-center gap-1 text-white",
-                   isActive ? "bg-gray-700" : "hover:bg-gray-700",
-                )}
-              >
-                {link.label}
-                <ChevronDown className="h-4 w-4" />
-              </Button>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent>
-              {link.items?.map(item => (
-                <DropdownMenuItem key={item.label} asChild>
-                  <Link href={item.href}>{item.label}</Link>
-                </DropdownMenuItem>
-              ))}
-            </DropdownMenuContent>
-          </DropdownMenu>
-        ) : (
-          <NavLink key={link.label} href={link.href} label={link.label} isActive={isActive} />
-        )}
-      )}
+        return <NavLink key={link.label} href={link.href} label={link.label} isActive={isActive} />
+      })}
     </>
   );
 
