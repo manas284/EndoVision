@@ -21,20 +21,24 @@ import { useScrollAnimation } from '@/hooks/use-scroll-animation';
 import { motion } from 'framer-motion';
 import { submitContactForm } from '@/app/actions';
 import * as React from 'react';
-
-const contactFormSchema = z.object({
-  name: z.string().min(2, "Name must be at least 2 characters."),
-  email: z.string().email("Please enter a valid email address."),
-  specialty: z.string().min(1, "Please select a specialty."),
-  message: z.string().min(10, "Message must be at least 10 characters.").max(500, "Message must be less than 500 characters."),
-});
-
-type ContactFormValues = z.infer<typeof contactFormSchema>;
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export function Contact() {
   const { toast } = useToast();
   const { ref, controls, sectionVariants, itemVariants } = useScrollAnimation();
   const [isSubmitting, setIsSubmitting] = React.useState(false);
+  const { translations } = useLanguage();
+  
+  const contactTranslations = translations.contact;
+
+  const contactFormSchema = z.object({
+    name: z.string().min(2, contactTranslations.form.validation.name),
+    email: z.string().email(contactTranslations.form.validation.email),
+    specialty: z.string().min(1, contactTranslations.form.validation.specialty),
+    message: z.string().min(10, contactTranslations.form.validation.messageMin).max(500, contactTranslations.form.validation.messageMax),
+  });
+
+  type ContactFormValues = z.infer<typeof contactFormSchema>;
 
   const form = useForm<ContactFormValues>({
     resolver: zodResolver(contactFormSchema),
@@ -52,22 +56,22 @@ export function Contact() {
       const result = await submitContactForm(data);
       if (result.success) {
         toast({
-          title: "Message Sent!",
+          title: contactTranslations.toast.success.title,
           description: result.message,
         });
         form.reset();
       } else {
         toast({
           variant: "destructive",
-          title: "Submission Failed",
+          title: contactTranslations.toast.failure.title,
           description: result.message,
         });
       }
     } catch (error) {
        toast({
         variant: "destructive",
-        title: "Error",
-        description: "An unexpected error occurred. Please try again.",
+        title: contactTranslations.toast.error.title,
+        description: contactTranslations.toast.error.description,
       });
     } finally {
       setIsSubmitting(false);
@@ -83,9 +87,9 @@ export function Contact() {
         id="contact" className="py-16 md:py-24 bg-secondary">
       <div className="container">
         <motion.div className="text-center" variants={itemVariants}>
-          <h2 className="font-headline text-3xl md:text-4xl font-bold">Contact Us</h2>
+          <h2 className="font-headline text-3xl md:text-4xl font-bold">{contactTranslations.title}</h2>
           <p className="mt-4 max-w-2xl mx-auto text-muted-foreground">
-            Have a question or need support? Reach out to our team.
+            {contactTranslations.subtitle}
           </p>
         </motion.div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mt-12 items-start">
@@ -95,8 +99,8 @@ export function Contact() {
                     <Mail className="h-6 w-6 text-primary" />
                   </div>
                   <div>
-                    <h3 className="font-headline text-xl font-semibold">Email</h3>
-                    <p className="text-muted-foreground">Our support team is available 24/7.</p>
+                    <h3 className="font-headline text-xl font-semibold">{contactTranslations.info.email.title}</h3>
+                    <p className="text-muted-foreground">{contactTranslations.info.email.description}</p>
                     <a href="mailto:contact@bluezonesurgical.com" className="text-primary font-medium hover:underline">contact@bluezonesurgical.com</a>
                   </div>
                 </div>
@@ -105,8 +109,8 @@ export function Contact() {
                         <Phone className="h-6 w-6 text-primary" />
                     </div>
                   <div>
-                    <h3 className="font-headline text-xl font-semibold">Phone</h3>
-                    <p className="text-muted-foreground">Speak with our specialists directly.</p>
+                    <h3 className="font-headline text-xl font-semibold">{contactTranslations.info.phone.title}</h3>
+                    <p className="text-muted-foreground">{contactTranslations.info.phone.description}</p>
                     <a href="tel:+917389073923" className="text-primary font-medium hover:underline">+91 7389073923</a>
                   </div>
                 </div>
@@ -115,8 +119,8 @@ export function Contact() {
                         <MapPin className="h-6 w-6 text-primary" />
                     </div>
                   <div>
-                    <h3 className="font-headline text-xl font-semibold">Office</h3>
-                    <p className="text-muted-foreground">123 Innovation Drive<br/>Navi Mumbai, India</p>
+                    <h3 className="font-headline text-xl font-semibold">{contactTranslations.info.office.title}</h3>
+                    <p className="text-muted-foreground">{contactTranslations.info.office.address}</p>
                   </div>
                 </div>
             </motion.div>
@@ -129,9 +133,9 @@ export function Contact() {
                       name="name"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel>Full Name</FormLabel>
+                          <FormLabel>{contactTranslations.form.name}</FormLabel>
                           <FormControl>
-                            <Input placeholder="John Doe" {...field} disabled={isSubmitting} />
+                            <Input placeholder={contactTranslations.form.placeholders.name} {...field} disabled={isSubmitting} />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -142,9 +146,9 @@ export function Contact() {
                       name="email"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel>Email Address</FormLabel>
+                          <FormLabel>{contactTranslations.form.email}</FormLabel>
                           <FormControl>
-                            <Input placeholder="you@example.com" {...field} disabled={isSubmitting} />
+                            <Input placeholder={contactTranslations.form.placeholders.email} {...field} disabled={isSubmitting} />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -155,18 +159,18 @@ export function Contact() {
                       name="specialty"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel>Specialty</FormLabel>
+                          <FormLabel>{contactTranslations.form.specialty}</FormLabel>
                            <Select onValueChange={field.onChange} defaultValue={field.value} disabled={isSubmitting}>
                             <FormControl>
                               <SelectTrigger>
-                                <SelectValue placeholder="Select a specialty" />
+                                <SelectValue placeholder={contactTranslations.form.placeholders.specialty} />
                               </SelectTrigger>
                             </FormControl>
                             <SelectContent>
-                              <SelectItem value="Arthroscopy">Arthroscopy</SelectItem>
-                              <SelectItem value="Hysteroscopy">Hysteroscopy</SelectItem>
-                              <SelectItem value="Urology">Urology</SelectItem>
-                              <SelectItem value="General Inquiry">General Inquiry</SelectItem>
+                              <SelectItem value="Arthroscopy">{contactTranslations.specialties.arthroscopy}</SelectItem>
+                              <SelectItem value="Hysteroscopy">{contactTranslations.specialties.hysteroscopy}</SelectItem>
+                              <SelectItem value="Urology">{contactTranslations.specialties.urology}</SelectItem>
+                              <SelectItem value="General Inquiry">{contactTranslations.specialties.general}</SelectItem>
                             </SelectContent>
                           </Select>
                           <FormMessage />
@@ -178,10 +182,10 @@ export function Contact() {
                       name="message"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel>Message</FormLabel>
+                          <FormLabel>{contactTranslations.form.message}</FormLabel>
                           <FormControl>
                             <Textarea
-                              placeholder="Tell us how we can help..."
+                              placeholder={contactTranslations.form.placeholders.message}
                               className="min-h-[120px]"
                               {...field}
                               disabled={isSubmitting}
@@ -195,10 +199,10 @@ export function Contact() {
                       {isSubmitting ? (
                         <>
                           <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                          Sending...
+                          {contactTranslations.form.sending}
                         </>
                       ) : (
-                        'Send Message'
+                        contactTranslations.form.submit
                       )}
                     </Button>
                   </form>

@@ -15,6 +15,7 @@ import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Menu, ChevronDown, Globe, Moon, Sun, Laptop } from 'lucide-react';
 import { useTheme } from 'next-themes';
 import { cn } from '@/lib/utils';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const Logo = () => (
     <Link href="/" className="flex items-center gap-2">
@@ -56,22 +57,21 @@ const ThemeToggle = () => {
   );
 };
 
-
-const navLinks = [
-  { href: '/', label: 'Home' },
-  { href: '/products', label: 'Products' },
-  { href: '/about', label: 'About' },
-  { href: '/#contact', label: 'Contact' },
-];
-
 export function Header() {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [language, setLanguage] = useState<'EN' | 'ES'>('EN');
+  const { language, setLanguage, translations } = useLanguage();
   const pathname = usePathname();
 
   const toggleLanguage = () => {
-    setLanguage(prev => prev === 'EN' ? 'ES' : 'EN');
+    setLanguage(language === 'en' ? 'hi' : 'en');
   };
+
+  const navLinks = [
+    { href: '/', label: translations.header.home },
+    { href: '/products', label: translations.header.products },
+    { href: '/about', label: translations.header.about },
+    { href: '/#contact', label: translations.header.contact },
+  ];
 
   const NavLink = ({ href, label, isActive }: { href: string; label: string; isActive: boolean }) => (
     <Button
@@ -91,7 +91,6 @@ export function Header() {
     <>
       {navLinks.map((link) => {
         const isActive = pathname === link.href;
-
         return <NavLink key={link.label} href={link.href} label={link.label} isActive={isActive} />
       })}
     </>
@@ -109,7 +108,7 @@ export function Header() {
         <div className="flex items-center gap-1">
           <Button variant="ghost" onClick={toggleLanguage} className="gap-2 font-semibold text-white hover:bg-gray-700 hover:text-white">
             <Globe className="h-5 w-5"/>
-            <span>{language}</span>
+            <span>{language.toUpperCase()}</span>
           </Button>
 
           <ThemeToggle />
