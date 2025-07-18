@@ -21,17 +21,19 @@ interface ProductCategoryDetailDialogProps {
 }
 
 export function ProductCategoryDetailDialog({ category, isOpen, onClose }: ProductCategoryDetailDialogProps) {
-  const scrollRef = React.useRef<HTMLDivElement>(null);
+  const viewportRef = React.useRef<HTMLDivElement>(null);
 
   if (!category) {
     return null;
   }
 
   const scroll = (direction: 'up' | 'down') => {
-    scrollRef.current?.scrollBy({
-      top: direction === 'up' ? -200 : 200,
-      behavior: 'smooth',
-    });
+    if (viewportRef.current) {
+      viewportRef.current.scrollBy({
+        top: direction === 'up' ? -200 : 200,
+        behavior: 'smooth',
+      });
+    }
   };
 
   return (
@@ -47,7 +49,7 @@ export function ProductCategoryDetailDialog({ category, isOpen, onClose }: Produ
           </DialogDescription>
         </DialogHeader>
         <div className="flex-grow relative overflow-hidden">
-          <ScrollArea className="h-full pr-6 -mr-6" ref={scrollRef}>
+          <ScrollArea className="h-full pr-6 -mr-6" viewportRef={viewportRef}>
               <div className="space-y-6 py-4">
               {category.subItems.map((item, itemIndex) => (
                   <div key={itemIndex} className="p-4 rounded-lg bg-secondary/50 border">
