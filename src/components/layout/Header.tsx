@@ -59,8 +59,8 @@ const ThemeToggle = () => {
 
 const navLinks = [
   { href: '/', label: 'Home' },
-  { href: '/about', label: 'About' },
   { href: '/products', label: 'Products' },
+  { href: '/about', label: 'About' },
   { href: '/#contact', label: 'Contact' },
 ];
 
