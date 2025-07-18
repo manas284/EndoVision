@@ -1,4 +1,5 @@
-import { Aperture, Zap, TestTubeDiagonal, Droplets, Shield, Waves, Hand, Camera, Scan, View, Microscope, Bone, HeartPulse } from 'lucide-react';
+
+import { Scissors, Hand, Zap, Shield, Droplets, Aperture, Check } from 'lucide-react';
 
 export interface ProductFeature {
   icon: React.ReactNode;
@@ -17,6 +18,22 @@ export interface GalleryImage {
   hint: string;
 }
 
+export interface DetailedCategory {
+    title: string;
+    icon: string;
+    mainDescription: string;
+    subItems: {
+        title: string;
+        icon: string;
+        description: string;
+        function: string;
+        application: string;
+        advantage: string;
+    }[];
+    keyFeatures: string[];
+}
+
+
 export interface Product {
   slug: string;
   name: string;
@@ -32,9 +49,10 @@ export interface Product {
     image: string;
     imageHint: string;
   };
-  features: ProductFeature[];
-  specs: ProductSpec[];
+  features: ProductFeature[]; // Kept for other products, will be empty for laparoscopic instruments
+  specs: ProductSpec[]; // Kept for other products, will be empty for laparoscopic instruments
   faqs: { question: string; answer: string }[];
+  detailedDescription?: DetailedCategory[];
 }
 
 export const products: Product[] = [
@@ -62,32 +80,54 @@ export const products: Product[] = [
       image: "https://placehold.co/800x600.png",
       imageHint: "surgical instruments"
     },
-    features: [
-      { icon: <Hand className="h-10 w-10 text-primary" />, title: "Laparoscopic Scissors", description: "Used to cut tissues. Available in Curved, Straight, Micro, and Hook blade types for various applications." },
-      { icon: <Hand className="h-10 w-10 text-primary" />, title: "Laparoscopic Graspers", description: "To grasp, hold, and manipulate tissue without trauma. Available in single/double action and various jaw types like Maryland, Babcock, and Alligator." },
-      { icon: <Zap className="h-10 w-10 text-primary" />, title: "Clip Applicators", description: "Holds and applies titanium/polymer clips to blood vessels for hemostasis. Available in 5mm and 10mm sizes." },
-      { icon: <Shield className="h-10 w-10 text-primary" />, title: "Laparoscopic Needle Holders", description: "Securely hold and maneuver surgical needles during suturing. Available in various types and jaw configurations." },
-      { icon: <Droplets className="h-10 w-10 text-primary" />, title: "Suction & Irrigation System", description: "Used to remove blood, smoke, or fluids while irrigating the surgical site for a clear view." },
-      { icon: <Zap className="h-10 w-10 text-primary" />, title: "Monopolar & Bipolar Instruments", description: "A range of electrodes, forceps, and sealers for precise cutting, coagulation, and vessel sealing." },
-    ],
-    specs: [
-      { parameter: "Laparoscopic Scissors (5mm)", value: "Blade Types: Curved, Straight, Micro, Hook" },
-      { parameter: "5mm Double Action Graspers", value: "Jaw Types: Maryland, Mixter (90°), Universal/Maxi, Allies, Bowel/Fenestrated, End Clinch, Claw (2x4/2x3), Babcock, Alligator, Plain, Oviduct" },
-      { parameter: "5mm Single Action Graspers", value: "Jaw Types: Croce Olmi, Allies" },
-      { parameter: "10mm Single-Action Graspers", value: "Jaw Types: Claw Forcep, Spoon Forcep, OP Scissor" },
-      { parameter: "Clip Applicators (10mm)", value: "Action: Double & Single. Jaw Sizes: Small (LT200, LT300, LT400), Long Insert. Variants: Separate Jaws" },
-      { parameter: "Clip Applicators (5mm)", value: "Designed for smaller vessel ligation in 5mm ports." },
-      { parameter: "Needle Holders", value: "Handle Types: Ethicon (Stainless Steel), Storz (Aluminum Gun Type), Storz (V-Type). Jaw Options: Straight, Right, Left, Toothed." },
-      { parameter: "Suction & Irrigation", value: "Control Types: Thumb, Trumpet, Storz. Sizes: 5mm, 10mm to 5mm." },
-      { parameter: "Monopolar Electrodes (5mm)", value: "Tip Types: L Hook, J Hook, Spatula, Ball Electrode." },
-      { parameter: "Bipolar Coagulation Forceps", value: "Jaw Types: Tong (Plate), Fenestrated." },
-      { parameter: "Bipolar Grasper Forceps", value: "Non-Detachable, Double Action. Jaw Types: Maryland, Bowel, Ruby." },
-      { parameter: "Bipolar Grasper Cutter", value: "Detachable. Handle Types: Blue Bissinger, Black Bissinger, Wolf. Jaw Types: Maryland, Fenestrated, Ruby." },
-      { parameter: "Bipolar Sealer Cutter", value: "Handle Types: Non-Detachable (Indian), Detachable (Bissinger/Wolf). Jaw Options: Silver Jaw, Gold Jaw." },
-      { parameter: "Trocars", value: "Sizes: 3mm, 5mm, 7mm, 10mm, 12mm, 15mm, 20mm. Types: Storz, Magnetic. Materials: Stainless Steel, Brass." },
-      { parameter: "Veress Needles", value: "Sizes: 100mm, 120mm, 140mm, 160mm." },
-      { parameter: "Endo Retractors", value: "Types: Fan Retractor (5mm, 3-prong), Articulating Fan (5mm/10mm, 5-prongs)." },
-      { parameter: "Laparoscopy Reducers", value: "Conversions: 20mm→10mm, 15mm→10mm, 10mm→7mm, 10mm→5mm, 7mm→5mm, 5mm→3mm. Types: Metal, Top Mounted, Flipon." },
+    features: [], // This is now handled by detailedDescription
+    specs: [], // This is now handled by detailedDescription
+    detailedDescription: [
+      {
+        title: "1. Laparoscopic Scissors (5mm)",
+        icon: "🔪",
+        mainDescription: "Laparoscopic scissors are precision surgical instruments designed for cutting tissue during minimally invasive surgery. They are inserted through 5mm trocars and manipulated using a handle and long shaft. These scissors are electrosurgical-compatible and can be used in various surgical procedures including general surgery, gynecology, urology, and colorectal surgery.",
+        subItems: [
+          {
+            title: "Curved Scissor",
+            icon: "✂️",
+            description: "The blades are curved, typically upward, allowing surgeons to cut around convex structures or anatomical curves.",
+            function: "Enables better maneuverability in tight or angled spaces where straight scissors may not reach.",
+            application: "Ideal for dissecting peritoneal layers, separating adhesions, or trimming curved anatomical structures.",
+            advantage: "Provides superior tissue visibility and control during curved or radial dissection paths."
+          },
+          {
+            title: "Straight Scissor",
+            icon: "✂️",
+            description: "Features straight, sharp, or blunt blades for making linear cuts in tissues and structures.",
+            function: "Used for clean, controlled cuts through fascia, soft tissues, and sutures.",
+            application: "Commonly used during gallbladder removal, hysterectomy, and intracorporeal suturing.",
+            advantage: "Offers consistent cutting force with a simple forward motion, suitable for general use."
+          },
+          {
+            title: "Micro Scissor",
+            icon: "✂️",
+            description: "Very fine and narrow blades with a delicate tip designed for microsurgical tasks.",
+            function: "Provides ultra-precise control for cutting delicate structures like nerves, vessels, or pediatric tissues.",
+            application: "Used in precise dissection during laparoscopic myomectomy, pediatric surgery, or endometriosis cases.",
+            advantage: "Minimizes tissue trauma, ideal for refining dissection in small anatomical areas."
+          },
+          {
+            title: "Hook Scissor",
+            icon: "✂️",
+            description: "The blade has a sharp, curved, hook-like tip designed for encasing and cutting tissue bundles.",
+            function: "Allows tissue to be ‘hooked’ before cutting, ensuring accurate targeting without slipping.",
+            application: "Especially useful in cutting ligaments, tough connective tissues, and in procedures involving fibrotic structures or adhesions.",
+            advantage: "Reduces the risk of accidental injury to surrounding tissues; allows separation and cutting in a single action."
+          }
+        ],
+        keyFeatures: [
+          "Material: Medical-grade stainless steel or available with insulated shafts.",
+          "Shaft Size: Standard 5mm for compatibility with universal laparoscopic ports.",
+          "Handle Options: Ratcheted or ratchet-free, with ergonomic grips for fatigue-free use.",
+          "Energy Compatibility: Monopolar versions are available for simultaneous cutting and coagulation."
+        ]
+      }
     ],
     faqs: [
         { question: "Are these instruments compatible with standard trocars?", answer: "Yes, our instruments are designed to be compatible with all standard trocars of the corresponding size." },
