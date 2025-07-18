@@ -40,8 +40,8 @@ export function ProductCategoryDetailDialog({ category, isOpen, onClose }: Produ
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="max-w-4xl max-h-[90vh] flex flex-col">
-        <DialogHeader>
+      <DialogContent className="max-w-4xl h-[90vh] flex flex-col">
+        <DialogHeader className="flex-shrink-0">
           <DialogTitle className="text-3xl font-headline flex items-center gap-4">
             <span className="text-4xl">{category.icon}</span>
             {category.title}
