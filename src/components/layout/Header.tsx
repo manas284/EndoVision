@@ -18,11 +18,9 @@ import { cn } from '@/lib/utils';
 
 const Logo = () => (
     <Link href="/" className="flex items-center gap-2">
-      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-8 w-8 text-primary">
-        <circle cx="12" cy="12" r="10" />
-        <path d="M12 2a10 10 0 0 0-3.91 19.82" />
-        <path d="M12 22a10 10 0 0 0 3.91-19.82" />
-        <ellipse cx="12" cy="12" rx="2.5" ry="5" />
+      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-primary">
+        <circle cx="16" cy="16" r="16" className="fill-current"/>
+        <path d="M16.2031 4.25L7.45312 27.75L16.2031 22.25L24.9531 27.75L16.2031 4.25Z" fill="#3B73B5"/>
       </svg>
       <span className="font-headline text-2xl font-bold text-primary">BluezoneSurgical</span>
     </Link>
