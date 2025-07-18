@@ -63,22 +63,30 @@ export const products: Product[] = [
       imageHint: "surgical instruments"
     },
     features: [
-      { icon: <Hand className="h-10 w-10 text-primary" />, title: "Ergonomic Handles", description: "Designed to reduce fatigue and improve control during long procedures." },
-      { icon: <Shield className="h-10 w-10 text-primary" />, title: "Tungsten Carbide Jaws", description: "Provides exceptional grip and durability for reliable tissue manipulation." },
-      { icon: <Aperture className="h-10 w-10 text-primary" />, title: "Modular Take-Apart Design", description: "Allows for thorough cleaning and easy component replacement, extending instrument life." },
-      { icon: <Zap className="h-10 w-10 text-primary" />, title: "High-Quality Insulation", description: "Ensures safety during electrosurgery procedures." },
+      { icon: <Hand className="h-10 w-10 text-primary" />, title: "Laparoscopic Scissors", description: "Used to cut tissues. Available in Curved, Straight, Micro, and Hook blade types for various applications." },
+      { icon: <Hand className="h-10 w-10 text-primary" />, title: "Laparoscopic Graspers", description: "To grasp, hold, and manipulate tissue without trauma. Available in single/double action and various jaw types like Maryland, Babcock, and Alligator." },
+      { icon: <Zap className="h-10 w-10 text-primary" />, title: "Clip Applicators", description: "Holds and applies titanium/polymer clips to blood vessels for hemostasis. Available in 5mm and 10mm sizes." },
+      { icon: <Shield className="h-10 w-10 text-primary" />, title: "Laparoscopic Needle Holders", description: "Securely hold and maneuver surgical needles during suturing. Available in various types and jaw configurations." },
+      { icon: <Droplets className="h-10 w-10 text-primary" />, title: "Suction & Irrigation System", description: "Used to remove blood, smoke, or fluids while irrigating the surgical site for a clear view." },
+      { icon: <Zap className="h-10 w-10 text-primary" />, title: "Monopolar & Bipolar Instruments", description: "A range of electrodes, forceps, and sealers for precise cutting, coagulation, and vessel sealing." },
     ],
     specs: [
-      { parameter: "Instrument Types", value: "Graspers, Dissectors, Scissors, Needle Holders" },
-      { parameter: "Diameter", value: "5mm" },
-      { parameter: "Working Length", value: "33cm" },
-      { parameter: "Material", value: "Medical Grade Stainless Steel, Tungsten Carbide" },
-      { parameter: "Rotation", value: "360°" },
-      { parameter: "Sterilization", value: "Autoclavable" },
+      { parameter: "Laparoscopic Scissors (5mm)", value: "Types: Curved, Straight, Micro, Hook" },
+      { parameter: "Laparoscopic Graspers (5mm/10mm)", value: "Action: Single & Double. Jaws: Maryland, Mixter, Allies, Bowel, Babcock, Claw, Alligator, etc." },
+      { parameter: "Clip Applicators (5mm/10mm)", value: "Action: Single & Double. Jaw Sizes: LT200, LT300, LT400." },
+      { parameter: "Needle Holders", value: "Types: Ethicon, Storz Gun Type, Storz V-Type. Jaws: Straight, Right, Left, Toothed." },
+      { parameter: "Suction & Irrigation", value: "Types: Thumb, Trumpet, Storz. Sizes: 5mm, 10mm." },
+      { parameter: "Monopolar Electrodes (5mm)", value: "Tips: L Hook, J Hook, Spatula, Ball." },
+      { parameter: "Bipolar Instruments", value: "Forceps, Graspers, Cutters, and Sealers with various jaw and handle types." },
+      { parameter: "Trocars", value: "Sizes: 3mm to 20mm. Types: Storz, Magnetic." },
+      { parameter: "Veress Needles", value: "Sizes: 100mm, 120mm, 140mm, 160mm." },
+      { parameter: "Endo Retractors (5mm/10mm)", value: "Types: Fan Retractor (3-prong), Articulating Fan (5-prong)." },
+      { parameter: "Laparoscopy Reducers", value: "Reduces from 20mm down to 3mm. Types: Metal, Top Mounted, Flipon." },
     ],
     faqs: [
-        { question: "Are these instruments compatible with standard trocars?", answer: "Yes, our 5mm instruments are designed to be compatible with all standard 5mm trocars." },
+        { question: "Are these instruments compatible with standard trocars?", answer: "Yes, our instruments are designed to be compatible with all standard trocars of the corresponding size." },
         { question: "What is the warranty on these laparoscopic instruments?", answer: "All our reusable laparoscopic instruments come with a one-year warranty against manufacturing defects." },
+        { question: "Are the instruments reusable?", answer: "Yes, the majority of our laparoscopic instruments are designed for reusability and are autoclavable. Please refer to the specific instrument's documentation for cleaning and sterilization protocols." },
     ]
   }
 ];
