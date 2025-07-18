@@ -43,10 +43,12 @@ export function ProductCategoryDetailDialog({ category, isOpen, onClose }: Produ
                     <span className="text-2xl">{item.icon}</span> {item.title}
                 </h4>
                 <dl className="mt-3 space-y-2 text-sm text-muted-foreground">
-                    <div>
-                    <dt className="font-semibold text-foreground">Description:</dt>
-                    <dd>{item.description}</dd>
-                    </div>
+                    {item.description && (
+                        <div>
+                        <dt className="font-semibold text-foreground">Description:</dt>
+                        <dd>{item.description}</dd>
+                        </div>
+                    )}
                     {item.function && (
                         <div>
                         <dt className="font-semibold text-foreground">Function:</dt>
