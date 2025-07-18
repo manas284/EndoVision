@@ -15,7 +15,8 @@ interface ProductHeroProps {
 }
 
 export function ProductHero({ product }: ProductHeroProps) {
-  const [activeImage, setActiveImage] = useState(product.gallery[0]);
+  const [activeImageIndex, setActiveImageIndex] = useState(0);
+  const activeImage = product.gallery[activeImageIndex];
 
   return (
     <section id="product-hero" className="py-12 md:py-16 bg-secondary">
@@ -38,10 +39,10 @@ export function ProductHero({ product }: ProductHeroProps) {
               {product.gallery.map((image, index) => (
                 <button
                   key={index}
-                  onClick={() => setActiveImage(image)}
+                  onClick={() => setActiveImageIndex(index)}
                   className={cn(
                     "rounded-md overflow-hidden border-2 transition-all",
-                    activeImage.src === image.src ? "border-primary shadow-md" : "border-transparent hover:border-primary/50"
+                    activeImageIndex === index ? "border-primary shadow-md" : "border-transparent hover:border-primary/50"
                   )}
                 >
                   <Image
