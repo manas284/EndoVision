@@ -195,7 +195,7 @@ export const products: Product[] = [
       {
         title: "3. Clip Applicators",
         icon: "🔗",
-        mainDescription: "Laparoscopic clip applicators are essential instruments used to apply ligation clips to occlude blood vessels, ducts, or tubular structures, preventing bleeding or fluid leakage. They are designed to deploy specific clip sizes (LT200, LT300, LT400).",
+        mainDescription: "Laparoscopic clip applicators are essential instruments used to apply ligation clips during surgery to occlude blood vessels, ducts, or tubular structures. These clips, typically made of titanium or polymer, are applied to prevent bleeding or fluid leakage. Applicators are designed to deploy specific clip sizes (LT200, LT300, LT400) and are compatible with single-use or reusable clip cartridges.",
         subItems: [
           {
             title: "10mm Double Action",
@@ -233,167 +233,213 @@ export const products: Product[] = [
        {
         title: "4. Needle Holders",
         icon: "🔩",
-        mainDescription: "Laparoscopic needle holders are essential for intracorporeal suturing and knot-tying. They are designed to hold the surgical needle firmly while providing optimal control and precision.",
+        mainDescription: "Laparoscopic needle holders are critical tools in endoscopic surgery, designed to hold suturing needles securely and facilitate precise placement of stitches within the body. They are long-shafted, precision-controlled instruments integrated with ergonomic handles for surgeon comfort and stability.",
         subItems: [
           {
             title: "Ethicon Type (Stainless Steel)",
             icon: "🧷",
-            description: "Classic ring handle with ratchet, offers precise control and secure locking.",
-            function: "Holds and maneuvers surgical needles during suturing.",
-            application: "Common in general laparoscopic surgeries.",
-            advantage: "Durable, autoclavable, universal usage, compatible with most suture types."
+            description: "Rust-resistant, high-quality stainless steel for long-term durability and repeated autoclaving. Traditional ring handle equipped with a smooth ratchet-lock system for locking the needle in place during suturing.",
+            function: "Holds suturing needles securely.",
+            application: "Commonly used in general, gynecological, and urological laparoscopic procedures requiring internal stitching.",
+            advantage: "Excellent tactile feedback, widely accepted by laparoscopic surgeons, compatible with standard 5mm and 10mm ports."
           },
           {
             title: "Storz Type (Aluminum Gun/V-Type)",
             icon: "🧷",
-            description: "Lightweight ergonomic grip to reduce hand fatigue. V-Type handle provides better reach in narrow fields.",
-            function: "Precision needle handling for complex suturing.",
-            application: "Advanced procedures, long surgeries.",
-            advantage: "Easy maneuverability, high precision, reliable locking mechanism."
+            description: "Lightweight aluminum body (Gun Type) or straight vertical handle (V-Type) for reduced fatigue and enhanced access.",
+            function: "Enables rapid adjustment and single-click control when locking the needle. V-Type is suitable for rotational movements.",
+            application: "Advanced procedures, long surgeries, deep pelvic regions.",
+            advantage: "Strong, stable needle grip with high torque resistance. Both are compatible with curved and straight needles."
+          },
+          {
+            title: "Jaw Options (All Types)",
+            icon: "🛠️",
+            description: "Available in Straight, Right Angled, Left Angled, and Toothed variants.",
+            function: "Straight for standard sutures, Angled for difficult-to-reach areas, Toothed for maximum grip on slippery needles.",
+            application: "Adaptable to any surgical scenario, from posterior dissections to procedures in wet conditions.",
+            advantage: "Provides versatility and ensures the right tool is available for every suturing challenge."
           }
         ],
         keyFeatures: [
-          "Jaw Options: Straight, Right Angled, Left Angled for accessing tight spaces.",
-          "Toothed Jaws: Ensure extra grip on curved or slippery suture needles.",
-          "Material: High-quality stainless steel or lightweight aluminum."
+          "Material: High-quality stainless steel or lightweight aluminum.",
+          "Jaw Options: Straight, Right Angled, Left Angled, and Toothed for various needs.",
+          "Handle Design: Ergonomic options including Ring, Pistol-grip, and Vertical.",
+          "Ratchet System: Secure locking mechanism to hold needles firmly.",
         ]
       },
       {
         title: "5. Suction & Irrigation Systems",
-        icon: "🧪",
-        mainDescription: "Used to irrigate the surgical field and remove blood, fluid, or smoke during laparoscopic procedures, maintaining a clear view for the surgeon.",
+        icon: "💧",
+        mainDescription: "Laparoscopic suction irrigation systems are essential tools used to clear blood, debris, smoke, or fluids from the operative field and can also be used to deliver irrigation fluids to maintain visibility and prevent tissue adhesion.",
         subItems: [
           {
             title: "Thumb-Control Suction",
-            icon: "💧",
-            description: "Allows surgeon full control of fluid suction or irrigation via a manual thumb lever.",
-            function: "Simple, direct control over fluid management.",
-            application: "General procedures where manual control is preferred. Available for 5mm and 10mm ports.",
-            advantage: "Simplicity, cost-effective, and reliable."
+            icon: "💦",
+            description: "Features a thumb lever or button for manual control of suction or irrigation flow. Available in 5mm and 10mm sizes.",
+            function: "Allows direct, one-handed control over fluid management.",
+            application: "Diagnostic laparoscopy, laparoscopic cholecystectomy.",
+            advantage: "Compact, easy to control, and cost-effective for short to medium surgeries."
           },
           {
             title: "Trumpet-Control Suction",
-            icon: "🚿",
-            description: "Button-like trumpet valve for easy, intuitive finger control of on-off suction and irrigation.",
-            function: "Provides ergonomic and consistent flow control.",
-            application: "Preferred in longer procedures. Available for 5mm and 10mm ports.",
-            advantage: "Reduces hand fatigue and improves consistency."
+            icon: "🧴",
+            description: "Spring-loaded push-button style valve resembling a 'trumpet' for intuitive finger use. Available in 5mm and 10mm sizes.",
+            function: "Provides reliable, high-flow efficiency with an easy switch between suction and irrigation.",
+            application: "Used in fluid-rich surgeries like gynecological adhesiolysis, oophorectomies.",
+            advantage: "Ergonomic and preferred in longer procedures due to consistency and flow."
+          },
+          {
+            title: "Storz Type Trumpet Suction",
+            icon: "🧪",
+            description: "High-grade stainless steel body with integrated trumpet valve, fully compatible with Karl Storz systems and connectors.",
+            function: "Delivers high-flow rate suction suitable for complex procedures.",
+            application: "Gynecology, urology, and colorectal surgeries requiring recurrent flushing and clearing.",
+            advantage: "Robust, reusable, and ensures seamless integration with existing Storz equipment."
           }
         ],
         keyFeatures: [
-            "Storz Type Compatibility: High-flow rate systems available for complex procedures.",
-            "Reducer Options: 10mm to 5mm reducers available for flexibility.",
-            "Autoclavable: All components are fully reusable and sterilizable."
+          "Autoclavable: All components are fully reusable and sterilizable.",
+          "High Flow: Designed to prevent clogging and maintain a clear surgical field.",
+          "Ergonomic Design: Reduces hand fatigue during prolonged use.",
+          "Versatile Sizing: Options for both 5mm and 10mm ports."
         ]
       },
       {
         title: "6. Monopolar Electrodes (5mm)",
         icon: "⚡",
-        mainDescription: "Designed to perform cutting, coagulation, and dissection in laparoscopic electrosurgery using monopolar energy. Used with electrosurgical units (ESU).",
+        mainDescription: "Monopolar electrodes are used in laparoscopic procedures for cauterizing, cutting, and dissection. They deliver current from a single electrode to targeted tissue and complete the circuit through a grounding pad on the patient.",
         subItems: [
           {
-            title: "L-Hook / J-Hook",
+            title: "L-Hook / J-Hook Electrode",
             icon: "🔌",
-            description: "L-shaped or J-shaped tip for multi-directional use.",
-            function: "Precise incision, dissection, and coagulation of tissues.",
+            description: "L-shaped or J-shaped sharp metallic tip.",
+            function: "Used for tissue dissection, coagulation of blood vessels, and fine cutting.",
             application: "Common in cholecystectomy, appendectomy, and dissecting curved tissues.",
-            advantage: "High precision and control in tight spaces."
+            advantage: "Precision cutting along straight or curved tissue areas with lower thermal spread."
           },
           {
-            title: "Spatula / Ball Electrode",
+            title: "Spatula Electrode",
             icon: "🔌",
-            description: "Flat, wide paddle blade (Spatula) or rounded ball tip (Ball).",
-            function: "Spatula for broad coagulation; Ball for precise spot coagulation.",
-            application: "Spatula for superficial lesions like endometriosis; Ball for hemostasis.",
-            advantage: "Versatile options for different coagulation needs with minimal tissue damage."
+            description: "Flat blade (paddle) shape for broad surface area.",
+            function: "Used to cauterize large tissue planes, such as peritoneal surfaces or omentum.",
+            application: "Effective for treating superficial lesions like endometriosis during tumor debulking.",
+            advantage: "Provides wide, even coagulation."
+          },
+          {
+            title: "Ball Electrode",
+            icon: "🔌",
+            description: "Spherical metal tip.",
+            function: "Ideal for spot coagulation with minimal tissue penetration.",
+            application: "Often used for hemostasis near blood vessels or on delicate anatomy.",
+            advantage: "Controlled coagulation with minimal damage to surrounding tissue."
           }
         ],
         keyFeatures: [
           "Shaft: 5mm insulated shaft for safety.",
-          "Connection: Standard monopolar connection compatible with most ESUs.",
-          "Material: High-grade stainless steel with durable insulation."
+          "Connection: Standard monopolar connection compatible with most Electrosurgical Units (ESUs).",
+          "Material: High-grade stainless steel with durable insulation.",
+          "Reusable: Fully autoclavable."
         ]
       },
       {
         title: "7. Bipolar Instruments",
-        icon: "⚙️",
-        mainDescription: "Used for safe coagulation of tissues and controlled energy delivery without a return electrode, minimizing risk to adjacent tissues.",
+        icon: "🔥",
+        mainDescription: "Bipolar instruments safely deliver coagulating current between two electrodes on the instrument tip, eliminating the need for a grounding pad and minimizing lateral thermal spread. They’re widely preferred in bowel, gynecological, urological, and oncologic laparoscopies.",
         subItems: [
           {
             title: "Bipolar Coagulation Forceps",
-            icon: "🔥",
-            description: "U or X Handle with Tong (Plate) or Fenestrated Jaws.",
-            function: "Dissecting or coagulating vessels during laparoscopic procedures.",
-            application: "Provides controlled coagulation with minimal thermal spread.",
-            advantage: "Atraumatic grip with fenestrated jaws, efficient coagulation with tong jaws."
+            icon: "🧲",
+            description: "Available with U-Handle or ergonomic X-Handle. Jaws come in Tong (Plate) or Fenestrated styles.",
+            function: "Dissecting or coagulating vessels. Tong jaws for even compression, fenestrated for gentle grip.",
+            application: "Used for controlled coagulation with minimal thermal spread.",
+            advantage: "Safe and effective vessel sealing."
           },
           {
-            title: "Bipolar Grasper / Cutter",
-            icon: "🔥",
-            description: "Combines grasping and bipolar coagulation. Available as non-detachable or detachable (modular).",
-            function: "Simultaneous grasping, cutting, and coagulation.",
-            application: "Used with Maryland, Bowel, or Ruby jaws for different tissue types.",
-            advantage: "Multifunctional tool reduces instrument exchanges. Detachable versions offer cost-savings."
+            title: "Non-Detachable Bipolar Graspers",
+            icon: "🔗",
+            description: "Combines grasping and coagulation. Jaw types include Maryland, Bowel, and Ruby for different tissues.",
+            function: "Simultaneous tissue handling and vessel sealing.",
+            application: "Bowel resections, hysterectomy.",
+            advantage: "Permanent design reduces cost and maintenance; ideal for high-usage surgical centers."
+          },
+          {
+            title: "Detachable Bipolar Grasper Cutter",
+            icon: "🔧",
+            description: "Modular system with interchangeable handles (Blue/Black Bissinger, Wolf) and jaws (Maryland, Fenestrated, Ruby).",
+            function: "Grasping, cutting, and coagulation in one instrument.",
+            application: "Versatile tool for complex procedures.",
+            advantage: "Reduces instrument exchanges, cost-effective due to replaceable parts."
+          },
+          {
+            title: "Bipolar Sealer Cutter",
+            icon: "⚙️",
+            description: "All-in-one tool for vessel sealing and cutting. Available as non-detachable (Indian Handle) or detachable (Bissinger/Wolf Handles) with Silver or Gold jaws.",
+            function: "Efficiently seals and cuts vessels up to 7mm.",
+            application: "Advanced laparoscopic procedures requiring reliable large vessel sealing.",
+            advantage: "Enhanced sealing efficiency and multifunctional design."
           }
         ],
         keyFeatures: [
-          "Handle Options: Blue/Black Bissinger, Wolf, Indian Handle.",
-          "Jaw Options: Maryland, Fenestrated, Ruby, Silver/Gold Sealer Jaws.",
-          "Safety: Confined energy delivery reduces risk of unintended burns."
+          "Safety: Confined energy delivery reduces risk of unintended burns.",
+          "Versatility: Multiple handle and jaw combinations for any procedure.",
+          "Efficiency: Combines multiple functions to reduce instrument exchanges.",
+          "Autoclavable: Both detachable and non-detachable versions are fully reusable."
         ]
       },
       {
         title: "8. Trocars & Veress Needles",
         icon: "🧷",
-        mainDescription: "Trocars create access ports for instruments, while Veress needles safely establish pneumoperitoneum.",
+        mainDescription: "Trocars and Veress needles serve as the initial access tools for laparoscopic surgeries.",
         subItems: [
           {
             title: "Trocars",
-            icon: "🔩",
-            description: "Available in Stainless Steel, Brass, Storz Type, and Magnetic variants.",
-            function: "Provide a sealed port for instrument insertion.",
-            application: "Sizes from 3mm to 20mm to accommodate all laparoscopic instruments.",
-            advantage: "Reusable, ergonomic designs. Magnetic trocars offer enhanced stability."
+            icon: "💉",
+            description: "Provide access ports for instruments. Available in diameters from 3mm to 20mm.",
+            function: "Create and maintain a sealed port into the abdominal cavity.",
+            application: "Used in all laparoscopic surgeries to introduce cameras and instruments.",
+            advantage: "Options include durable Stainless Steel, cost-effective Brass, ergonomic Storz Type, and stabilized Magnetic variants."
           },
           {
             title: "Veress Needles",
-            icon: "🩺",
-            description: "Spring-loaded safety needle to safely insufflate the abdomen with CO2.",
+            icon: "🪡",
+            description: "Spring-loaded safety needle to safely insufflate the abdomen with CO₂. Sizes from 100mm to 160mm.",
             function: "Establishes pneumoperitoneum at the start of laparoscopy.",
-            application: "Initial entry for all laparoscopic procedures. Sizes from 100mm to 160mm.",
+            application: "Used for initial entry in diagnostic laparoscopy or surgeries with no prior scarring.",
             advantage: "Auto-retracting blunt stylet protects organs from injury during insertion."
           }
         ],
         keyFeatures: [
           "Durability: Made from high-quality materials for long service life.",
-          "Safety: Designed to minimize patient trauma and risk of visceral injury."
+          "Safety: Designed to minimize patient trauma and risk of visceral injury.",
+          "Variety: Comprehensive range of sizes and materials to suit any surgical need."
         ]
       },
-       {
+      {
         title: "9. Endo Retractors",
         icon: "🚧",
         mainDescription: "Designed to atraumatically hold organs away from the surgical field to improve visibility and access.",
         subItems: [
           {
             title: "Fan Retractor Straight",
-            icon: "🛠️",
-            description: "Basic retraction for smaller tissues with 3 prongs.",
-            function: "Temporarily holds liver, stomach, or bowel in minimally invasive surgery.",
-            application: "General surgery for basic organ retraction.",
-            advantage: "Simple, effective, and fits a 5mm port."
+            icon: "⚙️",
+            description: "Features 3 prongs and fits a 5mm port. Manual opening fan blades.",
+            function: "Temporarily holds liver, stomach, or bowel.",
+            application: "Used for basic organ retraction in general surgery.",
+            advantage: "Simple, effective, and has a thin profile suitable for smaller ports."
           },
           {
             title: "Fan Retractor Articulated",
-            icon: "🛠️",
-            description: "Offers better angulation for accessing deep cavities with 5 prongs.",
+            icon: "🧲",
+            description: "Features 5 articulating prongs for a larger surface area. Available for 5mm or 10mm shafts.",
             function: "Provides gradual and safe elevation of organs like the liver or uterus.",
-            application: "Complex procedures requiring dynamic retraction, e.g., deep pelvic surgery.",
-            advantage: "Articulating tip provides superior maneuverability."
+            application: "Designed for superior organ retraction in bariatric, colorectal, and GYN cases.",
+            advantage: "Articulating tip provides superior maneuverability and access to deep cavities."
           }
         ],
         keyFeatures: [
-          "Shaft Sizes: 5mm and 10mm options available.",
-          "Atraumatic Design: Smooth, rounded prongs to prevent tissue damage."
+          "Atraumatic Design: Smooth, rounded prongs to prevent tissue damage.",
+          "Shaft Sizes: Options for both 5mm and 10mm ports.",
+          "Material: Durable, medical-grade stainless steel."
         ]
       },
       {
@@ -403,24 +449,25 @@ export const products: Product[] = [
         subItems: [
           {
             title: "Metal Reducers",
-            icon: "🔧",
-            description: "Durable, reusable reducers for various size combinations.",
-            function: "Allows use of a 5mm instrument in a 10mm port, for example.",
+            icon: "🔩",
+            description: "Durable, reusable reducers for various size combinations (e.g., 20→10mm, 10→5mm, 5→3mm).",
+            function: "Allows use of a smaller instrument in a larger port.",
             application: "Increases instrument flexibility without adding extra ports.",
-            advantage: "Wide range of sizes available (e.g., 20→10mm, 10→5mm, 5→3mm)."
+            advantage: "Wide range of sizes available and cost-effective."
           },
           {
-            title: "Top Mounted / Flipon Reducer",
+            title: "Top Mounted & Flipon Reducers",
             icon: "🔧",
-            description: "Sits on top of the trocar, offering fast adaptation without trocar change.",
+            description: "Sits on top of the trocar or uses a flip-lock mechanism for rapid adaptation (10mm to 5mm).",
             function: "Quickly secure different-sized instruments.",
             application: "High-paced surgeries requiring frequent instrument changes.",
-            advantage: "Flip-lock mechanism ensures a secure and rapid seal."
+            advantage: "Ensures a secure and rapid seal to maintain insufflation."
           }
         ],
         keyFeatures: [
           "Material: Medical-grade silicone and stainless steel.",
           "Seal: Provides a reliable seal to prevent gas leakage.",
+          "Ease of Use: Designed for quick and easy application during surgery."
         ]
       }
     ],
