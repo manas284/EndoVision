@@ -91,7 +91,7 @@ export function ProductCategoryDetailDialog({ category, isOpen, onClose }: Produ
                                 <dd>{item.application}</dd>
                                 </div>
                             )}
-                            {item.advantage && (
+                             {item.advantage && (
                                 <div>
                                 <dt className="font-semibold text-foreground">Advantage:</dt>
                                 <dd>{item.advantage}</dd>
