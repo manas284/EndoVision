@@ -50,49 +50,44 @@ export function ProductCategoryDetailDialog({ category, isOpen, onClose }: Produ
                         </h4>
                       </AccordionTrigger>
                       <AccordionContent>
-                        <div className="flex flex-col md:flex-row gap-6 items-start pl-10 py-4">
+                        <div className="space-y-4 pl-10 py-4">
                             {item.imageUrl && (
-                                <div className="flex-shrink-0 w-full md:w-[250px] lg:w-[300px]">
-                                    <div className="relative aspect-square rounded-md overflow-hidden border bg-white">
-                                        <Image
-                                            src={item.imageUrl}
-                                            alt={item.title}
-                                            width={400}
-                                            height={400}
-                                            className="object-contain w-full h-full p-2"
-                                            data-ai-hint="laparoscopic scissor"
-                                        />
-                                    </div>
+                                <div className="relative w-full h-64 rounded-md overflow-hidden border bg-white">
+                                    <Image
+                                        src={item.imageUrl}
+                                        alt={item.title}
+                                        layout="fill"
+                                        className="object-contain"
+                                        data-ai-hint="laparoscopic scissor"
+                                    />
                                 </div>
                             )}
-                            <div className="flex-grow">
-                                <dl className="space-y-2 text-sm text-muted-foreground">
-                                    {item.description && (
-                                        <div>
-                                        <dt className="font-semibold text-foreground">Description:</dt>
-                                        <dd>{item.description}</dd>
-                                        </div>
-                                    )}
-                                    {item.function && (
-                                        <div>
-                                        <dt className="font-semibold text-foreground">Function:</dt>
-                                        <dd>{item.function}</dd>
-                                        </div>
-                                    )}
-                                    {item.application && (
-                                        <div>
-                                        <dt className="font-semibold text-foreground">Application:</dt>
-                                        <dd>{item.application}</dd>
-                                        </div>
-                                    )}
-                                    {item.advantage && (
-                                        <div>
-                                        <dt className="font-semibold text-foreground">Advantage:</dt>
-                                        <dd>{item.advantage}</dd>
-                                        </div>
-                                    )}
-                                </dl>
-                            </div>
+                            <dl className="space-y-2 text-sm text-muted-foreground">
+                                {item.description && (
+                                    <div>
+                                    <dt className="font-semibold text-foreground">Description:</dt>
+                                    <dd>{item.description}</dd>
+                                    </div>
+                                )}
+                                {item.function && (
+                                    <div>
+                                    <dt className="font-semibold text-foreground">Function:</dt>
+                                    <dd>{item.function}</dd>
+                                    </div>
+                                )}
+                                {item.application && (
+                                    <div>
+                                    <dt className="font-semibold text-foreground">Application:</dt>
+                                    <dd>{item.application}</dd>
+                                    </div>
+                                )}
+                                {item.advantage && (
+                                    <div>
+                                    <dt className="font-semibold text-foreground">Advantage:</dt>
+                                    <dd>{item.advantage}</dd>
+                                    </div>
+                                )}
+                            </dl>
                         </div>
                       </AccordionContent>
                     </AccordionItem>
