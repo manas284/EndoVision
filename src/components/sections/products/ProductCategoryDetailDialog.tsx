@@ -52,7 +52,7 @@ export function ProductCategoryDetailDialog({ category, isOpen, onClose }: Produ
                       <AccordionContent>
                         <div className="space-y-4 pl-10 py-4">
                             {item.imageUrl && (
-                                <div className="relative w-full h-64 rounded-md overflow-hidden border bg-white">
+                                <div className="relative w-full h-64 rounded-md overflow-hidden border bg-white mb-4">
                                     <Image
                                         src={item.imageUrl}
                                         alt={item.title}
