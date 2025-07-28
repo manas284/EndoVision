@@ -50,21 +50,21 @@ export function ProductCategoryDetailDialog({ category, isOpen, onClose }: Produ
                         </h4>
                       </AccordionTrigger>
                       <AccordionContent>
-                        <div className="flex flex-col md:flex-row gap-6 pl-10 py-4">
+                        <div className="flex flex-col md:flex-row gap-6 items-start pl-10 py-4">
                             {item.imageUrl && (
-                                <div className="md:w-1/2 flex-shrink-0">
-                                    <div className="relative aspect-video rounded-md overflow-hidden border bg-white">
+                                <div className="flex-shrink-0 w-full md:w-[250px] lg:w-[300px]">
+                                    <div className="relative aspect-square rounded-md overflow-hidden border bg-white">
                                         <Image
                                             src={item.imageUrl}
                                             alt={item.title}
                                             fill
-                                            className="object-contain"
+                                            className="object-contain p-2"
                                             data-ai-hint="laparoscopic scissor"
                                         />
                                     </div>
                                 </div>
                             )}
-                            <div className="md:w-1/2">
+                            <div className="flex-grow">
                                 <dl className="space-y-2 text-sm text-muted-foreground">
                                     {item.description && (
                                         <div>
