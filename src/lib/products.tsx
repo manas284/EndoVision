@@ -110,7 +110,7 @@ export const products: Product[] = [
             function: "Used for clean, controlled cuts through fascia, soft tissues, and sutures.",
             application: "Commonly used during gallbladder removal, hysterectomy, and intracorporeal suturing.",
             advantage: "Offers consistent cutting force with a simple forward motion, suitable for general use.",
-            imageUrl: "https://storage.googleapis.com/project-1107279361797.appspot.com/e2f3d6c1-2e6b-4e89-9a74-6b5860471b0c.png"
+            imageUrl: "https://storage.googleapis.com/project-1107279361797.appspot.com/8301ec9a-6c17-48f0-b054-99859f77f0a6.png"
           },
           {
             title: "Micro Scissor",
@@ -119,7 +119,7 @@ export const products: Product[] = [
             function: "Provides ultra-precise control for cutting delicate structures like nerves, vessels, or pediatric tissues.",
             application: "Used in precise dissection during laparoscopic myomectomy, pediatric surgery, or endometriosis cases.",
             advantage: "Minimizes tissue trauma, ideal for refining dissection in small anatomical areas.",
-            imageUrl: "https://storage.googleapis.com/project-1107279361797.appspot.com/7b7e7e6a-7a1a-4d2b-8c0e-4a673966526e.png"
+            imageUrl: "https://storage.googleapis.com/project-1107279361797.appspot.com/8301ec9a-6c17-48f0-b054-99859f77f0a6.png"
           },
           {
             title: "Hook Scissor",
@@ -128,7 +128,7 @@ export const products: Product[] = [
             function: "Allows tissue to be ‘hooked’ before cutting, ensuring accurate targeting without slipping.",
             application: "Especially useful in cutting ligaments, tough connective tissues, and in procedures involving fibrotic structures or adhesions.",
             advantage: "Reduces the risk of accidental injury to surrounding tissues; allows separation and cutting in a single action.",
-            imageUrl: "https://storage.googleapis.com/project-1107279361797.appspot.com/264b3017-d86b-4e08-912c-35439c79e64e.png"
+            imageUrl: "https://storage.googleapis.com/project-1107279361797.appspot.com/8301ec9a-6c17-48f0-b054-99859f77f0a6.png"
           }
         ],
         keyFeatures: [
