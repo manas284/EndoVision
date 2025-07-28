@@ -64,12 +64,12 @@ export const products: Product[] = [
     usp: "A comprehensive suite of ergonomic, durable instruments for modern laparoscopic surgery.",
     status: "New Arrival",
     categoryIcon: <Hand className="h-10 w-10 text-primary" />,
-    heroImage: "https://placehold.co/1200x800.png",
+    heroImage: "https://storage.googleapis.com/project-1107279361797.appspot.com/c4441544-d830-4e3f-a185-50e5012543b5.png",
     gallery: [
-      { src: "https://placehold.co/1200x800.png", alt: "Laparoscopic instrument set", hint: "laparoscopic instruments" },
-      { src: "https://placehold.co/800x600.png", alt: "Laparoscopic grasper", hint: "laparoscopic grasper" },
-      { src: "https://placehold.co/800x600.png", alt: "Laparoscopic scissors", hint: "laparoscopic scissors" },
-      { src: "https://placehold.co/800x600.png", alt: "Surgeon using laparoscopic tool", hint: "laparoscopic surgery" },
+      { src: "https://storage.googleapis.com/project-1107279361797.appspot.com/c4441544-d830-4e3f-a185-50e5012543b5.png", alt: "Laparoscopic instrument set", hint: "laparoscopic instruments" },
+      { src: "https://storage.googleapis.com/project-1107279361797.appspot.com/8301ec9a-6c17-48f0-b054-99859f77f0a6.png", alt: "Laparoscopic grasper", hint: "laparoscopic grasper" },
+      { src: "https://storage.googleapis.com/project-1107279361797.appspot.com/c4441544-d830-4e3f-a185-50e5012543b5.png", alt: "Laparoscopic scissors", hint: "laparoscopic scissors" },
+      { src: "https://storage.googleapis.com/project-1107279361797.appspot.com/264b3017-d86b-4e08-912c-35439c79e64e.png", alt: "Surgeon using laparoscopic tool", hint: "laparoscopic surgery" },
     ],
     glanceFeatures: [
       { icon: <Hand className="h-6 w-6 text-primary" />, text: "Ergonomic Design" },
@@ -79,7 +79,7 @@ export const products: Product[] = [
     overview: {
       title: "Precision and Control in Your Hands",
       description: "Our new line of laparoscopic instruments is engineered for superior performance and surgeon comfort. Each instrument features an ergonomic handle, robust construction, and a modular design for easy cleaning and maintenance, ensuring reliability in every procedure.",
-      image: "https://placehold.co/800x600.png",
+      image: "https://storage.googleapis.com/project-1107279361797.appspot.com/3931bb48-d345-42a1-8230-2495d0383792.png",
       imageHint: "surgical instruments"
     },
     faqs: [
@@ -110,7 +110,7 @@ export const products: Product[] = [
             function: "Used for clean, controlled cuts through fascia, soft tissues, and sutures.",
             application: "Commonly used during gallbladder removal, hysterectomy, and intracorporeal suturing.",
             advantage: "Offers consistent cutting force with a simple forward motion, suitable for general use.",
-            imageUrl: "https://placehold.co/600x400.png"
+            imageUrl: "https://storage.googleapis.com/project-1107279361797.appspot.com/e2f3d6c1-2e6b-4e89-9a74-6b5860471b0c.png"
           },
           {
             title: "Micro Scissor",
@@ -119,7 +119,7 @@ export const products: Product[] = [
             function: "Provides ultra-precise control for cutting delicate structures like nerves, vessels, or pediatric tissues.",
             application: "Used in precise dissection during laparoscopic myomectomy, pediatric surgery, or endometriosis cases.",
             advantage: "Minimizes tissue trauma, ideal for refining dissection in small anatomical areas.",
-            imageUrl: "https://placehold.co/600x400.png"
+            imageUrl: "https://storage.googleapis.com/project-1107279361797.appspot.com/7b7e7e6a-7a1a-4d2b-8c0e-4a673966526e.png"
           },
           {
             title: "Hook Scissor",
@@ -128,7 +128,7 @@ export const products: Product[] = [
             function: "Allows tissue to be ‘hooked’ before cutting, ensuring accurate targeting without slipping.",
             application: "Especially useful in cutting ligaments, tough connective tissues, and in procedures involving fibrotic structures or adhesions.",
             advantage: "Reduces the risk of accidental injury to surrounding tissues; allows separation and cutting in a single action.",
-            imageUrl: "https://placehold.co/600x400.png"
+            imageUrl: "https://storage.googleapis.com/project-1107279361797.appspot.com/264b3017-d86b-4e08-912c-35439c79e64e.png"
           }
         ],
         keyFeatures: [
