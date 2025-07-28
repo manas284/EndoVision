@@ -101,7 +101,7 @@ export const products: Product[] = [
             function: "Enables better maneuverability in tight or angled spaces where straight scissors may not reach.",
             application: "Ideal for dissecting peritoneal layers, separating adhesions, or trimming curved anatomical structures.",
             advantage: "Provides superior tissue visibility and control during curved or radial dissection paths.",
-            imageUrl: "https://storage.googleapis.com/project-1107279361797.appspot.com/c4441544-d830-4e3f-a185-50e5012543b5.png"
+            imageUrl: "https://storage.googleapis.com/project-1107279361797.appspot.com/8301ec9a-6c17-48f0-b054-99859f77f0a6.png"
           },
           {
             title: "Straight Scissor",
