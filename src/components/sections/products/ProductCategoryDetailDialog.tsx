@@ -13,7 +13,6 @@ import { Check } from 'lucide-react';
 import type { DetailedCategory } from '@/lib/products.tsx';
 import * as React from 'react';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
-import Image from 'next/image';
 
 interface ProductCategoryDetailDialogProps {
   category: DetailedCategory | null;
@@ -53,15 +52,12 @@ export function ProductCategoryDetailDialog({ category, isOpen, onClose }: Produ
                         <div className="md:flex md:gap-6 py-4 pl-4">
                             {item.imageUrl && (
                                 <div className="md:w-1/3 flex-shrink-0 mb-4 md:mb-0">
-                                    <div className="relative w-full aspect-square rounded-md overflow-hidden border bg-white">
-                                        <Image
-                                            src={item.imageUrl}
-                                            alt={item.title}
-                                            fill
-                                            className="object-contain"
-                                            data-ai-hint="laparoscopic scissor"
-                                        />
-                                    </div>
+                                    {/* Using standard img tag for simplicity and to ensure rendering */}
+                                    <img
+                                        src={item.imageUrl}
+                                        alt={item.title}
+                                        style={{ width: '100%', height: 'auto', objectFit: 'contain', backgroundColor: '#f0f0f0', borderRadius: '0.375rem' }}
+                                    />
                                 </div>
                             )}
                             <div className="flex-grow">
