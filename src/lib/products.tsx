@@ -30,6 +30,7 @@ export interface DetailedCategory {
         function: string;
         application: string;
         advantage: string;
+        imageUrl?: string;
     }[];
     keyFeatures: string[];
 }
@@ -99,7 +100,8 @@ export const products: Product[] = [
             description: "The blades are curved, typically upward, allowing surgeons to cut around convex structures or anatomical curves.",
             function: "Enables better maneuverability in tight or angled spaces where straight scissors may not reach.",
             application: "Ideal for dissecting peritoneal layers, separating adhesions, or trimming curved anatomical structures.",
-            advantage: "Provides superior tissue visibility and control during curved or radial dissection paths."
+            advantage: "Provides superior tissue visibility and control during curved or radial dissection paths.",
+            imageUrl: "https://storage.googleapis.com/project-1107279361797.appspot.com/c4441544-d830-4e3f-a185-50e5012543b5.png"
           },
           {
             title: "Straight Scissor",
@@ -107,7 +109,8 @@ export const products: Product[] = [
             description: "Features straight, sharp, or blunt blades for making linear cuts in tissues and structures.",
             function: "Used for clean, controlled cuts through fascia, soft tissues, and sutures.",
             application: "Commonly used during gallbladder removal, hysterectomy, and intracorporeal suturing.",
-            advantage: "Offers consistent cutting force with a simple forward motion, suitable for general use."
+            advantage: "Offers consistent cutting force with a simple forward motion, suitable for general use.",
+            imageUrl: "https://placehold.co/600x400.png"
           },
           {
             title: "Micro Scissor",
@@ -115,7 +118,8 @@ export const products: Product[] = [
             description: "Very fine and narrow blades with a delicate tip designed for microsurgical tasks.",
             function: "Provides ultra-precise control for cutting delicate structures like nerves, vessels, or pediatric tissues.",
             application: "Used in precise dissection during laparoscopic myomectomy, pediatric surgery, or endometriosis cases.",
-            advantage: "Minimizes tissue trauma, ideal for refining dissection in small anatomical areas."
+            advantage: "Minimizes tissue trauma, ideal for refining dissection in small anatomical areas.",
+            imageUrl: "https://placehold.co/600x400.png"
           },
           {
             title: "Hook Scissor",
@@ -123,7 +127,8 @@ export const products: Product[] = [
             description: "The blade has a sharp, curved, hook-like tip designed for encasing and cutting tissue bundles.",
             function: "Allows tissue to be ‘hooked’ before cutting, ensuring accurate targeting without slipping.",
             application: "Especially useful in cutting ligaments, tough connective tissues, and in procedures involving fibrotic structures or adhesions.",
-            advantage: "Reduces the risk of accidental injury to surrounding tissues; allows separation and cutting in a single action."
+            advantage: "Reduces the risk of accidental injury to surrounding tissues; allows separation and cutting in a single action.",
+            imageUrl: "https://placehold.co/600x400.png"
           }
         ],
         keyFeatures: [

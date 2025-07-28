@@ -13,6 +13,7 @@ import { Check } from 'lucide-react';
 import type { DetailedCategory } from '@/lib/products.tsx';
 import * as React from 'react';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
+import Image from 'next/image';
 
 interface ProductCategoryDetailDialogProps {
   category: DetailedCategory | null;
@@ -49,32 +50,45 @@ export function ProductCategoryDetailDialog({ category, isOpen, onClose }: Produ
                         </h4>
                       </AccordionTrigger>
                       <AccordionContent>
-                        <dl className="mt-3 space-y-2 text-sm text-muted-foreground pl-10">
-                            {item.description && (
-                                <div>
-                                <dt className="font-semibold text-foreground">Description:</dt>
-                                <dd>{item.description}</dd>
+                        <div className="grid md:grid-cols-2 gap-6 pl-10">
+                            {item.imageUrl && (
+                                <div className="relative aspect-video rounded-md overflow-hidden border">
+                                    <Image
+                                        src={item.imageUrl}
+                                        alt={item.title}
+                                        fill
+                                        className="object-contain"
+                                        data-ai-hint="laparoscopic scissor"
+                                    />
                                 </div>
                             )}
-                            {item.function && (
-                                <div>
-                                <dt className="font-semibold text-foreground">Function:</dt>
-                                <dd>{item.function}</dd>
-                                </div>
-                            )}
-                            {item.application && (
-                                <div>
-                                <dt className="font-semibold text-foreground">Application:</dt>
-                                <dd>{item.application}</dd>
-                                </div>
-                            )}
-                             {item.advantage && (
-                                <div>
-                                <dt className="font-semibold text-foreground">Advantage:</dt>
-                                <dd>{item.advantage}</dd>
-                                </div>
-                            )}
-                        </dl>
+                            <dl className="mt-3 space-y-2 text-sm text-muted-foreground">
+                                {item.description && (
+                                    <div>
+                                    <dt className="font-semibold text-foreground">Description:</dt>
+                                    <dd>{item.description}</dd>
+                                    </div>
+                                )}
+                                {item.function && (
+                                    <div>
+                                    <dt className="font-semibold text-foreground">Function:</dt>
+                                    <dd>{item.function}</dd>
+                                    </div>
+                                )}
+                                {item.application && (
+                                    <div>
+                                    <dt className="font-semibold text-foreground">Application:</dt>
+                                    <dd>{item.application}</dd>
+                                    </div>
+                                )}
+                                {item.advantage && (
+                                    <div>
+                                    <dt className="font-semibold text-foreground">Advantage:</dt>
+                                    <dd>{item.advantage}</dd>
+                                    </div>
+                                )}
+                            </dl>
+                        </div>
                       </AccordionContent>
                     </AccordionItem>
                   ))}
