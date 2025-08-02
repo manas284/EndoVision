@@ -52,7 +52,6 @@ export function ProductCategoryDetailDialog({ category, isOpen, onClose }: Produ
                         <div className="md:flex md:gap-6 py-4 pl-4">
                             {item.imageUrl && (
                                 <div className="md:w-1/3 flex-shrink-0 mb-4 md:mb-0">
-                                    {/* Using standard img tag for simplicity and to ensure rendering */}
                                     <img
                                         src={item.imageUrl}
                                         alt={item.title}

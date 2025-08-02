@@ -101,7 +101,7 @@ export const products: Product[] = [
             function: "Enables better maneuverability in tight or angled spaces where straight scissors may not reach.",
             application: "Ideal for dissecting peritoneal layers, separating adhesions, or trimming curved anatomical structures.",
             advantage: "Provides superior tissue visibility and control during curved or radial dissection paths.",
-            imageUrl: "https://storage.googleapis.com/project-1107279361797.appspot.com/6c659e6c-7e5d-4a1d-8f9f-7c15e8b23f2f.png"
+            imageUrl: "/images/curved-scissor.png"
           },
           {
             title: "Straight Scissor",
@@ -279,7 +279,7 @@ export const products: Product[] = [
       },
       {
         id: "suction-irrigation",
-        title: "5. Suction & Irrigation Systems",
+        title: "5. Suction &amp; Irrigation Systems",
         icon: "💧",
         mainDescription: "Laparoscopic suction irrigation systems are essential tools used to clear blood, debris, smoke, or fluids from the operative field and can also be used to deliver irrigation fluids to maintain visibility and prevent tissue adhesion.",
         subItems: [
@@ -401,7 +401,7 @@ export const products: Product[] = [
       },
       {
         id: "trocars-veress",
-        title: "8. Trocars & Veress Needles",
+        title: "8. Trocars &amp; Veress Needles",
         icon: "🧷",
         mainDescription: "Trocars and Veress needles serve as the initial access tools for laparoscopic surgeries.",
         subItems: [
@@ -472,7 +472,7 @@ export const products: Product[] = [
             advantage: "Wide range of sizes available and cost-effective."
           },
           {
-            title: "Top Mounted & Flipon Reducers",
+            title: "Top Mounted &amp; Flipon Reducers",
             icon: "🔧",
             description: "Sits on top of the trocar or uses a flip-lock mechanism for rapid adaptation (10mm to 5mm).",
             function: "Quickly secure different-sized instruments.",
