@@ -130,7 +130,7 @@ export const products: Product[] = [
             function: "Allows tissue to be ‘hooked’ before cutting, ensuring accurate targeting without slipping.",
             application: "Especially useful in cutting ligaments, tough connective tissues, and in procedures involving fibrotic structures or adhesions.",
             advantage: "Reduces the risk of accidental injury to surrounding tissues; allows separation and cutting in a single action.",
-            imageUrl: "https://kenmedsurgical.com/cdn/shop/files/7a2b603e-72d0-5ac5-9263-11d482ed072f_533x.jpg?v=1726499072"
+            imageUrl: "https://i.ibb.co/qYp831d4/Hook-scissor.jpg"
           }
         ],
         keyFeatures: [
@@ -495,6 +495,7 @@ export const products: Product[] = [
     
 
     
+
 
 
 
