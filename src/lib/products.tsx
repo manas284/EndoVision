@@ -30,7 +30,7 @@ export interface DetailedCategory {
         function: string;
         application: string;
         advantage: string;
-        imageUrl?: string;
+        imageUrl?: string | React.ReactNode;
     }[];
     keyFeatures: string[];
 }
@@ -101,7 +101,7 @@ export const products: Product[] = [
             function: "Enables better maneuverability in tight or angled spaces where straight scissors may not reach.",
             application: "Ideal for dissecting peritoneal layers, separating adhesions, or trimming curved anatomical structures.",
             advantage: "Provides superior tissue visibility and control during curved or radial dissection paths.",
-            imageUrl: "/images/curved-scissor.png"
+            imageUrl: "https://kenmedsurgical.com/cdn/shop/files/7a2b603e-72d0-5ac5-9263-11d482ed072f_533x.jpg?v=1726499072"
           },
           {
             title: "Straight Scissor",
@@ -489,5 +489,7 @@ export const products: Product[] = [
     ],
   }
 ];
+
+    
 
     

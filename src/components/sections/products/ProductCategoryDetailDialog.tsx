@@ -52,11 +52,17 @@ export function ProductCategoryDetailDialog({ category, isOpen, onClose }: Produ
                         <div className="md:flex md:gap-6 py-4 pl-4">
                             {item.imageUrl && (
                                 <div className="md:w-1/3 flex-shrink-0 mb-4 md:mb-0">
+                                  {typeof item.imageUrl === 'string' ? (
                                     <img
                                         src={item.imageUrl}
                                         alt={item.title}
                                         style={{ width: '100%', height: 'auto', objectFit: 'contain', backgroundColor: '#f0f0f0', borderRadius: '0.375rem' }}
                                     />
+                                  ) : (
+                                    <div style={{ width: '100%', height: 'auto', backgroundColor: '#f0f0f0', borderRadius: '0.375rem' }}>
+                                      {item.imageUrl}
+                                    </div>
+                                  )}
                                 </div>
                             )}
                             <div className="flex-grow">
@@ -113,3 +119,5 @@ export function ProductCategoryDetailDialog({ category, isOpen, onClose }: Produ
     </Dialog>
   );
 }
+
+    
