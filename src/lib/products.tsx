@@ -66,7 +66,7 @@ export const products: Product[] = [
     categoryIcon: <Hand className="h-10 w-10 text-primary" />,
     heroImage: "https://www.datocms-assets.com/136621/1737729829-desk_banner_histeroscopia.png",
     gallery: [
-      { src: "https://www.datocms-assets.com/136621/1737729829-desk_banner_histeroscopia.png", alt: "Laparoscopic instrument set", hint: "laparoscopic instruments" },
+      { src: "https://kenmedsurgical.com/cdn/shop/files/7a2b603e-72d0-5ac5-9263-11d482ed072f_533x.jpg?v=1726499072", alt: "Laparoscopic instrument set", hint: "laparoscopic instruments" },
       { src: "https://kenmedsurgical.com/cdn/shop/files/7a2b603e-72d0-5ac5-9263-11d482ed072f_533x.jpg?v=1726499072", alt: "Laparoscopic grasper", hint: "laparoscopic grasper" },
       { src: "https://www.datocms-assets.com/136621/1737729829-desk_banner_histeroscopia.png", alt: "Laparoscopic scissors", hint: "laparoscopic scissors" },
       { src: "https://placehold.co/800x600.png", alt: "Surgeon using laparoscopic tool", hint: "laparoscopic surgery" },
