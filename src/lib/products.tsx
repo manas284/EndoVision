@@ -112,7 +112,7 @@ export const products: Product[] = [
             function: "Used for clean, controlled cuts through fascia, soft tissues, and sutures.",
             application: "Commonly used during gallbladder removal, hysterectomy, and intracorporeal suturing.",
             advantage: "Offers consistent cutting force with a simple forward motion, suitable for general use.",
-            imageUrl: "https://placehold.co/400x400.png"
+            imageUrl: "https://i.ibb.co/SD2vc5qc/straight-scissor.jpg"
           },
           {
             title: "Micro Scissor",
@@ -495,6 +495,7 @@ export const products: Product[] = [
     
 
     
+
 
 
 
