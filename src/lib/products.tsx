@@ -101,7 +101,7 @@ export const products: Product[] = [
             function: "Enables better maneuverability in tight or angled spaces where straight scissors may not reach.",
             application: "Ideal for dissecting peritoneal layers, separating adhesions, or trimming curved anatomical structures.",
             advantage: "Provides superior tissue visibility and control during curved or radial dissection paths.",
-            imageUrl: "/images/laparoscopic-scissor.jpg"
+            imageUrl: "https://kenmedsurgical.com/cdn/shop/files/7a2b603e-72d0-5ac5-9263-11d482ed072f_533x.jpg?v=1726499072"
           },
           {
             title: "Straight Scissor",
@@ -110,7 +110,7 @@ export const products: Product[] = [
             function: "Used for clean, controlled cuts through fascia, soft tissues, and sutures.",
             application: "Commonly used during gallbladder removal, hysterectomy, and intracorporeal suturing.",
             advantage: "Offers consistent cutting force with a simple forward motion, suitable for general use.",
-            imageUrl: "/images/laparoscopic-scissor.jpg"
+            imageUrl: "https://kenmedsurgical.com/cdn/shop/files/7a2b603e-72d0-5ac5-9263-11d482ed072f_533x.jpg?v=1726499072"
           },
           {
             title: "Micro Scissor",
@@ -119,7 +119,7 @@ export const products: Product[] = [
             function: "Provides ultra-precise control for cutting delicate structures like nerves, vessels, or pediatric tissues.",
             application: "Used in precise dissection during laparoscopic myomectomy, pediatric surgery, or endometriosis cases.",
             advantage: "Minimizes tissue trauma, ideal for refining dissection in small anatomical areas.",
-            imageUrl: "/images/laparoscopic-scissor.jpg"
+            imageUrl: "https://kenmedsurgical.com/cdn/shop/files/7a2b603e-72d0-5ac5-9263-11d482ed072f_533x.jpg?v=1726499072"
           },
           {
             title: "Hook Scissor",
@@ -128,7 +128,7 @@ export const products: Product[] = [
             function: "Allows tissue to be ‘hooked’ before cutting, ensuring accurate targeting without slipping.",
             application: "Especially useful in cutting ligaments, tough connective tissues, and in procedures involving fibrotic structures or adhesions.",
             advantage: "Reduces the risk of accidental injury to surrounding tissues; allows separation and cutting in a single action.",
-            imageUrl: "/images/laparoscopic-scissor.jpg"
+            imageUrl: "https://kenmedsurgical.com/cdn/shop/files/7a2b603e-72d0-5ac5-9263-11d482ed072f_533x.jpg?v=1726499072"
           }
         ],
         keyFeatures: [
@@ -489,3 +489,5 @@ export const products: Product[] = [
     ],
   }
 ];
+
+    
