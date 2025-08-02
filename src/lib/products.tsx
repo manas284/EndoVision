@@ -1,5 +1,7 @@
 
 import { Hand, Shield, Aperture } from 'lucide-react';
+import Image from 'next/image';
+
 
 export interface ProductFeature {
   icon: React.ReactNode;
@@ -20,7 +22,7 @@ export interface GalleryImage {
 
 export interface DetailedCategory {
     id: string;
-    title: string;
+    title:string;
     icon: string;
     mainDescription: string;
     subItems: {
