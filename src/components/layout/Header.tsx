@@ -71,6 +71,7 @@ export function Header() {
     { href: '/products', label: translations.header.products },
     { href: '/about', label: translations.header.about },
     { href: '/#contact', label: translations.header.contact },
+    { href: '/design-overview', label: "Design" },
   ];
 
   const NavLink = ({ href, label, isActive }: { href: string; label: string; isActive: boolean }) => (
