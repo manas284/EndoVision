@@ -13,7 +13,7 @@ import { Resend } from 'resend';
 import { ContactFormEmail } from '@/components/emails/ContactFormEmail';
 
 const resend = process.env.RESEND_API_KEY ? new Resend(process.env.RESEND_API_KEY) : null;
-const TO_EMAIL = 'gauravkumar808437@gmail.com';
+const TO_EMAIL = 'manastiwari625@gmail.com';
 const FROM_EMAIL = 'onboarding@resend.dev'; // Resend requires a verified domain or this default for free tier
 
 export async function sendContactMessage(
