@@ -86,7 +86,7 @@ const en: Translation = {
       },
       office: {
         title: "Office",
-        address: "123 Innovation Drive\nNavi Mumbai, India",
+        address: "Shop no. F- 241, B- Wing, 1st Floor, Express Zone, Western Express Highway, Goregaon (e), Mumbai, Maharashtra, 400063",
       },
     },
     form: {
@@ -152,7 +152,7 @@ const hi: Translation = {
       },
       office: {
         title: "कार्यालय",
-        address: "123 इनोवेशन ड्राइव\nनवी मुंबई, भारत",
+        address: "दुकान नं. एफ-241, बी-विंग, पहली मंजिल, एक्सप्रेस जोन, वेस्टर्न एक्सप्रेस हाईवे, गोरेगांव (पूर्व), मुंबई, महाराष्ट्र, 400063",
       },
     },
     form: {
