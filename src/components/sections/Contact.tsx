@@ -101,7 +101,7 @@ export function Contact() {
                   <div>
                     <h3 className="font-headline text-xl font-semibold">{contactTranslations.info.email.title}</h3>
                     <p className="text-muted-foreground">{contactTranslations.info.email.description}</p>
-                    <a href="mailto:contact@bluezonesurgical.com" className="text-primary font-medium hover:underline">contact@bluezonesurgical.com</a>
+                    <a href="mailto:bluezonesurgical@gmail.com" className="text-primary font-medium hover:underline">bluezonesurgical@gmail.com</a>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
@@ -111,7 +111,7 @@ export function Contact() {
                   <div>
                     <h3 className="font-headline text-xl font-semibold">{contactTranslations.info.phone.title}</h3>
                     <p className="text-muted-foreground">{contactTranslations.info.phone.description}</p>
-                    <a href="tel:+917389073923" className="text-primary font-medium hover:underline">+91 7389073923</a>
+                    <a href="tel:+919653472948" className="text-primary font-medium hover:underline">+91 9653472948</a>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
